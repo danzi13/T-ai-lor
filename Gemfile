@@ -2,10 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.6.6'
 gem 'rails', '6.0.0'
+gem 'openai'
+gem 'httparty'
 
 # for Heroku deployment 
 group :development, :test do
-  gem 'pg', '0.21.0'
+  #gem 'pg', '0.21.0'
+  gem 'sqlite3', '1.4'
+  # gem 'sqlite3', '1.3.11'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
   gem 'launchy'

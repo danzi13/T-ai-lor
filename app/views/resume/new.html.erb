@@ -3,16 +3,26 @@
 
 <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
     <%= f.label :file %>
     <%= f.file_field :file %>
+  </div>
+  <div class="field">
+    <%= f.label :resume_text, 'Resume Text' %>
+    <%= f.text_area :resume_text, style: 'display: none;' %>
   </div>
   <div class="actions">
     <%= f.submit "Upload Resume" %>
   </div>
 <% end %>
 <%= link_to 'Continue', uploaded_path, class: 'btn btn-primary' %>
+<p>or</p>
+<%= link_to 'Enter Resume Text', '#', id: 'show_resume_text_field', class: 'btn btn-primary' %>
+
+<script>
+  $(document).ready(function() {
+    $('#show_resume_text_field').click(function() {
+      $('#resume_resume_text').toggle();
+    });
+  });
+</script>
 

@@ -33,7 +33,9 @@ Rottenpotatoes::Application.configure do
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
   # config.active_record.schema_format = :sql
-
+  config.hosts << "pure-river-69411-5cfef20475c9.herokuapp.com"
+  config.hosts << "felixmodest-floodfresh-3000.codio.io"
+  config.hosts << "felixmodest-floodfresh-3001.codio.io"
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 

@@ -30,4 +30,5 @@ Rottenpotatoes::Application.configure do
   config.assets.debug = true
   config.hosts << "pure-river-69411-5cfef20475c9.herokuapp.com"
   config.hosts << "felixmodest-floodfresh-3000.codio.io"
+  config.hosts << "felixmodest-floodfresh-3001.codio.io"
 end
