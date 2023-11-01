@@ -7682,3 +7682,705 @@ Migrating to AddAttachmentAttachmentToResumes (20231101023237)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (8.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-11-01 17:02:46.473871"], ["updated_at", "2023-11-01 17:02:46.473871"]]
   [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:31:11 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:31:11 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 88ms (Allocations: 18873)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:8:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:32:01 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1398)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:8:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/" for 209.2.227.158 at 2023-11-01 17:33:45 +0000
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:33:46 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 1312)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:8:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:34:43 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 1312)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:8:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:34:47 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1312)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:8:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:37:31 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1654)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:4:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:37:36 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1614)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:4:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:37:43 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1614)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:4:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/" for 209.2.231.106 at 2023-11-01 17:37:51 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 17:37:51 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1614)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:4:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:38:10 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 41ms (Allocations: 19145)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:4:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:38:33 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1699)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:4:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:3:in `new'
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 17:42:49 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4887)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 675ms (Views: 510.8ms | ActiveRecord: 57.4ms | Allocations: 319256)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 209.2.231.106 at 2023-11-01 17:42:50 +0000
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 209.2.231.106 at 2023-11-01 17:42:50 +0000
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 17:43:05 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tRS+iosoNR+XXetxEVDAhNiKpFb7ekv/PB9mJD1DQ55hr5GaGUvkBDIGaRRVWbrwArM8AGUALCv1SjBLfaUKCQ==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fa832980a30 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-6831-1g7qkek.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (12.7ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 17:43:05.859071"], ["updated_at", "2023-11-01 17:43:05.859071"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 17.3ms | Allocations: 13179)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "active_storage_blobs" does not exist
+LINE 8:  WHERE a.attrelid = '"active_storage_blobs"'::regclass
+                            ^
+):
+  
+app/controllers/resume_controller.rb:8:in `create'
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 17:44:50 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tRS+iosoNR+XXetxEVDAhNiKpFb7ekv/PB9mJD1DQ55hr5GaGUvkBDIGaRRVWbrwArM8AGUALCv1SjBLfaUKCQ==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fa831fdacb0 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-6831-1t596ru.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 17:44:50.190778"], ["updated_at", "2023-11-01 17:44:50.190778"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.4ms | Allocations: 1226)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "active_storage_blobs" does not exist
+LINE 8:  WHERE a.attrelid = '"active_storage_blobs"'::regclass
+                            ^
+):
+  
+app/controllers/resume_controller.rb:8:in `create'
+Started GET "/" for 209.2.231.106 at 2023-11-01 17:45:10 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 17:45:10 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 832)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8403)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:45:19 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 654)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8173)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 209.2.227.158 at 2023-11-01 17:45:19 +0000
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 209.2.227.158 at 2023-11-01 17:45:19 +0000
+Started GET "/assets/resume.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 209.2.227.158 at 2023-11-01 17:45:19 +0000
+Started GET "/assets/resume.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 209.2.227.158 at 2023-11-01 17:45:19 +0000
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 209.2.227.158 at 2023-11-01 17:45:20 +0000
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 209.2.227.158 at 2023-11-01 17:45:20 +0000
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 17:45:23 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hr88cuMDMs+RuNen3tqUgkS72Hg7Qeqs4SvB5xuz0/9SBBNicWDj1DTjVcKa0+72noJALqU7jXgofpeIW1WaaA==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fa832080d68 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-6831-1u5amp.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 17:45:23.913033"], ["updated_at", "2023-11-01 17:45:23.913033"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms | Allocations: 1214)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "active_storage_blobs" does not exist
+LINE 8:  WHERE a.attrelid = '"active_storage_blobs"'::regclass
+                            ^
+):
+  
+app/controllers/resume_controller.rb:8:in `create'
+Started POST "/resume" for 209.2.227.158 at 2023-11-01 17:45:30 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HKOMozaskGJqb/NNOgDTW8lvYHTDPOK39pptVJWBv5I5heY5q7KIYU1kRoLiHZA6BouqxGhUJswyUwxsnkR2ow==", "resume"=>{"title"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ""], ["created_at", "2023-11-01 17:45:30.708766"], ["updated_at", "2023-11-01 17:45:30.708766"]]
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 19.6ms | Allocations: 1160)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "active_storage_attachments" does not exist
+LINE 8:  WHERE a.attrelid = '"active_storage_attachments"'::regclass
+                            ^
+):
+  
+app/controllers/resume_controller.rb:10:in `create'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:45:34 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 832)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8348)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:45:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 824)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 8343)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 17:46:54 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 832)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8351)
+
+
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 17:47:07 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hr88cuMDMs+RuNen3tqUgkS72Hg7Qeqs4SvB5xuz0/9SBBNicWDj1DTjVcKa0+72noJALqU7jXgofpeIW1WaaA==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fa832ecab80 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-6831-h7ea1g.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 17:47:07.074287"], ["updated_at", "2023-11-01 17:47:07.074287"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.5ms | Allocations: 1224)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "active_storage_blobs" does not exist
+LINE 8:  WHERE a.attrelid = '"active_storage_blobs"'::regclass
+                            ^
+):
+  
+app/controllers/resume_controller.rb:8:in `create'
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 17:47:38 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 8.5ms | Allocations: 827)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 8424)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 17:47:58 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8001)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 17:48:02 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 513)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 7999)
+
+
+Started GET "/editor" for 209.2.227.158 at 2023-11-01 17:48:16 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.0ms | Allocations: 204)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 8250)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 17:48:21 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 516)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 8000)
+
+
+Started GET "/download" for 209.2.227.158 at 2023-11-01 17:48:35 +0000
+Processing by ResumeController#download as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 132)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 17:48:35 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 8004)
+
+
+Started POST "/tailor" for 209.2.227.158 at 2023-11-01 17:48:43 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e8ZvqB26QUqwepXF01VwWEgFCnFtq4FUjmbYN1ulcT1e4AUygKRZSZdxIAoLSDM5h+HAwcbDRS9Kr7kPUGC4DA==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 403)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 17:48:43 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 8006)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:07 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 720)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 85ms (Views: 8.8ms | ActiveRecord: 67.0ms | Allocations: 14175)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:08 +0000
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:08 +0000
+Started GET "/assets/resume.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:08 +0000
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:08 +0000
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:08 +0000
+Started GET "/assets/resume.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 17:49:09 +0000
+Started GET "/" for 209.2.231.106 at 2023-11-01 17:56:27 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 17:56:27 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 5118)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 171)
+Completed 200 OK in 438ms (Views: 311.6ms | ActiveRecord: 17.3ms | Allocations: 328193)
+
+
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 17:56:45 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CimfuXAygM4cH88pYLOhJNyMwSnmOnuQOSfYnaHkNVbekrCp4lFR1blETUwkuttQBrVZf3hAHETwco7y4QJ8wQ==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f876e377d80 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-6992-bybw70.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (6.1ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 17:56:45.741568"], ["updated_at", "2023-11-01 17:56:45.741568"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 9.1ms | Allocations: 13179)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "active_storage_blobs" does not exist
+LINE 8:  WHERE a.attrelid = '"active_storage_blobs"'::regclass
+                            ^
+):
+  
+app/controllers/resume_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentAttachmentToResumes (20231101023237)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "resumes" ADD "attachment_file_name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:04:00 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 27.1ms | Allocations: 5107)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 439ms (Views: 330.3ms | ActiveRecord: 15.6ms | Allocations: 328195)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:04:20 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 6.9ms | Allocations: 823)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 8419)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:04:47 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OrMy4MC3rbR3iC5/WJvZ9y1OC5dMnIuRjSOFqbItwUpvhyGR4aRS4nui8uM68dxZZqEi3X9lgQDrCOBuFb4qQg==", "description"=>"Hi Everyone!\r\n\r\nJust a reminder to complete the Week 9 Design Review sheets that you were given last week and bring a printed copy on Friday. \r\n\r\nAgain, the template, with instructions, is in the week 9 google drive folder: https://drive.google.com/drive/folders/1agWFR7n4-yr2JciOKjP5rXgD77ev8sFL\r\n\r\nEric", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:04:47 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 8018)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:04:55 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 198)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8053)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:04:59 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 528)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8012)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentAttachmentToResumes (20231101023237)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "resumes" ADD "attachment_file_name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:09:31 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 821)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 8340)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:09:34 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 824)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 8343)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 18:09:39 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 513)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 7996)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 18:09:56 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 513)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms | Allocations: 7999)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 18:16:12 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.9ms | Allocations: 8000)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:16:15 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 820)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 13ms (Views: 12.8ms | Allocations: 8339)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:16:16 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 824)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 13ms (Views: 12.2ms | Allocations: 8343)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 18:16:37 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 8.1ms | Allocations: 8000)
+
+
+Started POST "/tailor" for 209.2.227.158 at 2023-11-01 18:17:28 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"23ltKN/kaVYJOuYlfiiuiBg62GYIYjq9td+bjMBdu/D+XweyQvpxVS4xU+qmNe3p194S1qMK/sZxFvq0y5hywQ==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (Allocations: 425)
+
+
+Started GET "/uploaded" for 209.2.227.158 at 2023-11-01 18:17:28 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 7.9ms | Allocations: 8020)
+
+
+Started GET "/" for 209.2.227.158 at 2023-11-01 18:17:43 +0000
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:17:43 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 820)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 8339)
+
+
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:25:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 882)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 33ms (Views: 9.2ms | ActiveRecord: 5.0ms | Allocations: 16107)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (3.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "postgres"[0m
+Started GET "/" for 209.2.231.106 at 2023-11-01 18:46:52 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 18:46:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 5106)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 171)
+Completed 200 OK in 476ms (Views: 351.4ms | ActiveRecord: 12.2ms | Allocations: 328148)
+
+
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 18:47:03 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUr36PMHnWnRq4aeFZQ7FA0XdrkbTtIzUxuyfFzMAnXV8dj4YWRMcnTwBPtRnUFg1y7u74U0teeaTuQTHCpL4g==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f55d21fe5a8 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-7333-157eorw.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 587)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'file' for Resume.):
+  
+app/controllers/resume_controller.rb:7:in `create'
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:49:31 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 7.1ms | Allocations: 834)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 8578)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:49:38 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 896)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 31ms (Views: 13.0ms | ActiveRecord: 5.0ms | Allocations: 14402)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:49:42 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 525)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 7951)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:49:53 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYplDjKahI+KVFgvVhykRuoCtjpx4AGVHwtXikR3Uu4kvnZ/E4l72YZ+hLM0dqHooe2fcEIZCwR5IDJN4+S55g==", "description"=>"hello", "commit"=>"T(ai)lor!"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 759)
+
+
+  
+NameError (uninitialized constant ResumeController::Gpt3Service):
+  
+app/controllers/resume_controller.rb:32:in `tailor'
+Started GET "/resume" for 209.2.227.158 at 2023-11-01 18:50:07 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 828)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 8294)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-01 18:50:31 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 18:50:31 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 824)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8286)
+
+
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 18:50:46 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBHyQvhxtk1GqKQE+Z67NDCdz1pr5LX/5dN6r4pi4OSMqt1SahJnVuPzJmG9l8FA6qRXDPWe0isshizAyoSpcw==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f55d1c0c1e0 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-7333-1fmntj4.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 550)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'file' for Resume.):
+  
+app/controllers/resume_controller.rb:7:in `create'
+Started GET "/" for 209.2.231.106 at 2023-11-01 18:51:24 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 18:51:24 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 5110)
+  Rendered layouts/_flash.erb (Duration: 0.8ms | Allocations: 171)
+Completed 200 OK in 520ms (Views: 368.5ms | ActiveRecord: 18.2ms | Allocations: 328158)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:51:35 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYplDjKahI+KVFgvVhykRuoCtjpx4AGVHwtXikR3Uu4kvnZ/E4l72YZ+hLM0dqHooe2fcEIZCwR5IDJN4+S55g==", "description"=>"hello", "commit"=>"T(ai)lor!"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 777)
+
+
+  
+NameError (uninitialized constant ResumeController::Gpt3Service):
+  
+app/controllers/resume_controller.rb:32:in `tailor'
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 18:51:35 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jsrgtrVaMWb76+Wm67Wjy7Laj6fsQbtKUOP1+LQ2xkhacc+mJzngfV6wZ8OvvNm/aOMX8XI73J6ZtqOX9NCP3w==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x00005631b12ab550 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-7443-13ag7gd.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+[31mUnpermitted parameter: :file[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (28.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 18:51:35.328451"], ["updated_at", "2023-11-01 18:51:35.328451"]]
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 51.9ms | Allocations: 4609)
+
+
+  
+NoMethodError (undefined method `file' for #<Resume:0x00005631b12f06a0>):
+  
+app/controllers/resume_controller.rb:10:in `create'
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:53:07 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:53:07 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 846)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 8326)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:53:32 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1115)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 298ms (Views: 297.6ms | Allocations: 296912)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-01 18:53:33 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 18:53:33 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4850)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 94ms (Views: 17.1ms | ActiveRecord: 11.6ms | Allocations: 39297)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 18:53:39 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVEi0WmirLlBCKpnpIPWUIy4VybWu2lb/Qmg2dUAVM8wZTGgSLFT700idvvG6dP+x1d+bOVCY8qbIsUecpO/xw==", "description"=>"hello", "commit"=>"T(ai)lor!"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 785)
+
+
+  
+NameError (uninitialized constant ResumeController::Gpt3Service):
+  
+app/controllers/resume_controller.rb:32:in `tailor'
+Started POST "/resume" for 209.2.231.106 at 2023-11-01 18:53:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P0JTj/7fDfR0l7Xoppal3Mgi+GlfCS90YEIjmTfZUafr+XyfbLzc79HMN43in9+oEhtgP8FzSKCpF3X2dz8YMA==", "resume"=>{"title"=>"Ben", "file"=>#<ActionDispatch::Http::UploadedFile:0x000055e781c33390 @tempfile=#<Tempfile:/tmp/RackMultipart20231101-7463-1qax7y3.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+[31mUnpermitted parameter: :file[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.6ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ben"], ["created_at", "2023-11-01 18:53:43.507160"], ["updated_at", "2023-11-01 18:53:43.507160"]]
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 39ms (ActiveRecord: 21.5ms | Allocations: 3617)
+
+
+Started GET "/uploaded" for 209.2.231.106 at 2023-11-01 18:53:43 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.4ms | Allocations: 526)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 7970)
+
+

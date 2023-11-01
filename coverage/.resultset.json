@@ -22,7 +22,7 @@
           0,
           0,
           0,
-          0,
+          null,
           0,
           0,
           0,
@@ -42,6 +42,12 @@
           0,
           0,
           0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
           null,
           0,
           0,
@@ -89,12 +95,52 @@
       "/home/codio/workspace/Iteration/app/models/resume.rb": {
         "lines": [
           0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/codio/workspace/Iteration/app/services/gpt3.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
           null,
           0,
           0,
           0,
           0,
+          0,
+          0,
           null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           0,
           0,
           0,
@@ -104,7 +150,7 @@
         }
       }
     },
-    "timestamp": 1698857694
+    "timestamp": 1698864883
   },
   "RSpec": {
     "coverage": {
@@ -156,6 +202,10 @@
           0,
           0,
           null,
+          null,
+          0,
+          null,
+          null,
           0,
           0,
           0,
@@ -191,15 +241,41 @@
         "branches": {
         }
       },
-      "/home/codio/workspace/Iteration/app/models/resume.rb": {
+      "/home/codio/workspace/Iteration/app/models/gpt3.rb": {
         "lines": [
           0,
+          0,
+          0,
+          null,
+          0,
+          0,
           null,
           0,
           0,
           0,
           0,
+          0,
+          0,
           null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           0,
           0,
           0,
@@ -207,8 +283,22 @@
         ],
         "branches": {
         }
+      },
+      "/home/codio/workspace/Iteration/app/models/resume.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1698857514
+    "timestamp": 1698864491
   }
 }

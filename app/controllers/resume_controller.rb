@@ -7,7 +7,7 @@ class ResumeController < ApplicationController
     @resume = Resume.new(resume_params)
     if @resume.save
       puts "Uploaded resume title: #{@resume.title}"
-      puts "Uploaded resume file: #{@resume.file.url}"
+      #puts "Uploaded resume file: #{@resume.file.url}"
       flash[:notice] = "Resume uploaded successfully."
       flash[:alert] = "Warning: you have not yet tailored your resume for editing or downloading"
       redirect_to uploaded_path
@@ -28,6 +28,12 @@ class ResumeController < ApplicationController
       flash[:alert] = "Success! You can preview or download"
       flash[:notice] = nil
       #Change resume with AI
+
+      tailored_resume = Gpt3Service.generate_tailored_resume(description, @resume.title)
+
+      puts tailored_resume
+
+
     end
     redirect_to uploaded_path
   end
@@ -47,7 +53,7 @@ class ResumeController < ApplicationController
   private
 
   def resume_params
-    params.require(:resume).permit(:title, :file)
+    params.require(:resume).permit(:title, :attachment)
   end
 end
 

@@ -268,7 +268,7 @@ DEPENDENCIES
   launchy
   paperclip
   pg (= 0.21.0)
-  rails (= 6.0)
+  rails (= 6.0.0)
   rails_12factor
   rspec-rails (= 3.7.2)
   sass-rails (~> 5.0.3)
