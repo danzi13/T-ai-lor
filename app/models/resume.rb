@@ -1,5 +1,6 @@
 class Resume < ActiveRecord::Base
-   has_attached_file :file
+   #has_attached_file :file
+   has_one_attached :file
    attr_accessor :file_file_name
    attr_accessor :file_content_type
    attr_accessor :file_file_size
