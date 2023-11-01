@@ -1,11 +1,25 @@
-<p> Hi </p>
+<div class="col">
 
-<div class="row">
-  <div class="col-md-6">
-    <%= text_field :description, nil, class: 'form-control' %>
+  <h5>Paste your job description:</h5>
+
+  <%= form_tag tailor_path, method: :post, class: 'form' do %>
+    <%= text_area_tag :description, nil, class: 'form-control', style: 'height: 400px; width:75vw' %>
+    <br>
+
+  <%= %>
+
+  <div class="container">
+    <%= submit_tag 'T(ai)lor!', class: 'btn btn-success' %><% end %>
+    <%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
+    <br><br>
+
+    <% if flash[:alert] %>
+        <div class="btn btn-outline-secondary"><%= flash[:alert] %></div>
+    <% end %>
+
+    <br><br>
+    <%= link_to 'Download Resume', download_path, class: 'btn btn-dark' %>
+    <%= link_to 'Resume Editor', editor_path, class: 'btn btn-info' %>
+
   </div>
-</div>
-
-<div class="row">
-  <%= link_to 'Back to Upload', resume_path, :class => 'btn btn-danger col-2' %>
 </div>
