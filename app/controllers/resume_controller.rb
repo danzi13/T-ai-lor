@@ -38,7 +38,9 @@ class ResumeController < ApplicationController
       puts "THIS IS WHAT GPT IS RETURNING:"
       puts @tailored_resume
 
-      @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content
+      # @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content
+      @resume = Resume.new
+      @resume.resume_text = @tailored_resume
       @resume.save # Save the tailored resume
       
       puts "this is the new resume"
