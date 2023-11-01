@@ -6,7 +6,6 @@ gem 'rails', '4.2.10'
 # for Heroku deployment 
 group :development, :test do
   gem 'pg', '0.21.0'
-  gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
   gem 'launchy'
@@ -29,8 +28,6 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
-gem 'poppler'
