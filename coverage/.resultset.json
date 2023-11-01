@@ -119,7 +119,7 @@
       "/home/codio/workspace/Iteration/app/models/resume.rb": {
         "lines": [
           0,
-          0,
+          null,
           0,
           null,
           null,
@@ -214,7 +214,7 @@
         }
       }
     },
-    "timestamp": 1698879804
+    "timestamp": 1698880162
   },
   "RSpec": {
     "coverage": {

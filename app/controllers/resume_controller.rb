@@ -42,6 +42,7 @@ class ResumeController < ApplicationController
       @resume = Resume.new
       puts @tailored_resume.class
       @resume.resume_text = @tailored_resume
+      puts @resume.resume_text
       @resume.save # Save the tailored resume
       
       puts "this is the new resume!!"

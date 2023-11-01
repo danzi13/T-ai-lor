@@ -4,9 +4,11 @@ ruby '2.6.6'
 gem 'rails', '6.0.0'
 gem 'openai'
 gem 'httparty'
+gem 'pg'
 
 # for Heroku deployment 
 group :development, :test do
+  gem 'sqlite3', '1.4.0'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
   gem 'launchy'
@@ -23,7 +25,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
