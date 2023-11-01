@@ -5,7 +5,7 @@ gem 'rails', '4.2.10'
 
 # for Heroku deployment 
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.6'
+  gem 'pg', '0.21.0'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -21,8 +21,9 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'simplecov', :require => false
 end
+
 group :production do
-  gem 'pg', '~> 0.21'
+  gem 'pg', '0.21.0'
   gem 'rails_12factor'
 end
 
