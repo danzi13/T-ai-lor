@@ -1,4 +1,4 @@
-class AddAttachmentAttachmentToResumes < ActiveRecord::Migration
+class AddAttachmentAttachmentToResumes < ActiveRecord::Migration[6.0]
   def self.up
     change_table :resumes do |t|
       t.attachment :attachment

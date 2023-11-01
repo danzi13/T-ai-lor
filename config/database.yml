@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: db/development.sqlite3
+  database: postgres #db/development.sqlite3
   pool: 5
   username: codio
   password: 1234
@@ -19,7 +19,7 @@ development:
 # Do not set this db to the same as development or production.
 test: &test
   adapter: postgresql
-  database: db/test.sqlite3
+  database: postgres #db/test.sqlite3
   pool: 5
   timeout: 5000
   username: codio
@@ -28,7 +28,7 @@ test: &test
 
 production:
   adapter: postgresql
-  database: db/production.sqlite3
+  database: postgres #db/production.sqlite3
   pool: 5
   timeout: 5000
   username: codio
