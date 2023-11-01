@@ -11845,3 +11845,20 @@ Processing by ResumeController#new as HTML
 Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 8287)
 
 
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:13:51 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1056)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 9843)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-01 23:14:41 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-01 23:14:42 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1048)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9835)
+
+
