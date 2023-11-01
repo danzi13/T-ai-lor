@@ -1,4 +1,6 @@
 class ResumeController < ApplicationController
+
+  require_relative '../services/gpt3_service'
   def new
     @resume = Resume.new
   end

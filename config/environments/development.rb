@@ -28,6 +28,6 @@ Rottenpotatoes::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
+  config.hosts << "pure-river-69411-5cfef20475c9.herokuapp.com"
   config.hosts << "felixmodest-floodfresh-3000.codio.io"
 end

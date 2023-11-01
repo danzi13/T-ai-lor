@@ -14,6 +14,8 @@
       "/home/codio/workspace/Iteration/app/controllers/resume_controller.rb": {
         "lines": [
           0,
+          null,
+          0,
           0,
           0,
           0,
@@ -150,7 +152,7 @@
         }
       }
     },
-    "timestamp": 1698864883
+    "timestamp": 1698865046
   },
   "RSpec": {
     "coverage": {

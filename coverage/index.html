@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-11-01T18:54:43+00:00">2023-11-01T18:54:43+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-11-01T18:57:26+00:00">2023-11-01T18:57:26+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  1.45%
+  1.61%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.01
+         0.02
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>69</b> relevant lines,
+    <b>62</b> relevant lines,
     <span class="green"><b>1</b> lines covered</span> and
-    <span class="red"><b>68</b> lines missed. </span>
+    <span class="red"><b>61</b> lines missed. </span>
     (<span class="red">
-  1.45%
+  1.61%
 </span>
 )
   </div>
@@ -84,10 +84,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#85a9e1126aa05527f91f00b60f3c284c166e5558" class="src_link" title="app/controllers/resume_controller.rb">app/controllers/resume_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">59</td>
-            <td class="cell--number">31</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">31</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -168,9 +168,9 @@
   </div>
 
   <div class="t-line-summary">
-    <b>34</b> relevant lines,
+    <b>27</b> relevant lines,
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>34</b> lines missed. </span>
+    <span class="red"><b>27</b> lines missed. </span>
     (<span class="red">
   0.0%
 </span>
@@ -209,10 +209,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#85a9e1126aa05527f91f00b60f3c284c166e5558" class="src_link" title="app/controllers/resume_controller.rb">app/controllers/resume_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">59</td>
-            <td class="cell--number">31</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">31</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -772,9 +772,9 @@
     
 
     <div class="t-line-summary">
-      <b>31</b> relevant lines.
+      <b>24</b> relevant lines.
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>31</b> lines missed.</span>
+      <span class="red"><b>24</b> lines missed.</span>
     </div>
 
     
@@ -796,13 +796,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="2">
+          <li class="never" data-hits="" data-linenumber="2">
             
             
 
             
 
-            <code class="ruby">  def new</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -813,7 +813,7 @@
 
             
 
-            <code class="ruby">    @resume = Resume.new</code>
+            <code class="ruby">  require_relative &#39;../services/gpt3_service&#39;</code>
           </li>
         </div>
       
@@ -824,7 +824,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  def new</code>
           </li>
         </div>
       
@@ -835,7 +835,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    @resume = Resume.new</code>
           </li>
         </div>
       
@@ -846,133 +846,12 @@
 
             
 
-            <code class="ruby">  def create</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">    @resume = Resume.new(resume_params)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    if @resume.save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">      puts &quot;Uploaded resume title: #{@resume.title}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">      #puts &quot;Uploaded resume file: #{@resume.file.url}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">      flash[:notice] = &quot;Resume uploaded successfully.&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">      flash[:alert] = &quot;Warning: you have not yet tailored your resume for editing or downloading&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">      redirect_to uploaded_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">      render &#39;new&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="17">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -983,13 +862,134 @@
         </div>
       
         <div>
+          <li class="missed" data-hits="0" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    @resume = Resume.new(resume_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">    if @resume.save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">      puts &quot;Uploaded resume title: #{@resume.title}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">      #puts &quot;Uploaded resume file: #{@resume.file.url}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = &quot;Resume uploaded successfully.&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:alert] = &quot;Warning: you have not yet tailored your resume for editing or downloading&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">      redirect_to uploaded_path</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">      render &#39;new&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="missed" data-hits="0" data-linenumber="19">
             
             
 
             
 
-            <code class="ruby">  def tailor</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1011,18 +1011,18 @@
 
             
 
-            <code class="ruby">    description = params[:description]</code>
+            <code class="ruby">  def tailor</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
             
 
-            <code class="ruby">    puts description</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1033,7 +1033,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    description = params[:description]</code>
           </li>
         </div>
       
@@ -1044,78 +1044,12 @@
 
             
 
-            <code class="ruby">    if description == &quot;&quot;</code>
+            <code class="ruby">    puts description</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">      flash[:alert] = &quot;Warning: you have not tailored your resume for editing or downloading&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">      flash[:notice] = &quot;No description, try again&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">      flash[:alert] = &quot;Success! You can preview or download&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">      flash[:notice] = nil</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">      #Change resume with AI</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -1126,13 +1060,79 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="32">
+          <li class="missed" data-hits="0" data-linenumber="26">
             
             
 
             
 
-            <code class="ruby">      tailored_resume = Gpt3Service.generate_tailored_resume(description, @resume.title)</code>
+            <code class="ruby">    if description == &quot;&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:alert] = &quot;Warning: you have not tailored your resume for editing or downloading&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = &quot;No description, try again&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:alert] = &quot;Success! You can preview or download&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:notice] = nil</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">      #Change resume with AI</code>
           </li>
         </div>
       
@@ -1154,7 +1154,7 @@
 
             
 
-            <code class="ruby">      puts tailored_resume</code>
+            <code class="ruby">      tailored_resume = Gpt3Service.generate_tailored_resume(description, @resume.title)</code>
           </li>
         </div>
       
@@ -1170,24 +1170,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
+          <li class="missed" data-hits="0" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">      puts tailored_resume</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1198,7 +1198,7 @@
 
             
 
-            <code class="ruby">    redirect_to uploaded_path</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1209,7 +1209,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1220,7 +1220,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    redirect_to uploaded_path</code>
           </li>
         </div>
       
@@ -1231,7 +1231,7 @@
 
             
 
-            <code class="ruby">  def download</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1242,7 +1242,7 @@
 
             
 
-            <code class="ruby">    # If not tailored then </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1253,7 +1253,7 @@
 
             
 
-            <code class="ruby">    #flash[:notice] = &#39;No description uploaded, download failed(????)&#39;</code>
+            <code class="ruby">  def download</code>
           </li>
         </div>
       
@@ -1264,7 +1264,7 @@
 
             
 
-            <code class="ruby">    #flash[:alert] = &quot;Warning: you have not tailored your resume for editing or downloading&quot;</code>
+            <code class="ruby">    # If not tailored then </code>
           </li>
         </div>
       
@@ -1275,7 +1275,7 @@
 
             
 
-            <code class="ruby">    #redirect_to uploaded_path</code>
+            <code class="ruby">    #flash[:notice] = &#39;No description uploaded, download failed(????)&#39;</code>
           </li>
         </div>
       
@@ -1286,7 +1286,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    #flash[:alert] = &quot;Warning: you have not tailored your resume for editing or downloading&quot;</code>
           </li>
         </div>
       
@@ -1297,7 +1297,7 @@
 
             
 
-            <code class="ruby">    #else</code>
+            <code class="ruby">    #redirect_to uploaded_path</code>
           </li>
         </div>
       
@@ -1308,7 +1308,7 @@
 
             
 
-            <code class="ruby">    #send_file &#39;/path/to.zip&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1319,7 +1319,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    #else</code>
           </li>
         </div>
       
@@ -1330,23 +1330,12 @@
 
             
 
-            <code class="ruby">    redirect_to uploaded_path</code>
+            <code class="ruby">    #send_file &#39;/path/to.zip&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="51">
-            
-            
-
-            
-
-            <code class="ruby">  end </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -1357,13 +1346,24 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">    redirect_to uploaded_path</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="missed" data-hits="0" data-linenumber="53">
             
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">  end </code>
           </li>
         </div>
       
@@ -1385,18 +1385,18 @@
 
             
 
-            <code class="ruby">  def resume_params</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
             
 
-            <code class="ruby">    params.require(:resume).permit(:title, :attachment)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1407,7 +1407,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  def resume_params</code>
           </li>
         </div>
       
@@ -1418,12 +1418,34 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">    params.require(:resume).permit(:title, :attachment)</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
