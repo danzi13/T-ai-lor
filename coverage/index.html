@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-11-01T22:56:50+00:00">2023-11-01T22:56:50+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-11-01T23:03:24+00:00">2023-11-01T23:03:24+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,9 +43,9 @@
   </div>
 
   <div class="t-line-summary">
-    <b>108</b> relevant lines,
+    <b>110</b> relevant lines,
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>108</b> lines missed. </span>
+    <span class="red"><b>110</b> lines missed. </span>
     (<span class="red">
   0.0%
 </span>
@@ -84,10 +84,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#85a9e1126aa05527f91f00b60f3c284c166e5558" class="src_link" title="app/controllers/resume_controller.rb">app/controllers/resume_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">80</td>
-            <td class="cell--number">67</td>
+            <td class="cell--number">83</td>
+            <td class="cell--number">69</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">67</td>
+            <td class="cell--number">69</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -168,9 +168,9 @@
   </div>
 
   <div class="t-line-summary">
-    <b>70</b> relevant lines,
+    <b>72</b> relevant lines,
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>70</b> lines missed. </span>
+    <span class="red"><b>72</b> lines missed. </span>
     (<span class="red">
   0.0%
 </span>
@@ -209,10 +209,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#85a9e1126aa05527f91f00b60f3c284c166e5558" class="src_link" title="app/controllers/resume_controller.rb">app/controllers/resume_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">80</td>
-            <td class="cell--number">67</td>
+            <td class="cell--number">83</td>
+            <td class="cell--number">69</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">67</td>
+            <td class="cell--number">69</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -772,9 +772,9 @@
     
 
     <div class="t-line-summary">
-      <b>67</b> relevant lines.
+      <b>69</b> relevant lines.
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>67</b> lines missed.</span>
+      <span class="red"><b>69</b> lines missed.</span>
     </div>
 
     
@@ -1225,13 +1225,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
             
 
-            <code class="ruby">      @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content</code>
+            <code class="ruby">      # @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content</code>
           </li>
         </div>
       
@@ -1242,18 +1242,18 @@
 
             
 
-            <code class="ruby">      @resume.save # Save the tailored resume</code>
+            <code class="ruby">      @resume = Resume.new</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="missed" data-hits="0" data-linenumber="43">
             
             
 
             
 
-            <code class="ruby">      </code>
+            <code class="ruby">      puts @tailored_resume.class</code>
           </li>
         </div>
       
@@ -1264,7 +1264,7 @@
 
             
 
-            <code class="ruby">      puts &quot;this is the new resume&quot;</code>
+            <code class="ruby">      @resume.resume_text = @tailored_resume</code>
           </li>
         </div>
       
@@ -1275,18 +1275,18 @@
 
             
 
-            <code class="ruby">      puts @resume.inspect</code>
+            <code class="ruby">      @resume.save # Save the tailored resume</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
             
 
-            <code class="ruby">      attributes_hash = @resume.attributes</code>
+            <code class="ruby">      </code>
           </li>
         </div>
       
@@ -1297,7 +1297,7 @@
 
             
 
-            <code class="ruby">      attributes_hash.each do |attribute, value|</code>
+            <code class="ruby">      puts &quot;this is the new resume!!&quot;</code>
           </li>
         </div>
       
@@ -1308,7 +1308,7 @@
 
             
 
-            <code class="ruby">        puts &quot;#{attribute}: #{value}&quot;</code>
+            <code class="ruby">      puts @resume.inspect</code>
           </li>
         </div>
       
@@ -1319,18 +1319,18 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">      attributes_hash = @resume.attributes</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="missed" data-hits="0" data-linenumber="50">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      attributes_hash.each do |attribute, value|</code>
           </li>
         </div>
       
@@ -1341,7 +1341,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        puts &quot;#{attribute}: #{value}&quot;</code>
           </li>
         </div>
       
@@ -1352,29 +1352,29 @@
 
             
 
-            <code class="ruby">    redirect_to uploaded_path</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="53">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="54">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1385,7 +1385,7 @@
 
             
 
-            <code class="ruby">  def download</code>
+            <code class="ruby">    redirect_to uploaded_path</code>
           </li>
         </div>
       
@@ -1396,18 +1396,18 @@
 
             
 
-            <code class="ruby">    tailored_resume = Resume.last # Get the last tailored resume</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
             
 
-            <code class="ruby">    attributes_hash = tailored_resume.attributes</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1418,7 +1418,7 @@
 
             
 
-            <code class="ruby">    attributes_hash.each do |attribute, value|</code>
+            <code class="ruby">  def download</code>
           </li>
         </div>
       
@@ -1429,7 +1429,7 @@
 
             
 
-            <code class="ruby">      puts &quot;#{attribute}: #{value}&quot;</code>
+            <code class="ruby">    tailored_resume = Resume.last # Get the last tailored resume</code>
           </li>
         </div>
       
@@ -1440,7 +1440,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    attributes_hash = tailored_resume.attributes</code>
           </li>
         </div>
       
@@ -1451,7 +1451,7 @@
 
             
 
-            <code class="ruby">    if tailored_resume</code>
+            <code class="ruby">    attributes_hash.each do |attribute, value|</code>
           </li>
         </div>
       
@@ -1462,7 +1462,7 @@
 
             
 
-            <code class="ruby">      puts &#39;here&#39;</code>
+            <code class="ruby">      puts &quot;#{attribute}: #{value}&quot;</code>
           </li>
         </div>
       
@@ -1473,7 +1473,7 @@
 
             
 
-            <code class="ruby">      puts tailored_resume.resume_text</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1484,7 +1484,7 @@
 
             
 
-            <code class="ruby">      puts &#39;here&#39;</code>
+            <code class="ruby">    if tailored_resume</code>
           </li>
         </div>
       
@@ -1495,7 +1495,7 @@
 
             
 
-            <code class="ruby">      send_data tailored_resume.resume_text, filename: &#39;tailored_resume.txt&#39;, type: &#39;text/plain&#39;, disposition: &#39;attachment&#39;</code>
+            <code class="ruby">      puts &#39;here&#39;</code>
           </li>
         </div>
       
@@ -1506,7 +1506,7 @@
 
             
 
-            <code class="ruby">      puts &quot;Tailored resume exists&quot;</code>
+            <code class="ruby">      puts tailored_resume.resume_text</code>
           </li>
         </div>
       
@@ -1517,7 +1517,7 @@
 
             
 
-            <code class="ruby">    else</code>
+            <code class="ruby">      puts &#39;here&#39;</code>
           </li>
         </div>
       
@@ -1528,7 +1528,7 @@
 
             
 
-            <code class="ruby">      flash[:alert] = &quot;No tailored resume is available for download.&quot;</code>
+            <code class="ruby">      send_data tailored_resume.resume_text, filename: &#39;tailored_resume.txt&#39;, type: &#39;text/plain&#39;, disposition: &#39;attachment&#39;</code>
           </li>
         </div>
       
@@ -1539,7 +1539,7 @@
 
             
 
-            <code class="ruby">      puts &quot;ERROR: No tailored resume found&quot;</code>
+            <code class="ruby">      puts &quot;Tailored resume exists&quot;</code>
           </li>
         </div>
       
@@ -1550,7 +1550,7 @@
 
             
 
-            <code class="ruby">      redirect_to uploaded_path</code>
+            <code class="ruby">    else</code>
           </li>
         </div>
       
@@ -1561,7 +1561,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      flash[:alert] = &quot;No tailored resume is available for download.&quot;</code>
           </li>
         </div>
       
@@ -1572,18 +1572,18 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      puts &quot;ERROR: No tailored resume found&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="missed" data-hits="0" data-linenumber="73">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      redirect_to uploaded_path</code>
           </li>
         </div>
       
@@ -1594,45 +1594,12 @@
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="75">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="76">
-            
-            
-
-            
-
-            <code class="ruby">  def resume_params</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="77">
-            
-            
-
-            
-
-            <code class="ruby">    params.require(:resume).permit(:attachment, :resume_text) # Include :resume_text in permitted params</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="78">
+          <li class="missed" data-hits="0" data-linenumber="75">
             
             
 
@@ -1643,7 +1610,73 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="76">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
           <li class="missed" data-hits="0" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby">  def resume_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby">    params.require(:resume).permit(:attachment, :resume_text) # Include :resume_text in permitted params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="81">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="82">
             
             
 
@@ -1654,7 +1687,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="80">
+          <li class="never" data-hits="" data-linenumber="83">
             
             
 

@@ -11388,3 +11388,214 @@ Processing by ResumeController#uploaded as HTML
 Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 8420)
 
 
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-01 22:58:12 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 528)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.6ms | Allocations: 8198)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-01 22:58:14 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.5ms | Allocations: 202)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 8047)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-01 22:58:16 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 528)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 34ms (Views: 33.5ms | Allocations: 8015)
+
+
+Started POST "/tailor" for 209.2.231.226 at 2023-11-01 22:58:18 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"awT5rSJRWsWVpKa2fhVE8k2u0Fd1pAwC69M/1IbONUW4aqhKcV9YkiYiwhsOwCUuWWGYd2B9F0np874SJBdU7w==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (Allocations: 418)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-01 22:58:18 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 539)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.3ms | Allocations: 8024)
+
+
+Started GET "/" for 209.2.231.226 at 2023-11-01 22:58:19 +0000
+Started GET "/resume" for 209.2.231.226 at 2023-11-01 22:58:20 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 793)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 30ms (Views: 14.3ms | ActiveRecord: 1.3ms | Allocations: 15977)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 22:59:16 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZeBmC1pZh0KGpmOrMJrFDMkoykII3su34XaHWvHCd0cw1HV6e0p4FIqMvzdS8MCigsfjCDsnwSaHXeKdVlGcTw==", "description"=>"skills required is ruby and sql", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-01 22:59:18.398953"], ["updated_at", "2023-11-01 22:59:18.398953"]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1513ms (ActiveRecord: 72.7ms | Allocations: 3823)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 22:59:18 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.7ms | Allocations: 816)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 153)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 9542)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 22:59:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1034)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 8697)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:00:03 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bToSauQ96m0sW0UXp1rN9M7QozUA0ce5x5sulnGfbXw4DgEbxS4VOyBxmYvFMMhahT+KfzMozSihsEtR1gyGdA==", "description"=>"skills needed: ruby and sql", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-01 23:00:04.527980"], ["updated_at", "2023-11-01 23:00:04.527980"]]
+  [1m[35m (78.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1360ms (ActiveRecord: 80.4ms | Allocations: 11441)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:00:04 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 544)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8178)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:00:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 778)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8299)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:01:36 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bw5/btCTuLBFwMu62hfWdd0ieLJX3yPRhu8a7YoxdrhSOmwf8YBH5knqFya4fdPbls1R+GQmKUDgxH8qLaKdsA==", "description"=>"skills needed ruby and sql", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2023-11-01 23:01:38.372135"], ["updated_at", "2023-11-01 23:01:38.372135"]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1475ms (ActiveRecord: 76.3ms | Allocations: 11459)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:01:39 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8164)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:03:03 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:03:03 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 44ms (Allocations: 17637)
+
+
+  
+NoMethodError (undefined method `has_one_attached' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:2:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:03:46 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 611)
+
+
+  
+NoMethodError (undefined method `has_one_attached' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:2:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:04:06 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 559)
+
+
+  
+NoMethodError (undefined method `has_one_attached' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:2:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:04:08 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 559)
+
+
+  
+NoMethodError (undefined method `has_one_attached' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:2:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:04:22 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 547)
+
+
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:04:23 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 134)
+
+
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:04:24 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 134)
+
+
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-01 23:04:26 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 134)
+
+
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+app/controllers/resume_controller.rb:6:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:04:33 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 0ms (Allocations: 134)
+
+
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+app/controllers/resume_controller.rb:6:in `new'

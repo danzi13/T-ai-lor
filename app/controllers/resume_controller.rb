@@ -40,10 +40,11 @@ class ResumeController < ApplicationController
 
       # @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content
       @resume = Resume.new
+      puts @tailored_resume.class
       @resume.resume_text = @tailored_resume
       @resume.save # Save the tailored resume
       
-      puts "this is the new resume"
+      puts "this is the new resume!!"
       puts @resume.inspect
       attributes_hash = @resume.attributes
       attributes_hash.each do |attribute, value|
