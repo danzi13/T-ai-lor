@@ -10,7 +10,7 @@
     <%#= label :resume, :resume_text, 'Resume Text', :class => 'col-form-label' %>
     <%#= text_field :resume, 'resume text', :class => 'form-control' %>
     <%= f.label :resume_text, 'Resume Text' %>
-    <%= f.text_area :resume_text, style: 'display: none;' %>
+    <%= text_field :resume_text, style: 'display: none;' %>
   </div>
   <div class="actions">
     <%= f.submit "Upload Resume" %>

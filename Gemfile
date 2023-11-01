@@ -8,7 +8,6 @@ gem 'pg'
 
 # for Heroku deployment 
 group :development, :test do
-  gem 'sqlite3', '1.4.0'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
   gem 'launchy'

@@ -11821,3 +11821,27 @@ Processing by ResumeController#uploaded as HTML
 Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9541)
 
 
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:12:14 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1094)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 9881)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:13:11 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1048)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 9835)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-01 23:13:19 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 765)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 8287)
+
+
