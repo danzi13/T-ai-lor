@@ -55,17 +55,17 @@ class ResumeController < ApplicationController
       @last_resume.resume_text = @tailored_resume
       @last_resume.save
 
-      if @last_resume.save
-        # Successfully saved
-        # puts "successfully saved"
-      else
-        # Handle validation errors
-        # puts @last_resume.errors.full_messages
-      end
+      # if @last_resume.save
+      #   # Successfully saved
+      #   # puts "successfully saved"
+      # else
+      #   # Handle validation errors
+      #   # puts @last_resume.errors.full_messages
+      # end
 
       # puts "this is the new resume!!"
       # puts @last_resume.inspect
-      l_resume = Resume.order(id: :desc).first
+      # l_resume = Resume.order(id: :desc).first
       # puts l_resume.inspect
 
     end
