@@ -21,7 +21,7 @@ class ResumeController < ApplicationController
       render 'new'
     end
 
-    @last_resume = Resume.last
+    # @last_resume = Resume.last
     # puts @last_resume.inspect
   end
 

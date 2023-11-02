@@ -20002,3 +20002,11 @@ Processing by ResumeController#uploaded as HTML
 Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 8060)
 
 
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 03:04:11 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 765)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 67ms (Views: 12.0ms | ActiveRecord: 38.4ms | Allocations: 18769)
+
+
