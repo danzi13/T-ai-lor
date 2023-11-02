@@ -318,3 +318,766 @@ FOREIGN KEY ("blob_id")
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (72.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (71.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4150221691207175325)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResumes (20231031200214)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (38.5ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" bigserial primary key, "title" character varying, "attachment_file_name" character varying, "attachment_content_type" character varying, "attachment_file_size" bigint, "attachment_updated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231031200214"]]
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFileToResumes (20231101163556)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "resumes" ADD "file" bytea[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231101163556"]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20231101174332)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.7ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  [1m[35m (39.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (27.7ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231101174332"]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-11-01 23:45:31.359618"], ["updated_at", "2023-11-01 23:45:31.359618"]]
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4150221691207175325)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:23:21 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5155)
+  Rendered layouts/_flash.erb (Duration: 3.6ms | Allocations: 230)
+Completed 200 OK in 473ms (Views: 439.0ms | ActiveRecord: 21.0ms | Allocations: 310682)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:23:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1650)
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:23:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:23:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:23:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:23:22 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 588)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1757)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:23:22 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1326)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:24:11 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 5155)
+  Rendered layouts/_flash.erb (Duration: 3.6ms | Allocations: 230)
+Completed 200 OK in 321ms (Views: 299.7ms | ActiveRecord: 5.0ms | Allocations: 300784)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:24:11 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1650)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:24:11 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:24:11 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:24:11 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:26:25 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 474)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:26:25 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 411)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:26:46 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 644)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:26:46 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5155)
+  Rendered layouts/_flash.erb (Duration: 3.5ms | Allocations: 230)
+Completed 200 OK in 282ms (Views: 265.9ms | ActiveRecord: 4.6ms | Allocations: 300355)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:26:47 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1650)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:26:47 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:20 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 5185)
+  Rendered layouts/_flash.erb (Duration: 3.7ms | Allocations: 230)
+Completed 200 OK in 343ms (Views: 317.9ms | ActiveRecord: 6.6ms | Allocations: 300880)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 528)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1657)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1645)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1645)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1645)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:41 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 24.1ms | Allocations: 7360)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 5.0ms | Allocations: 16217)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:29:41 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2327)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2585)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:30:53 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 5185)
+  Rendered layouts/_flash.erb (Duration: 3.5ms | Allocations: 230)
+Completed 200 OK in 345ms (Views: 319.2ms | ActiveRecord: 6.5ms | Allocations: 300880)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:30:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 528)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1657)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:30:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1645)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:30:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1645)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:30:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1645)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:32:19 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 5155)
+  Rendered layouts/_flash.erb (Duration: 4.5ms | Allocations: 230)
+Completed 200 OK in 361ms (Views: 338.7ms | ActiveRecord: 7.0ms | Allocations: 300851)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:32:19 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 1650)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:32:19 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:32:19 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:32:19 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:34:33 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5155)
+  Rendered layouts/_flash.erb (Duration: 3.5ms | Allocations: 230)
+Completed 200 OK in 286ms (Views: 268.5ms | ActiveRecord: 4.7ms | Allocations: 300851)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:34:33 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1650)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:34:33 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:34:33 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:34:33 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:12 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5155)
+  Rendered layouts/_flash.erb (Duration: 3.4ms | Allocations: 230)
+Completed 200 OK in 299ms (Views: 278.3ms | ActiveRecord: 5.7ms | Allocations: 300851)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1650)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 7.4ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 274ms (Views: 272.9ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 69ms (Views: 11.9ms | ActiveRecord: 4.5ms | Allocations: 12716)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:35:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 4.8ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 222ms (Views: 221.3ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.7ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 68ms (Views: 11.5ms | ActiveRecord: 4.9ms | Allocations: 12715)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:36:15 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 5.4ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 228ms (Views: 226.9ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 35ms (Views: 13.3ms | ActiveRecord: 5.9ms | Allocations: 12682)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:37:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:38:19 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 5.8ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 236ms (Views: 235.4ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:38:20 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 280)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1348)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:38:20 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4876)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 29ms (Views: 12.1ms | ActiveRecord: 4.7ms | Allocations: 12695)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:38:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:38:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:38:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:38:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:39:10 +0000
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:39:10 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:39:10 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:39:10 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:39:20 +0000
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:39:20 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:39:20 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:39:20 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:41:18 +0000
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:41:18 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:41:18 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:41:18 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:42:47 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 5.4ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 244ms (Views: 242.7ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:42:48 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:42:48 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 71ms (Views: 12.4ms | ActiveRecord: 4.8ms | Allocations: 12717)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:42:48 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:42:48 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:42:48 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:42:48 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:44:43 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 4.9ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 227ms (Views: 226.0ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:44:43 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:44:43 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 68ms (Views: 11.8ms | ActiveRecord: 4.7ms | Allocations: 12715)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:44:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:44:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:44:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:44:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 5.0ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 224ms (Views: 223.2ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 67ms (Views: 12.4ms | ActiveRecord: 4.6ms | Allocations: 12715)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:45:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 6.3ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 159)
+Completed 200 OK in 279ms (Views: 278.1ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 84ms (Views: 12.9ms | ActiveRecord: 6.3ms | Allocations: 12716)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:47:06 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1638)

@@ -14,10 +14,14 @@ module NavigationHelpers
     case page_name
 
     when /on the resume page$/ then '/resume'
+    when /the uploaded page$/ then '/uploaded'
     
     when /Enter Resume Text$/ then '/resume#'
 
-    when /Continue$/ then '/uploaded'
+    when /Submit Text$/ then '/uploaded'
+    when /Upload Resume$/ then '/uploaded'
+    
+    when /Choose File$/ then '/resume'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

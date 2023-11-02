@@ -13,4 +13,6 @@ Rottenpotatoes::Application.routes.draw do
   get '/download', to: 'resume#download', as: 'download'
 
   get '/editor', to: 'resume#editor', as: 'editor'
+
+  post '/resume/save', to: 'resume#save'
 end

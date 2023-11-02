@@ -36,6 +36,7 @@ Rottenpotatoes::Application.configure do
   config.hosts << "pure-river-69411-5cfef20475c9.herokuapp.com"
   config.hosts << "felixmodest-floodfresh-3000.codio.io"
   config.hosts << "felixmodest-floodfresh-3001.codio.io"
+  config.hosts << "www.example.com"
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 

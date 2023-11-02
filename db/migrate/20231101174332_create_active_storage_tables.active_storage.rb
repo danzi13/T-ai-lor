@@ -9,6 +9,7 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
       t.bigint   :byte_size,  null: false
       t.string   :checksum,   null: false
       t.datetime :created_at, null: false
+      t.string   :resume_text
 
       t.index [ :key ], unique: true
     end
@@ -17,6 +18,7 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
       t.string     :name,     null: false
       t.references :record,   null: false, polymorphic: true, index: false
       t.references :blob,     null: false
+      t.string   :resume_text
 
       t.datetime :created_at, null: false
 

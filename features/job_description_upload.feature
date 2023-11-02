@@ -1,8 +1,7 @@
 Feature: upload job description on t(AI)lor
 
 Background: user on website
-  Given the user is on the job description page of t(AI)lor
-  And Resume uploaded successfully
+  Given I am on the uploaded page
 
 Scenario: add job description
   When I fill in "Job Description"

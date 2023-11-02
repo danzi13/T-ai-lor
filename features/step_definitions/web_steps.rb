@@ -53,6 +53,8 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
 
+
+
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
@@ -100,6 +102,10 @@ end
 
 When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
+end
+
+When /^I attach the file "([^"]*)"$/ do |path|
+  
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
