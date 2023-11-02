@@ -11,6 +11,7 @@ class ResumeController < ApplicationController
       puts "Resume Text: #{params[:resume][:resume_text]}"
     end
     @resume = Resume.new(resume_params)
+    @resume.title = params[:resume][:resume_text]
     if @resume.save
       puts "Uploaded resume title: #{@resume.title}"
       flash[:notice] = "Resume uploaded successfully."
@@ -19,6 +20,9 @@ class ResumeController < ApplicationController
     else
       render 'new'
     end
+
+    @last_resume = Resume.last
+    puts @last_resume.inspect
   end
 
   def tailor
@@ -32,30 +36,36 @@ class ResumeController < ApplicationController
       flash[:alert] = "Success! You can preview or download"
       flash[:notice] = nil
 
+      @last_resume = Resume.last
+
       # Change resume with AI
-      @prompt = "Tailor the following resume to match the job description:\n\nJob Description: #{description}\n\nResume: skills: java, python \n\nTailored Resume:"
+      @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same:\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
       @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
       puts "THIS IS WHAT GPT IS RETURNING:"
       puts @tailored_resume
 
       # @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content
-      @resume = Resume.new
-      last_resume = Resume.unscoped.last
+      # @resume = Resume.new
 
-      @resume.id = last_resume.id + 1
+      # @resume.id = last_resume.id + 1
 
       puts "Value of @tailored_resume: #{@tailored_resume}"
       # Assign @tailored_resume to @resume.resume_text
-      @resume.title = @tailored_resume
-      # Check the value of @resume.resume_text after assignment
-      puts "Value of @resume.resume_text after assignment: #{@resume.resume_text}"
-      @resume.save
+      @last_resume.title = @tailored_resume
+      @last_resume.resume_text = @tailored_resume
+      @last_resume.save
 
-
+      if @last_resume.save
+        # Successfully saved
+        puts "successfully saved"
+      else
+        # Handle validation errors
+        puts @last_resume.errors.full_messages
+      end
 
       puts "this is the new resume!!"
-      puts @resume.inspect
-      l_resume = Resume.last
+      puts @last_resume.inspect
+      l_resume = Resume.order(id: :desc).first
       puts l_resume.inspect
 
     end
@@ -82,7 +92,9 @@ class ResumeController < ApplicationController
   end
 
   def editor
-    @editor_helper = "hi"
+
+    @last_resume = Resume.last
+    @editor_helper = @last_resume.title
     if @tailored_resume == ""
       @title_helper = 'tailored_resume.txt'
       @editor_helper = @tailored_resume
@@ -96,15 +108,16 @@ class ResumeController < ApplicationController
     @resume = Resume.new
     @resume.title = params[:resume]
     @resume.save
-    flash[:notice] = nil
+    flash[:notice] = "Success! Resume Updated"
+    redirect_to uploaded_path
+  end
+  
+  def cancel
+    flash[:notice] = "Your resume was not changed"
     redirect_to uploaded_path
   end
 
-
-private
-
   def resume_params
     params.require(:resume).permit(:attachment, :resume_text) # Include :resume_text in permitted params
-    # params.permit(:resume, :attachment, :resume_text)
   end
 end

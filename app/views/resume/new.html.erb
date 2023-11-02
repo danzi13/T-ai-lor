@@ -1,28 +1,36 @@
 <h2>Powered by ChatGPT 3.5</h2>
 <p>Upload your Resume</p>
 
-<div class="row">
-  <div class="col-md-6">
-    <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+<%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+    
+  <div class="row">
+    <div class="col-md-6">
       <div class="field">
-        <%= f.label :file %>
-        <%= f.file_field :file %>
+        <label for="resume_file">File</label>
+        <input type="file" name="resume[file]" id="resume_file">
       </div>
-      <div class="actions">
-        <%= f.submit "Upload Resume" %>
-      </div>
-    <% end %>
-  </div> <!-- Close this div -->
-  <div class="col-md-6">
-    <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
-      <div class="field" style="padding-top: 20px;">
-        <%= f.label :resume_text, 'Resume Text' %>
-        <%= f.text_area :resume_text, style: 'width: 100%;' %>
-      </div>
-      <div class="actions">
-        <%= f.submit "Submit Text" %>
-      </div>
-    <% end %>
+    </div>
   </div>
+
+	
+  <div class="col-md-6">
+      <div class="field">
+        <%= f.label :resume_text, 'Resume Text' %>
+        <%= f.text_area :resume_text %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="field">
+        <%= submit_tag "Upload Resume" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="text-center" style="margin-top: auto;">
+  <%= link_to 'Continue', uploaded_path, class: 'btn btn-primary' %>
 </div>
 

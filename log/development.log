@@ -16086,3 +16086,1998 @@ Processing by ResumeController#uploaded as HTML
 Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 8227)
 
 
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:52:13 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:52:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 895)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 3.7ms | Allocations: 15209)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:52:20 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EIQsvtZEVI/WN9cLQJ1u4qQgiMoUOdr297HSF5hdoepFsD/P91er2dodC5ci92tM78+hgCfA0GeRmrfQP85K4g==", "resume"=>{"resume_text"=>"jasmine lou resume\r\nskills: python"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 00:52:20.840927"], ["updated_at", "2023-11-02 00:52:20.840927"]]
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 22ms (ActiveRecord: 17.2ms | Allocations: 968)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:52:20 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:52:25 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5D/Nutd69NL56gCQ9KnO8rluJtqHc+cIXGJd4NwvbHexC97L9mkLhPXA3AyWw8tc8oEPkLSK7Zk6STgne7yHfw==", "description"=>"skill needed ruby", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 976ms (ActiveRecord: 0.3ms | Allocations: 5091)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:52:26 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 520)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8055)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 00:52:58 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 521)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 8056)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:54:27 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:54:28 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5267)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 461ms (Views: 380.4ms | ActiveRecord: 11.1ms | Allocations: 329489)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:54:35 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LETlswZ2wirdIYSWt4RGObUxJRgfnnjCARq3MIkkzBR5cPbCJ2U9fNELWArV7kOX/t4MUixnclNnMdL3LrcnHA==", "resume"=>{"resume_text"=>"jasmine resume\r\nskills: python"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (1.0ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 00:54:35.674331"], ["updated_at", "2023-11-02 00:54:35.674331"]]
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 38ms (ActiveRecord: 21.0ms | Allocations: 3478)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:54:35 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.7ms | Allocations: 854)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 8504)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:54:48 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tgtpbfxEL2snqn67D05u0uzuG4Gxgj7hf0M6K2w8ClTjP3oc3VfQPSuAoidtJGt8pwEyy4J7NHAZaF/sy6/hXA==", "description"=>"skills needed java", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT * FROM resumes ORDER BY id DESC LIMIT 1[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1474ms (ActiveRecord: 0.8ms | Allocations: 4895)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:54:50 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8066)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 00:56:34 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.1ms | Allocations: 565)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 8703)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:56:34 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oML97AsIvrWfUoecI8YqOUGOn9B0/R2kuC4Xb7FpVQP19u6dKhtB45N4WwBBrC+XCmG2mkcEFzXeBXKoFvq+Cw==", "description"=>"skill needed ruby", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1160ms (ActiveRecord: 5.7ms | Allocations: 11690)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:56:35 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 541)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 8077)
+
+
+Started POST "/resume/save" for 209.2.231.226 at 2023-11-02 00:56:36 +0000
+Processing by ResumeController#save as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L5zs8PcA0jVi6B4hEeUHUFoaa7z90AdemwoB7Wtd8rH88r0XpA7QYtFueoxhMGaMTtUjnOgJHBWZKoAryYSTGw==", "resume"=>"hi", "commit"=>"Save"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 873)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 00:56:36 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 8066)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:58:08 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:58:08 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 900)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 26ms (Views: 10.6ms | ActiveRecord: 4.1ms | Allocations: 15214)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:58:14 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZmS9jdESg5PfSSPHz6haPgHyKDtH0QuaeLDbg1h5zpcrYGHFle1WENX+BN9VKTGs+jh6t7mTr8PyaapqvIMMg==", "resume"=>{"resume_text"=>"jasmine\r\nskills: none"}, "commit"=>"Submit Text"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 00:58:14.466951"], ["updated_at", "2023-11-02 00:58:14.466951"]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 20ms (ActiveRecord: 16.2ms | Allocations: 958)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:58:14 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 543)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8080)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:58:26 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t/BTqR0LPjNbw4HOq8mVgrgSginQNZl1Lls4TrvL9OHixEDYPBjBZVfpXVLJo5As8/2rY+PMk+RIcF2JHFgf6Q==", "description"=>"skills needed python", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 805ms (ActiveRecord: 0.3ms | Allocations: 2591)
+
+
+  
+NoMethodError (undefined method `resume_text' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:51:in `tailor'
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 00:58:37 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8126)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 00:58:41 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 512)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8048)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:09 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t/BTqR0LPjNbw4HOq8mVgrgSginQNZl1Lls4TrvL9OHixEDYPBjBZVfpXVLJo5As8/2rY+PMk+RIcF2JHFgf6Q==", "description"=>"skills needed python", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1272ms (ActiveRecord: 4.1ms | Allocations: 11889)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:11 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 821)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 153)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 9603)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 00:59:11 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 527)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 8063)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:13 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1132)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 8850)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 00:59:16 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxLIPi69gk5iFo1dbgPSAEA4rnIUrW9EaD4NACvL5a9uNKKks6OaTUUdOJK2HpFhj9xkwr/Fqz+s92w4IA4sng==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 583)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8912)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 00:59:19 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxLIPi69gk5iFo1dbgPSAEA4rnIUrW9EaD4NACvL5a9uNKKks6OaTUUdOJK2HpFhj9xkwr/Fqz+s92w4IA4sng==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 583)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8919)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:19 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8m2vn627xESn5igXkUCt7xfSIYzZxtWLn7HjwSiLorKnWbzujKg7EqvM9IvzKqhBXD0Ixuo/3xr5moYGjxhJug==", "resume"=>{"resume_text"=>"no skills"}, "commit"=>"Submit Text"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 00:59:19.174587"], ["updated_at", "2023-11-02 00:59:19.174587"]]
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 26ms (ActiveRecord: 22.3ms | Allocations: 929)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:19 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:26 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7JotMRYvt3AkjMngqK8BcMoHmjXtF0F8LbWPNZm/av+5rj5ANzxIJiimFXzKxQTegeizf97uS+1LnuryPiyB9w==", "description"=>"skills needed python", "commit"=>"T(ai)lor!"}
+Completed 500 Internal Server Error in 10058ms (ActiveRecord: 0.0ms | Allocations: 1056)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<TCPSocket:(closed)>):
+  
+app/services/gpt3_service.rb:65:in `call'
+app/services/gpt3_service.rb:73:in `call'
+app/controllers/resume_controller.rb:37:in `tailor'
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:46 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7JotMRYvt3AkjMngqK8BcMoHmjXtF0F8LbWPNZm/av+5rj5ANzxIJiimFXzKxQTegeizf97uS+1LnuryPiyB9w==", "description"=>"skills needed python", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1391ms (ActiveRecord: 0.4ms | Allocations: 4538)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:48 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 520)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 8056)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:57 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d0JXnst7rRFOel6UL7Cn7caJ2R+DKBHjhgWhEPtyz8cidkTv6mhSR0JQgghN2qJDjWbwVbDRG3LgLsTXXOEkzw==", "description"=>"skills needed python", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1418ms (ActiveRecord: 0.5ms | Allocations: 4542)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:59:58 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:01:25 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 2.0ms | Allocations: 552)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 154)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 9670)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:02:06 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VEU90HsL06IyIu/V7X4NgfLTX08S1fMkCNNju08cKjMBcS6hWhgs9D4IM0mPFAgvuTx2BSEs+bVu+AZ86I/BOw==", "description"=>"hello", "commit"=>"T(ai)lor!"}
+Started POST "/resume" for 209.2.231.106 at 2023-11-02 01:02:10 +0000
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 7686ms (ActiveRecord: 5.1ms | Allocations: 12944)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:57:in `tailor'
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ciE18xlkLyvNHb0rRX81Ll7ZEIQyPgJuzft7UYnFXsemmhrjiwf+MGhGP04Bdk9ahOCI0qxEZboEri0+ySMXUA==", "resume"=>{"resume_text"=>"Sample Resume"}, "commit"=>"Submit Text"}
+Started GET "/cancel" for 209.2.231.226 at 2023-11-02 01:02:14 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 394)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:02:14.928839"], ["updated_at", "2023-11-02 01:02:14.928839"]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 48ms (ActiveRecord: 23.4ms | Allocations: 9400)
+
+
+Started GET "/uploaded" for 209.2.231.106 at 2023-11-02 01:02:15 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 812)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 8612)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:02:15 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 526)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 8064)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:02:28 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 524)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 8246)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:02:30 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.5ms | Allocations: 295)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 8104)
+
+
+Started GET "/cancel" for 209.2.231.226 at 2023-11-02 01:02:31 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:02:31 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8070)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:02:32 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.5ms | Allocations: 291)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 8095)
+
+
+Started GET "/cancel" for 209.2.231.226 at 2023-11-02 01:02:34 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:02:34 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8070)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:02:43 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VEU90HsL06IyIu/V7X4NgfLTX08S1fMkCNNju08cKjMBcS6hWhgs9D4IM0mPFAgvuTx2BSEs+bVu+AZ86I/BOw==", "description"=>"hello", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 7264ms (ActiveRecord: 4.1ms | Allocations: 10062)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:57:in `tailor'
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:02:53 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.7ms | Allocations: 291)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 8099)
+
+
+Started POST "/resume/save" for 209.2.231.226 at 2023-11-02 01:02:54 +0000
+Processing by ResumeController#save as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wg6nyFJssCXuuFekRdrQINqsGUNIHjVWzK2wzVJbHsERYPYvAWKycl0+Mwk1D7H8zmNRY13HLh3OjTEL8IJ/aw==", "resume"=>"hi", "commit"=>"Save"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 885)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:02:54 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 522)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 8058)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:03:04 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting end
+puts "error"messages
+            ^~~~~~~~):
+  
+app/controllers/resume_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/resume_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/editor" for 209.2.231.106 at 2023-11-02 01:03:05 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting end
+puts "error"messages
+            ^~~~~~~~):
+  
+app/controllers/resume_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/resume_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:03:25 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 303)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 8298)
+
+
+Started POST "/tailor" for 209.2.231.106 at 2023-11-02 01:03:28 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y1FmoFodIpFfCIsVXZOYUwrF+w+zircXa9lkYLK69lAf6kmwyH7zivpTCXAZmuIn0PxjWS3w0MOijDIP8ly/xw==", "description"=>"AI\r\nPython\r\nC\r\nC++\r\nMachine Learning", "commit"=>"T(ai)lor!"}
+Completed 500 Internal Server Error in 10056ms (ActiveRecord: 0.0ms | Allocations: 1533)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<TCPSocket:(closed)>):
+  
+app/services/gpt3_service.rb:65:in `call'
+app/services/gpt3_service.rb:73:in `call'
+app/controllers/resume_controller.rb:37:in `tailor'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:04:16 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: unterminated string meets end of file
+/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:05:14 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: unterminated string meets end of file
+/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:05:19 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: unterminated string meets end of file
+/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:05:22 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: unterminated string meets end of file
+/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:05:27 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: unterminated string meets end of file
+/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:117: unterminated string meets end of file
+app/controllers/resume_controller.rb:117: syntax error, unexpected end-of-input, expecting end
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:05:35 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:05:36 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:05:39 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end
+app/controllers/resume_controller.rb:118: syntax error, unexpected end-of-input, expecting end
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:05:46 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 451)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 10.8ms | Allocations: 29519)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    3: 
+    4: <div class="row">
+    5:   <div class="col-md-6">
+    6:     <%= form_for @resume, id="upload", url: resume_index_path, html: { multipart: true } do |f| %>
+    7:       <div class="field">
+    8:         <%= f.label :file %>
+    9:         <%= f.file_field :file %>
+  
+app/views/resume/new.html.erb:6
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:05:49 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 130)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    3: 
+    4: <div class="row">
+    5:   <div class="col-md-6">
+    6:     <%= form_for @resume, id="upload", url: resume_index_path, html: { multipart: true } do |f| %>
+    7:       <div class="field">
+    8:         <%= f.label :file %>
+    9:         <%= f.file_field :file %>
+  
+app/views/resume/new.html.erb:6
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:06:15 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxLIPi69gk5iFo1dbgPSAEA4rnIUrW9EaD4NACvL5a9uNKKks6OaTUUdOJK2HpFhj9xkwr/Fqz+s92w4IA4sng==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 133)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.4ms | Allocations: 11148)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    3: 
+    4: <div class="row">
+    5:   <div class="col-md-6">
+    6:     <%= form_for @resume, id="upload", url: resume_index_path, html: { multipart: true } do |f| %>
+    7:       <div class="field">
+    8:         <%= f.label :file %>
+    9:         <%= f.file_field :file %>
+  
+app/views/resume/new.html.erb:6
+app/controllers/resume_controller.rb:20:in `create'
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:06:17 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:06:17 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 130)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    3: 
+    4: <div class="row">
+    5:   <div class="col-md-6">
+    6:     <%= form_for @resume, id="upload", url: resume_index_path, html: { multipart: true } do |f| %>
+    7:       <div class="field">
+    8:         <%= f.label :file %>
+    9:         <%= f.file_field :file %>
+  
+app/views/resume/new.html.erb:6
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:06:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxLIPi69gk5iFo1dbgPSAEA4rnIUrW9EaD4NACvL5a9uNKKks6OaTUUdOJK2HpFhj9xkwr/Fqz+s92w4IA4sng==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1779)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 337ms (Views: 317.1ms | ActiveRecord: 5.1ms | Allocations: 304363)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:06:46 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 883)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 28ms (Views: 10.5ms | ActiveRecord: 4.9ms | Allocations: 15238)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:06:56 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1xlY0KsJibkZ4WhR+HVCvgEtxJfecGF86jRbkS0DRJWCLUuhihp27xXLtM2aH0cQSsLt3e2Ja+2MHz5WipCvnQ==", "resume"=>{"resume_text"=>"jasmine\r\nskills: python"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (11.0ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:06:56.744317"], ["updated_at", "2023-11-02 01:06:56.744317"]]
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 68ms (ActiveRecord: 39.0ms | Allocations: 9960)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:06:56 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.0ms | Allocations: 862)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 8664)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:07:36 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxLIPi69gk5iFo1dbgPSAEA4rnIUrW9EaD4NACvL5a9uNKKks6OaTUUdOJK2HpFhj9xkwr/Fqz+s92w4IA4sng==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 592)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 26ms (Views: 9.0ms | ActiveRecord: 4.0ms | Allocations: 15742)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:08:07 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:08:07 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5267)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 384ms (Views: 308.3ms | ActiveRecord: 11.5ms | Allocations: 329492)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:08:29 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DI6jeNMyYBVQzRpORfbhDwPG6uzld8tkmirGoL3a3UwpqMniTix4FnfGr4Gd66JuzCIgXE4fDx9e46eYth8UfQ==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 595)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 9116)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:08:30 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVPN8unUqZxtuyrN7wdxH346RJm5lUEJ2Ubnh7DnOlpMdadodMqxn0qwnwI3GjJ+sd6OKRL9hXIdj4a/uyLzaw==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 583)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 8907)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:08:33 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x6dDPy0cO35dABWWoSlWNyd1t1vxpAHLw0tDnQdqQESSk1BODA/EKFEqyQrDQ1OZbJqeEcJdC1qlYCZaoPmrTA==", "resume"=>{"resume_text"=>"jasmine lou resume"}, "commit"=>"Submit Text"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.8ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:08:33.039828"], ["updated_at", "2023-11-02 01:08:33.039828"]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 43ms (ActiveRecord: 18.3ms | Allocations: 3369)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:08:33 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 854)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 8503)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:08:33 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CU6bG9LkaV/2SzivJgqfbBA2fhc3aU9T2S6zQ8ChZzYsaPGBT/pxXNFAjWD+F9wN39K0p5wBiygd59J7y2SuBw==", "resume"=>{"resume_text"=>"test"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:08:33.635509"], ["updated_at", "2023-11-02 01:08:33.635509"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 25ms (ActiveRecord: 19.9ms | Allocations: 898)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:08:33 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 8073)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:08:38 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pFGWuehSYPh6x7IsoH45+pctznN/r8TNbMjYsxEUToKBd/wjdUx4+13MB+N4Y3qbWMkEw9THALaoAbmLGtGHsw==", "description"=>"test", "commit"=>"T(ai)lor!"}
+Completed 500 Internal Server Error in 10062ms (ActiveRecord: 0.0ms | Allocations: 1095)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<TCPSocket:(closed)>):
+  
+app/services/gpt3_service.rb:65:in `call'
+app/services/gpt3_service.rb:73:in `call'
+app/controllers/resume_controller.rb:37:in `tailor'
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:08:49 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RqzCDNKqySkuNEectzih1w74ELCunDKMa2x/+kG4Uo0TmNF987k2fyIemwDVUqR5RRc5+p1lOB0NRxo95iu5hQ==", "description"=>"skills needed: ruby", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1030ms (ActiveRecord: 0.7ms | Allocations: 5460)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:08:50 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 531)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8079)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:11:45 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dFCg5HB8jcSNIwiE0T8mTKLE+9rB0zGekrbSYwOELyIhZLOVUW9ykoEJ1BizVSPi6SvSkPIqOw/0nbekpBfEKg==", "description"=>"skills needed ruby", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "Skills: Java, Python (with experience in Ruby)"], ["updated_at", "2023-11-02 01:11:47.715217"], ["id", 42]]
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2067ms (ActiveRecord: 32.6ms | Allocations: 12391)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:11:47 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 544)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 8234)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:12:00 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (11.7ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 803)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:14:15 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:14:16 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 876)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 8453)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:15:39 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVPN8unUqZxtuyrN7wdxH346RJm5lUEJ2Ubnh7DnOlpMdadodMqxn0qwnwI3GjJ+sd6OKRL9hXIdj4a/uyLzaw==", "resume"=>{"resume_text"=>""}, "commit"=>"Submit Text"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 592)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 26ms (Views: 9.5ms | ActiveRecord: 4.2ms | Allocations: 15712)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:15:41 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 823)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8396)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:15:48 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1201)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 36ms (Views: 15.4ms | ActiveRecord: 5.6ms | Allocations: 16626)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:15:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 848)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 8422)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:15:56 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1196)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 25ms (Views: 11.7ms | ActiveRecord: 3.9ms | Allocations: 16613)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:16:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1184)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 25ms (Views: 11.1ms | ActiveRecord: 4.0ms | Allocations: 16601)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:17:24 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.9ms | Allocations: 829)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 8478)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:17:26 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K7b74kpyRFr3QFyPt8ClIf6+CKVNz83XzLm5VVD+dVh+guiTa2G7DPtqgBPVqqCPtVEh7342x0aqktyS922eUA==", "resume"=>{"resume_text"=>"Amanda Billings\r\n10 Paper Road\r\nMilltown, MA 70543\r\n555.123.1234\r\namanda_billings@email.com\r\n\r\nAccounting Manager\r\n\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\n\r\nCore Competencies\r\n\r\nBookkeeping: AP, AR, Account Reconciliations, Payroll\r\nOral and Written Communications\r\nFederal and State Tax Preparation\r\nOffice Administration\r\nPositive Teamwork and Collaboration\r\nQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\n\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\r\nPractice Manager, October 2018 to Present\r\nHandle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n\r\nEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\nSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\nDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\r\nAccountant, August 2012 to October 2018\r\nSkillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n\r\nCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\nMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\nPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\n\r\nVermont State College, Rutland, VT\r\nBachelor of Science in Accounting\r\nGraduated Magna cum Laude"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.6ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:17:26.361453"], ["updated_at", "2023-11-02 01:17:26.361453"]]
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 23ms (ActiveRecord: 17.4ms | Allocations: 951)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:17:26 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 536)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms | Allocations: 8077)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:18:02 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BRiYhHI9EaM26re++mHLM5WaPzvcThh7By1oBTHs6pFQLIv1Uy7u9TrAayKYC86d3nUWce+3EuphBg3Cln8BmQ==", "description"=>"SHIFT YOUR FUTURE\r\n\r\nCasual Package Deliver Driver\r\n\r\nSHIFT YOUR TEAM\r\n\r\nWho exactly are casual UPS Package Delivery Drivers? They’re the ones who drive our familiar brown trucks, bringing packages great and small to our customers. They’re a friendly, physically active crew who enjoy fast-paced work, being outdoors, and being behind the wheel!\r\n\r\nSHIFT YOUR SKILLS\r\n\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n\r\n· The ability to lift up to 70 lbs.\r\n\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n\r\n· Pass the DOT physical\r\n\r\n· Excellent customer service and driving skills\r\n\r\n· Legal right to work in the U.S.\r\n\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\n\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.\r\n\r\nSHIFT YOUR BENEFITS\r\n\r\nWhat’s in it for you?\r\n\r\n· Excellent weekly pay\r\n\r\n· Growth opportunities*\r\n\r\n· Extensive training\r\n\r\n· And so much more\r\n\r\n*This is a seasonal role. A seasonal job is a great place to start at UPS, and it might even lead to a permanent role that offers even more advantages and benefits! Permanent, full-time small package delivery drivers receive an average total compensation package of $145,000 per year. That includes $0 healthcare premiums, up to seven weeks of paid vacation, plus paid time off for holidays, sick leave and option days.", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.4ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "SHIFT YOUR FUTURE\r\n\r\nCasual Package Delivery Driver\r\n\r\nSHIFT YOUR SKILLS\r\n\r\nAs an experienced software developer with expertise in Java and Python, I have developed the ability to quickly adapt to new challenges and deliver high-quality results under pressure. In addition to my technical skills, I possess excellent customer service and driving skills, enabling me to provide a friendly and efficient service to UPS customers.\r\n\r\nSHIFT YOUR TEAM\r\n\r\nI am excited about the opportunity to join a friendly and physically active crew, who enjoy fast-paced work, being outdoors, and being behind the wheel. I am able to lift up to 70 lbs. and hold a valid driver’s license.\r\n\r\nSHIFT YOUR BENEFITS\r\n\r\nIn addition to the excitement and satisfaction of being a part of the UPS team, I am drawn to the exceptional weekly pay and extensive training opportunities. I look forward to the possibility of a growth opportunity within UPS."], ["updated_at", "2023-11-02 01:18:19.710721"], ["id", 43]]
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 17022ms (ActiveRecord: 24.5ms | Allocations: 5198)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:18:20 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 539)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 8074)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:18:24 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (1.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.8ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 606)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:18:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1129)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 9974)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:18:47 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 844)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 8418)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:19:06 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1132)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 9971)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:21:18 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:21:18 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1176)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 26ms (Views: 11.7ms | ActiveRecord: 3.8ms | Allocations: 16635)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:21:41 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"faOWfJqEtE2uto7Rt6wZaM42h35jfftbny7Cpf62v7ool4UNu5dLG6KcUk3VxhzGhdmuNFCE8cr5BadiWSVUsg==", "resume"=>{"resume_text"=>"Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"}, "commit"=>"Submit Text"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.3ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:21:41.269768"], ["updated_at", "2023-11-02 01:21:41.269768"]]
+  [1m[35m (22.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 28ms (ActiveRecord: 23.5ms | Allocations: 1219)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:21:41 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.4ms | Allocations: 823)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 8473)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:22:24 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1132)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 9971)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:22:42 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1124)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 9963)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:22:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 840)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 8414)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:23:10 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 833)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8407)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:24:45 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 5278)
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:24:46 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 843)
+  Rendered layouts/_flash.erb (Duration: 1.0ms | Allocations: 638)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 22)
+Completed 200 OK in 400ms (Views: 330.0ms | ActiveRecord: 11.6ms | Allocations: 339820)
+
+
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 12610)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:24:53 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OGV7hSvpB3XnRJ0siltwyJWRWz+RwBqIP8JVimhyaGhtUWj0Cvr4I+tuQbDoMXVm3n5ydaI5EBlZ6TBNz+GDYA==", "resume"=>{"resume_text"=>"Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (1.0ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:24:53.242660"], ["updated_at", "2023-11-02 01:24:53.242660"]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 39ms (ActiveRecord: 19.0ms | Allocations: 3987)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:24:53 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.1ms | Allocations: 859)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 8509)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:23 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:23 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1577)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.6ms | Allocations: 9289)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:26 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 362)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 667)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Powered by ChatGPT 3.5</h2>
+<p>Upload your Resume</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+      <div class="field">
+        <%= f.label :file %>
+        <%= label
+        <%= f.file_field :file %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Upload Resume" %>
+      </div>
+    <% end %>
+  </div> <!-- Close this div -->
+  <div class="col-md-6">
+    <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+      <div class="field" style="padding-top: 20px;">
+        <%= f.label :resume_text, 'Resume Text' %>
+        <%= f.text_area :resume_text, style: 'width: 100%;' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Submit Text" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+):
+1:    <h2>Powered by ChatGPT 3.5</h2>
+2:    <p>Upload your Resume</p>
+3:    
+4:    <div class="row">
+5:      <div class="col-md-6">
+6:        <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+7:          <div class="field">
+8:            <%= f.label :file %>
+9:            <%= label
+10:            <%= f.file_field :file %>
+11:          </div>
+12:          <div class="actions">
+13:            <%= f.submit "Upload Resume" %>
+14:          </div>
+15:        <% end %>
+16:      </div> <!-- Close this div -->
+17:      <div class="col-md-6">
+18:        <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+19:          <div class="field" style="padding-top: 20px;">
+20:            <%= f.label :resume_text, 'Resume Text' %>
+21:            <%= f.text_area :resume_text, style: 'width: 100%;' %>
+22:          </div>
+23:          <div class="actions">
+24:            <%= f.submit "Submit Text" %>
+25:          </div>
+26:        <% end %>
+27:      </div>
+28:    </div>
+  
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:31 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 362)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 696)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Powered by ChatGPT 3.5</h2>
+<p>Upload your Resume</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+      <div class="field">
+        <%= f.label :file %>
+        <%= label
+        <%= f.file_field :file %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Upload Resume" %>
+      </div>
+    <% end %>
+  </div> <!-- Close this div -->
+  <div class="col-md-6">
+    <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+      <div class="field" style="padding-top: 20px;">
+        <%= f.label :resume_text, 'Resume Text' %>
+        <%= f.text_area :resume_text, style: 'width: 100%;' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Submit Text" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+):
+1:    <h2>Powered by ChatGPT 3.5</h2>
+2:    <p>Upload your Resume</p>
+3:    
+4:    <div class="row">
+5:      <div class="col-md-6">
+6:        <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+7:          <div class="field">
+8:            <%= f.label :file %>
+9:            <%= label
+10:            <%= f.file_field :file %>
+11:          </div>
+12:          <div class="actions">
+13:            <%= f.submit "Upload Resume" %>
+14:          </div>
+15:        <% end %>
+16:      </div> <!-- Close this div -->
+17:      <div class="col-md-6">
+18:        <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+19:          <div class="field" style="padding-top: 20px;">
+20:            <%= f.label :resume_text, 'Resume Text' %>
+21:            <%= f.text_area :resume_text, style: 'width: 100%;' %>
+22:          </div>
+23:          <div class="actions">
+24:            <%= f.submit "Submit Text" %>
+25:          </div>
+26:        <% end %>
+27:      </div>
+28:    </div>
+  
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:10: syntax error, unexpected '<', expecting ')'
+app/views/resume/new.html.erb:15: syntax error, unexpected end, expecting ')'
+app/views/resume/new.html.erb:32: syntax error, unexpected end, expecting ')'
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:25:32 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 698)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1777)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..4)):
+     6:     <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+     7:       <div class="field">
+     8:         <%= f.label :file %>
+     9:         <%= label :file %>
+    10:         <%= f.file_field :file %>
+    11:       </div>
+    12:       <div class="actions">
+  
+app/views/resume/new.html.erb:9
+app/views/resume/new.html.erb:6
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:25:43 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1141)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 10000)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 829)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 8403)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:47 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+PPlwvyV9cCO/TaksAsasUpuWI21o4lWrWBEGI7w1qmtx/az3YYKloLX6jjSYR8fAYFxx4Zag8fLSyHfKWM9oQ==", "resume"=>{"resume_text"=>"Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:25:47.571273"], ["updated_at", "2023-11-02 01:25:47.571273"]]
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 20.4ms | Allocations: 4899)
+
+
+  
+NoMethodError (undefined method `put' for #<ResumeController:0x00007fd885f49ad8>):
+  
+app/controllers/resume_controller.rb:24:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:55 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+PPlwvyV9cCO/TaksAsasUpuWI21o4lWrWBEGI7w1qmtx/az3YYKloLX6jjSYR8fAYFxx4Zag8fLSyHfKWM9oQ==", "resume"=>{"resume_text"=>"Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.3ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 01:25:55.601681"], ["updated_at", "2023-11-02 01:25:55.601681"]]
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 41ms (ActiveRecord: 25.6ms | Allocations: 8837)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:25:55 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.9ms | Allocations: 827)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 8626)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-02 01:26:02 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-02 01:26:02 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 1019)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms | Allocations: 9867)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:06 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 725)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 8299)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:07 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 717)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 8290)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 695)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8268)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:12 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 709)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8282)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:22 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 705)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:23 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 705)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:49 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 950)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 9794)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 713)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 8287)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 972)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 9811)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:57 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 717)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 8291)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:57 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 705)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:58 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 705)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:26:59 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 717)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 8290)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-02 01:27:17 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-02 01:27:17 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1017)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 29ms (Views: 13.6ms | ActiveRecord: 4.1ms | Allocations: 16476)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:27:47 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 964)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 9803)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:29:23 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:29:24 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1003)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 25ms (Views: 11.1ms | ActiveRecord: 3.8ms | Allocations: 16429)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:29:31 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JM6tb65bFn1UU6xDdu8WUu6u90ggtEc20sWKfgUyfutx+r4ej0jpK1h5cN8UhRP8pUHeAhNNTae07u+5oqGV4w==", "resume"=>{"resume_text"=>"Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.9ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"], ["created_at", "2023-11-02 01:29:31.936304"], ["updated_at", "2023-11-02 01:29:31.936304"]]
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 35ms (ActiveRecord: 27.2ms | Allocations: 2205)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:29:32 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 827)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 8480)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:30:49 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:30:49 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 770)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 35ms (Views: 13.7ms | ActiveRecord: 5.6ms | Allocations: 15115)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:30:55 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 529)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 8064)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-02 01:31:01 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-02 01:31:02 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2703)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3771)
+
+
+  
+ActionView::Template::Error (undefined method `submit' for #<#<Class:0x00007fd885aa7070>:0x00007fd885aae208>):
+    21:   <div class="row">
+    22:     <div class="col-md-12 text-center">
+    23:       <div class="field">
+    24:         <%= submit "Upload Resume" %>
+    25:       </div>
+    26:     </div>
+    27:   </div>
+  
+app/views/resume/new.html.erb:24
+app/views/resume/new.html.erb:4
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:13 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:14 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 964)
+  Rendered layouts/_flash.erb (Duration: 0.9ms | Allocations: 163)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 9812)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:16 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 812)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 8460)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:19 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 719)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 8293)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:31:20 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 705)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 8278)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:22 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fe8gw7fQdJWZUX53g+Lx9Sc36N96Vf4e4jAuJj/sSNMo2zOylsOLw5V7ouvhiPRbbNjBlUms9I+EG0vhmH+j2w==", "resume"=>{"resume_text"=>"Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Amanda Billings\u202810 Paper Road\u2028Milltown, MA 70543\u2028555.123.1234\u2028amanda_billings@email.com\r\nAccounting Manager\r\nHighly organized and diligent professional drawing upon ten years of experience in accounting and finance to contribute to smooth and productive operations. Excellent command of budget development, financial analysis, and accounting best practices. Collaborate cross-functionally across organizational levels to build consensus, track benchmark achievement, and troubleshoot emerging issues.\r\nCore Competencies\r\n* \t\tBookkeeping: AP, AR, Account Reconciliations, Payroll\r\n* \t\tOral and Written Communications\r\n* \t\tFederal and State Tax Preparation\r\n* \t\tOffice Administration\r\n* \t\tPositive Teamwork and Collaboration\r\n* \t\tQuickBooks and Microsoft Office Suite\r\nPROFESSIONAL EXPERIENCE\r\nBarclay Professional Accounting Services, Inc. – Milltown, MA\u2028Practice Manager, October 2018 to Present\u2028Handle and optimize all administrative operations for 7-physician medical practice. The scope of responsibilities includes accounts receivable/payable, accounting, budget review, and preparation of financials for CPA. Selected Contributions :\r\n* \t\tEliminated backlog in financial reporting responsibilities within 25 days of initial hiring.\r\n* \t\tSuccessfully project-managed the acquisition and installation of state-of-the-art healthcare billing software that reduced errors by 30%.\r\n* \t\tDeveloped and organized office policies, procedures, and administrative and accounting workflows resulting in a significant increase in office efficiency.\r\nReddington Hardware – Wellington, MA\u2028Accountant, August 2012 to October 2018\u2028Skillfully performed all office accounting tasks for a small hardware store. Gathered and analyzed financial data, and processed accounts payable, accounts receivable, and payroll for workforce of 35 personnel. Selected Contributions:\r\n* \t\tCreated monthly and annual budget and forecast reports that contributed to a 5% decrease in annual expenditures.\r\n* \t\tMigrated accounting system to a new software provider and integrated all accounting, bookkeeping, tax, and payroll functions into the new system.\r\n* \t\tPrepared company state and federal tax returns and ensured compliance with filing deadlines.\r\nEDUCATION\r\nVermont State College, Rutland, VT\u2028Bachelor of Science in Accounting\u2028Graduated Magna cum Laude"], ["created_at", "2023-11-02 01:31:22.124934"], ["updated_at", "2023-11-02 01:31:22.124934"]]
+  [1m[35m (55.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.7ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 64ms (ActiveRecord: 56.7ms | Allocations: 2192)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:22 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 522)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 8059)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:31:25 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0iGEQHAZ0lGItIlPqt0vdpVHPoaTgZLVwBGH7lZoYwH3B+7a7QfKUq+/PIBywGwXWqP0NjjpVq4E2ObWXa2qMA==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 458)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 10058)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:31:26 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mw6jUU63QLv1FD0XDlVx2xGOZd2lQE4XxrR0szeyU0K+KMnL06lYuNIfiNjWSDK63mqvbQ4oimwCfRWLPHeacw==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 456)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 9978)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:31:28 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c17G6DTqdLQl/9MMFaoQKOWIspAfSix6svvdLtjmcEJWeKxyqfRstwL0ZsPNt1NJKmx4ILQi6AF2MrwW0yO5cw==", "resume"=>{"resume_text"=>"test"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "test"], ["created_at", "2023-11-02 01:31:28.715598"], ["updated_at", "2023-11-02 01:31:28.715598"]]
+  [1m[35m (21.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 29ms (ActiveRecord: 22.6ms | Allocations: 2095)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:31:28 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 532)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 8069)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:31:45 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9pw9eG88ZO39+aajQKZhIUI3PCAjnRv3s6UxuwPTUjC7mOEwK8OxbvdOgbvaJwqzuf1urN3fv645fEBS5ymQA==", "description"=>"SHIFT YOUR FUTURE\r\nCasual Package Deliver Driver\r\nSHIFT YOUR TEAM\r\nWho exactly are casual UPS Package Delivery Drivers? They’re the ones who drive our familiar brown trucks, bringing packages great and small to our customers. They’re a friendly, physically active crew who enjoy fast-paced work, being outdoors, and being behind the wheel!\r\nSHIFT YOUR SKILLS\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n· The ability to lift up to 70 lbs.\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n· Pass the DOT physical\r\n· Excellent customer service and driving skills\r\n· Legal right to work in the U.S.\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.\r\nSHIFT YOUR BENEFITS\r\nWhat’s in it for you?\r\n· Excellent weekly pay\r\n· Growth opportunities*\r\n· Extensive training\r\n· And so much more\r\n*This is a seasonal role. A seasonal job is a great place to start at UPS, and it might even lead to a permanent role that offers even more advantages and benefits! Permanent, full-time small package delivery drivers receive an average total compensation package of $145,000 per year. That includes $0 healthcare premiums, up to seven weeks of paid vacation, plus paid time off for holidays, sick leave and option days.\r\n\r\n", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 30125ms (ActiveRecord: 0.3ms | Allocations: 1793)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<TCPSocket:(closed)>):
+  
+app/services/gpt3_service.rb:65:in `call'
+app/services/gpt3_service.rb:73:in `call'
+app/controllers/resume_controller.rb:43:in `tailor'
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:32:31 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9pw9eG88ZO39+aajQKZhIUI3PCAjnRv3s6UxuwPTUjC7mOEwK8OxbvdOgbvaJwqzuf1urN3fv645fEBS5ymQA==", "description"=>"SHIFT YOUR FUTURE\r\nCasual Package Deliver Driver\r\nSHIFT YOUR TEAM\r\nWho exactly are casual UPS Package Delivery Drivers? They’re the ones who drive our familiar brown trucks, bringing packages great and small to our customers. They’re a friendly, physically active crew who enjoy fast-paced work, being outdoors, and being behind the wheel!\r\nSHIFT YOUR SKILLS\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n· The ability to lift up to 70 lbs.\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n· Pass the DOT physical\r\n· Excellent customer service and driving skills\r\n· Legal right to work in the U.S.\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.\r\nSHIFT YOUR BENEFITS\r\nWhat’s in it for you?\r\n· Excellent weekly pay\r\n· Growth opportunities*\r\n· Extensive training\r\n· And so much more\r\n*This is a seasonal role. A seasonal job is a great place to start at UPS, and it might even lead to a permanent role that offers even more advantages and benefits! Permanent, full-time small package delivery drivers receive an average total compensation package of $145,000 per year. That includes $0 healthcare premiums, up to seven weeks of paid vacation, plus paid time off for holidays, sick leave and option days.\r\n\r\n", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 30116ms (ActiveRecord: 0.5ms | Allocations: 1289)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<TCPSocket:(closed)>):
+  
+app/services/gpt3_service.rb:65:in `call'
+app/services/gpt3_service.rb:73:in `call'
+app/controllers/resume_controller.rb:43:in `tailor'
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:33:18 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9pw9eG88ZO39+aajQKZhIUI3PCAjnRv3s6UxuwPTUjC7mOEwK8OxbvdOgbvaJwqzuf1urN3fv645fEBS5ymQA==", "description"=>"SHIFT YOUR FUTURE\r\nCasual Package Deliver Driver\r\nSHIFT YOUR TEAM\r\nWho exactly are casual UPS Package Delivery Drivers? They’re the ones who drive our familiar brown trucks, bringing packages great and small to our customers. They’re a friendly, physically active crew who enjoy fast-paced work, being outdoors, and being behind the wheel!\r\nSHIFT YOUR SKILLS\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n· The ability to lift up to 70 lbs.\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n· Pass the DOT physical\r\n· Excellent customer service and driving skills\r\n· Legal right to work in the U.S.\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.\r\nSHIFT YOUR BENEFITS\r\nWhat’s in it for you?\r\n· Excellent weekly pay\r\n· Growth opportunities*\r\n· Extensive training\r\n· And so much more\r\n*This is a seasonal role. A seasonal job is a great place to start at UPS, and it might even lead to a permanent role that offers even more advantages and benefits! Permanent, full-time small package delivery drivers receive an average total compensation package of $145,000 per year. That includes $0 healthcare premiums, up to seven weeks of paid vacation, plus paid time off for holidays, sick leave and option days.\r\n\r\n", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:33:34 +0000
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (1.1ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "John Smith\r\n\r\n1234 Main St. | Anytown, USA 12345 | (123) 456-7890 | johnsmith@email.com\r\n\r\nObjective:\r\nTo secure the position of Casual Package Delivery Driver at UPS and become a valuable member of the team.\r\n\r\nSummary:\r\nPhysically fit and experienced driver with strong customer service skills and attention to detail. Possesses a clean driving record and valid driver's license with excellent knowledge of the local area. Available to work flexible shifts and meet the requirements of a high-paced work environment.\r\n\r\nSkills:\r\n- Ability to lift up to 70 lbs.\r\n- Valid driver's license (Class C)\r\n- Compliant with DOT physical standards\r\n- Exceptional customer service skills\r\n- Proficient driving skills\r\n- Legally authorized to work in the U.S.\r\n- Willingness to comply with UPS appearance guidelines\r\n\r\nExperience:\r\nDelivery Driver | ABC Express | Anytown, USA | 2018 - Present\r\n- Delivered packages to residential and commercial addresses around Anytown\r\n- Maintained accurate delivery records and handled customer inquiries\r\n- Adhered to company and regulatory standards\r\n\r\nServer | XYZ Restaurant | Anytown, USA | 2016 - 2018\r\n- Provided excellent customer service\r\n- Handled cash, credit and debit card transactions\r\n- Assisted in food and beverage preparation\r\n\r\nEducation:\r\nAssociate of Applied Science in Transportation Technology | Anytown Community College | Anytown, USA | 2014 - 2016\r\n\r\nCertifications:\r\n- DOT physical certification\r\n\r\nReferences:\r\nAvailable upon request"], ["updated_at", "2023-11-02 01:33:50.184194"], ["id", 50]]
+  [1m[35m (80.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 31584ms (ActiveRecord: 87.0ms | Allocations: 15419)
+
+
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9pw9eG88ZO39+aajQKZhIUI3PCAjnRv3s6UxuwPTUjC7mOEwK8OxbvdOgbvaJwqzuf1urN3fv645fEBS5ymQA==", "description"=>"SHIFT YOUR SKILLS\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n· The ability to lift up to 70 lbs.\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n· Pass the DOT physical\r\n· Excellent customer service and driving skills\r\n· Legal right to work in the U.S.\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.", "commit"=>"T(ai)lor!"}
+Started GET "/" for 209.2.231.106 at 2023-11-02 01:33:50 +0000
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/resume" for 209.2.231.106 at 2023-11-02 01:33:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 552)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 9398)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:34:01 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mw6jUU63QLv1FD0XDlVx2xGOZd2lQE4XxrR0szeyU0K+KMnL06lYuNIfiNjWSDK63mqvbQ4oimwCfRWLPHeacw==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 130)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+  [1m[36mResume Load (0.6ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 10.3ms | ActiveRecord: 6.9ms | Allocations: 12273)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:34:14 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mw6jUU63QLv1FD0XDlVx2xGOZd2lQE4XxrR0szeyU0K+KMnL06lYuNIfiNjWSDK63mqvbQ4oimwCfRWLPHeacw==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 297)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 163)
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 11067)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:34:15 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iCaRv70Qh1aybOYJI0+apokNzYn3SOSTK0r8gqJyE0utAPslIA6fVZVnU8b7UtnHRukHOVwgIOjvg526qbfaeg==", "resume"=>{"resume_text"=>""}}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 130)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.5ms | Allocations: 9642)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:34:17 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nrq+I8TAP1KwRtAW0nlAv81GCC8JYumg8X/Ro+AwvS+7nNS5Wd4nUZdNZdkKZAPeAqLCn6IKLds1trCb6/V0Hg==", "resume"=>{"resume_text"=>"test"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.6ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "test"], ["created_at", "2023-11-02 01:34:17.725814"], ["updated_at", "2023-11-02 01:34:17.725814"]]
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 27ms (ActiveRecord: 20.9ms | Allocations: 2102)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:34:17 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.1ms | Allocations: 817)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8466)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.4ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "John Smith\r\n\r\n1234 Main St. | Anytown, USA 12345 | (123) 456-7890 | johnsmith@email.com\r\n\r\nObjective:\r\nTo secure the position of a Casual Package Delivery Driver at UPS and thrive in a fast-paced work environment.\r\n\r\nSummary:\r\nHighly motivated and physically fit driver with strong customer service skills and attention to detail. Has a spotless driving record and the required valid driver's license to operate delivery vehicles of all shapes and sizes. Always ready to comply with UPS's appearance guidelines and available to work varying shifts to meet business needs.\r\n\r\nSkills:\r\n- Proficient in lifting up to 70 lbs.\r\n- Possesses a valid driver's license with no CDL required (Class C)\r\n- Passed the DOT physical with flying colors\r\n- Exceptional customer service skills\r\n- Proficient in driving various vehicles\r\n- Legally authorized to work in the U.S.\r\n- Willingness to comply with UPS appearance guidelines\r\n\r\nExperience:\r\nDelivery Driver | ABC Express | Anytown, USA | 2018 - Present\r\n- Delivered packages to countless residential and commercial addresses across multiple states\r\n- Successfully managed delivery records and resolved customer inquiries\r\n- Adhered to company and regulatory guidelines to keep packages safe and undamaged\r\n\r\nServer | XYZ Restaurant | Anytown, USA | 2016 - 2018\r\n- Provided top-notch customer service\r\n- Accurately handled cash, credit and debit card transactions\r\n- Maintained cleanliness and organized new supplies\r\n\r\nEducation:\r\nAssociate of Applied Science in Transportation Technology | Anytown Community College | Anytown, USA | 2014 - 2016\r\n\r\nCertifications:\r\n- DOT physical certification\r\n\r\nReferences:\r\nAvailable upon request"], ["updated_at", "2023-11-02 01:34:24.626379"], ["id", 50]]
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 34349ms (ActiveRecord: 27.2ms | Allocations: 83517)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:34:24 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8070)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:34:29 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (2.1ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 801)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:34:53 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:34:53 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 393)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 7966)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:35:12 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.1ms | Allocations: 516)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 8462)
+
+
+Started GET "/cancel" for 209.2.231.226 at 2023-11-02 01:35:13 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 396)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:35:13 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 527)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8064)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:35:22 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8052)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:35:32 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H3D8gxdhtO49okI6U0BF2Fu2tE3sZ1LQJNEdmLIm6pBKRO/yNnJLuDGInqYxKkB2EFmdB9+eWEFC+nhfFbUBmA==", "description"=>"SHIFT YOUR SKILLS\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n· The ability to lift up to 70 lbs.\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n· Pass the DOT physical\r\n· Excellent customer service and driving skills\r\n· Legal right to work in the U.S.\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.4ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "Objective: To obtain a position as a Casual Package Delivery Driver with UPS and utilize my strong customer service and driving skills to deliver boxes of all shapes and sizes to homes and businesses in the community and beyond.\r\n\r\nSkills: \r\n- Ability to lift up to 70 lbs. with ease and safely transport packages to their intended destination \r\n- Possess a valid driver's license and safe driving record, ensuring prompt and accurate deliveries (License type varies by state) \r\n- Physically capable of passing the DOT physical, ensuring compliance with safety regulations \r\n- Excellent customer service and communication skills, ensuring the timely and professional handling of all deliveries \r\n- Authorized to work in the U.S. and possess a strong work ethic \r\n- Committed to professional appearance and able to comply with UPS appearance guidelines while wearing the provided uniform \r\n\r\nExperience: \r\n- Delivery Driver, ABC Company: Delivered packages to various customers and businesses while ensuring safety and customer satisfaction. Familiar with the local area and adept at navigating through traffic and busy roads. \r\n\r\nEducation: \r\n- High School Diploma, XYZ High School \r\n\r\nAvailability: \r\n-Flexible availability to work varying shift lengths Monday-Friday or Tuesday-Saturday, as necessary in order to meet UPS business needs."], ["updated_at", "2023-11-02 01:35:56.514648"], ["id", 51]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 24068ms (ActiveRecord: 20.7ms | Allocations: 4666)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:35:56 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.9ms | Allocations: 825)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 153)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 9602)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-02 01:35:56 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-02 01:35:57 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 748)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 8463)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:36:06 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.9ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 606)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:36:17 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 812)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 153)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9584)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:37:53 +0000
+Processing by ResumeController#editor as HTML
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.3ms | Allocations: 503)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 154)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 9577)
+
+
+Started POST "/resume/save" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:38:50 +0000
+Processing by ResumeController#save as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xGhwWgUAAJq4NECbLgVntuIFF9neX9t3tE2nx8Q2UwORXGMrJBP/zLQenAdMb2IYqeo+k+2m0ebSZsIAY6W4Cw==", "resume"=>"hi", "commit"=>"Save"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 877)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:38:50 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 803)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 8451)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:38:55 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lU6ki8Fh6I4ytF/y25PGHPmbNnj+/I2InBVbM2g0snXAerf64HIX2D6eg265+cOysnQfMs0Fhxn6Pj70z6dZfQ==", "description"=>"SHIFT YOUR SKILLS\r\nSo, what does it take to make it through a busy shift delivering boxes of all shapes and sizes to homes and businesses in your community and beyond?\r\n· The ability to lift up to 70 lbs.\r\n· Valid driver’s license—no CDL required (License type varies by state)\r\n· Pass the DOT physical\r\n· Excellent customer service and driving skills\r\n· Legal right to work in the U.S.\r\n· Casual Package Delivery Drivers are expected to comply with UPS appearance guidelines and wear the company-provided uniform\r\nFull-time UPS employees work eight to ten hours per day and workdays can vary (Monday - Friday) or (Tuesday - Saturday) depending on the business needs.", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.6ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "Objective: To secure a position as a Casual Package Delivery Driver with UPS and utilize my exceptional customer service and driving skills to successfully deliver packages of all sizes and shapes.\r\n\r\nSkills:\r\n- Able to easily and safely lift up to 70 lbs. and efficiently transport packages\r\n- Possess a valid driver's license and safe driving record, ensuring timely and accurate package deliveries (License type varies by state)\r\n- Physically capable of passing the DOT physical exam to comply with safety regulations\r\n- Exceptional customer service and communication skills ensuring professional handling of deliveries\r\n- Authorized to work in the U.S. and possess a strong work ethic\r\n- Diligently adhere to UPS appearance guidelines, while wearing the provided uniform\r\n\r\nExperience:\r\n- Delivery Driver, ABC Company: Successfully delivered packages to multiple customers and businesses, guaranteeing customer satisfaction. Proficient at navigating through busy roads and able to quickly cope with changes in traffic and weather conditions.\r\n\r\nEducation:\r\n- High School Diploma, XYZ High School\r\n\r\nAvailability:\r\n- Flexible availability to work varying shifts Monday-Friday or Tuesday-Saturday, as required to fulfill UPS business needs."], ["updated_at", "2023-11-02 01:39:18.729422"], ["id", 51]]
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 23048ms (ActiveRecord: 18.1ms | Allocations: 4662)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:39:19 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 542)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 8078)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:39:22 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.6ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 605)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:42:36 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xnJqN+WkkziTZbs+Qnze10M8lqBc53/X3C5+fMwOzO7jVACteLqLO7RuDvGaYZ22jNhcEPePu6wY5x9Ex8sF3w==", "description"=>"test", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.6ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "Objective: To secure a position as a Package Delivery Driver with UPS and utilize my exceptional customer service and driving skills to successfully deliver packages of all sizes and shapes.\r\n\r\nSkills:\r\n- Able to easily and safely lift up to 70 lbs. and efficiently transport packages\r\n- Possess a valid Class A Commercial Driver's License and safe driving record, ensuring timely and accurate package deliveries\r\n- Physically demonstrated ability to pass the DOT physical exam to comply with safety regulations\r\n- Exceptional customer service and communication skills ensuring professional handling of deliveries\r\n- Authorized to work in the U.S. and possess a strong work ethic\r\n- Diligently adhere to UPS appearance guidelines, while wearing the provided uniform\r\n- Familiar with handheld devices and computer software used to track and deliver packages\r\n\r\nExperience:\r\n- Delivery Driver, XYZ Company: Successfully delivered packages to multiple customers and businesses with a focus on customer satisfaction. Proficient at navigating through busy roads and able to quickly cope with changes in traffic and weather conditions. Demonstrated ability to plan efficient delivery routes resulting in on-time delivery and reduced fuel consumption.\r\n\r\nEducation:\r\n- High School Diploma, ABC High School\r\n\r\nAvailability:\r\n- Flexible availability to work varying shifts Monday-Friday or Tuesday-Saturday, as required to fulfill UPS business needs. Willing to work overtime during peak season."], ["updated_at", "2023-11-02 01:43:04.672814"], ["id", 51]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.7ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 28507ms (ActiveRecord: 24.4ms | Allocations: 11801)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:43:04 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 540)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 8226)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:44:23 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:44:24 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 800)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.0ms | Allocations: 8516)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:44:57 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eyd9bkDRPF2QHGzv5fLNj352OyOwZopn+JyeFP0Epb82ARf03c8kXrcX2SA9747usZLxkxsOThw8Vf8s9sFsjg==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 459)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:44:57 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 545)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 8233)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:51:17 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YYo0z/u4qRs35l5p3ltYfimWCmcKq8xZCWxXgmCopOFErF5VZqaxGBDt66YGRhsf5nLA16HDCCLNpTa6a21t0A==", "description"=>"test", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:51:41 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Update (0.6ms)[0m  [1m[33mUPDATE "resumes" SET "title" = $1, "updated_at" = $2 WHERE "resumes"."id" = $3[0m  [["title", "Objective: To secure a position as a Package Delivery Driver with UPS and utilize my exceptional customer service and driving skills to successfully deliver packages of all sizes and shapes.\r\n\r\nSkills:\r\n- Able to easily and safely lift up to 70 lbs. and efficiently transport packages\r\n- Possess a valid Class A Commercial Driver's License and safe driving record, ensuring timely and accurate package deliveries\r\n- Physically demonstrated ability to pass the DOT physical exam to comply with safety regulations\r\n- Exceptional customer service and communication skills ensuring professional handling of deliveries\r\n- Authorized to work in the U.S. and possess a strong work ethic\r\n- Diligently adhere to UPS appearance guidelines, while wearing the provided uniform\r\n- Familiar with handheld devices and computer software used to track and deliver packages\r\n\r\nExperience:\r\n- Delivery Driver, XYZ Company: Successfully delivered packages to multiple customers and businesses with a focus on customer satisfaction. Proficient at navigating through busy roads and able to quickly cope with changes in traffic and weather conditions. Demonstrated ability to plan efficient delivery routes resulting in on-time delivery and reduced fuel consumption.\r\n\r\nEducation:\r\n- High School Diploma, ABC High School\r\n\r\nAvailability:\r\n- Flexible availability to work varying shifts Monday-Friday or Tuesday-Saturday, as required to fulfill UPS business needs. Willing to work overtime during peak season. \r\n\r\nNote: No changes were needed as the job description bounced between several different known job titles in our system. Furthermore, the job responsibilities were lacking to make any clear changes to the resume. It's important for job descriptions to be explicit in what is needed in order for candidates to tailor their resumes effectively."], ["updated_at", "2023-11-02 01:51:49.057065"], ["id", 51]]
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 31186ms (ActiveRecord: 29.1ms | Allocations: 17092)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:51:49 +0000
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:51:49 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.4ms | Allocations: 541)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 8263)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:51:49 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 575)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 27ms (Views: 11.1ms | ActiveRecord: 3.7ms | Allocations: 14702)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:51:55 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.7ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 671)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:52:06 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.7ms | Allocations: 267)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 8310)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 01:52:09 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 264)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 8319)
+
+
+Started GET "/cancel" for 209.2.231.226 at 2023-11-02 01:52:13 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:52:13 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 526)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 8063)
+
+
+Started GET "/editor" for 209.2.231.226 at 2023-11-02 01:52:14 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.5ms | Allocations: 264)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 8323)
+
+
+Started POST "/resume/save" for 209.2.231.226 at 2023-11-02 01:52:15 +0000
+Processing by ResumeController#save as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"afP+fDki/JIKCalzdvOtVs5jTTm27iJo6qoZUPl56JC6na+baiz+xbmPzd4GJsyK2qwFGaM3OSPoipiWW6CJOg==", "resume"=>"Objective: To secure a position as a Package Delivery Driver with UPS and utilize my exceptional customer service and driving skills to successfully deliver packages of all sizes and shapes.\r\n\r\nSkills:\r\n- Able to easily and safely lift up to 70 lbs. and efficiently transport packages\r\n- Possess a valid Class A Commercial Driver's License and safe driving record, ensuring timely and accurate package deliveries\r\n- Physically demonstrated ability to pass the DOT physical exam to comply with safety regulations\r\n- Exceptional customer service and communication skills ensuring professional handling of deliveries\r\n- Authorized to work in the U.S. and possess a strong work ethic\r\n- Diligently adhere to UPS appearance guidelines, while wearing the provided uniform\r\n- Familiar with handheld devices and computer software used to track and deliver packages\r\n\r\nExperience:\r\n- Delivery Driver, XYZ Company: Successfully delivered packages to multiple customers and businesses with a focus on customer satisfaction. Proficient at navigating through busy roads and able to quickly cope with changes in traffic and weather conditions. Demonstrated ability to plan efficient delivery routes resulting in on-time delivery and reduced fuel consumption.\r\n\r\nEducation:\r\n- High School Diploma, ABC High School\r\n\r\nAvailability:\r\n- Flexible availability to work varying shifts Monday-Friday or Tuesday-Saturday, as required to fulfill UPS business needs. Willing to work overtime during peak season. \r\n\r\nNote: No changes were needed as the job description bounced between several different known job titles in our system. Furthermore, the job responsibilities were lacking to make any clear changes to the resume. It's important for job descriptions to be explicit in what is needed in order for candidates to tailor their resumes effectively.", "commit"=>"Save"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 897)
+
+
+Started GET "/uploaded" for 209.2.231.226 at 2023-11-02 01:52:15 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 526)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 8062)
+
+
+Started GET "/download" for 209.2.231.226 at 2023-11-02 01:52:19 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.8ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.7ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 607)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:52:53 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ft+cz5VE22N1mw68/f5ybyFoRsgeT6sMAKj3MIyFh6ND64++tFckNXmx0iCflHfBaodvgi22oZ1mg5L3KxZsqw==", "resume"=>{"resume_text"=>"jasmine\r\nskills: driving, delivering packages"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.6ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "jasmine\r\nskills: driving, delivering packages"], ["created_at", "2023-11-02 01:52:53.731762"], ["updated_at", "2023-11-02 01:52:53.731762"]]
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 24ms (ActiveRecord: 17.9ms | Allocations: 2109)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 01:52:53 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.3ms | Allocations: 531)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 8068)
+
+
+Started GET "/" for 209.2.231.226 at 2023-11-02 01:52:55 +0000
+Started GET "/resume" for 209.2.231.226 at 2023-11-02 01:52:56 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 8090)
+
+
+Started POST "/resume" for 209.2.231.226 at 2023-11-02 01:52:58 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgF/ML+HugEX9juiHMAf7zInT/Pa291bg3/MXl1ai4yBby7X7Im4VqRwXw9sFX4zJugH088CxhCBX02Y/4PqJg==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 269)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 9772)
+
+
+Started GET "/" for 209.2.231.106 at 2023-11-02 01:53:03 +0000
+Started GET "/resume" for 209.2.231.106 at 2023-11-02 01:53:03 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 517)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 8093)
+
+

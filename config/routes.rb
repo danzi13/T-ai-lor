@@ -15,4 +15,6 @@ Rottenpotatoes::Application.routes.draw do
   get '/editor', to: 'resume#editor', as: 'editor'
 
   post '/resume/save', to: 'resume#save'
+
+  get 'cancel', to: 'resume#cancel', as: 'cancel'
 end

@@ -12,3 +12,17 @@ Scenario: job description not added
   When "Job Description" is empty
   And I press "Upload Job Description"
   Then I should see "No description, try again"
+
+Scenario: return to home page
+  When I follow "Upload a New Resume"
+  Then I am on the resume page
+
+Scenario: editor without tailoring
+  When I follow "Resume Editor"
+  And I am on the editor page
+  Then I should see "No resume was tailored"
+
+Scenario: editor with tailoring
+  When I press "T(ai)lor!"
+  And I press "Resume Editor"
+  Then I am on the editor page

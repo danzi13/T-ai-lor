@@ -32,9 +32,9 @@ end
 World(WithinHelpers)
 
 # Single-line step scoper
-When /^(.*) within (.*[^:])$/ do |step, parent|
-  with_scope(parent) { When step }
-end
+# When /^(.*) within (.*[^:])$/ do |step, parent|
+#   with_scope(parent) { When step }
+# end
 
 # Multi-line step scoper
 When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
@@ -49,11 +49,30 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
+When(/^I press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
+When /^I press "([^"]*)" within "(.*)"/ do |button, form_id|
+  within('div.row1') do
+    within('div.col-md-62') do
+      within "form##{form_id}" do
+        click_button(button)
+      end
+    end
+  end
+end
 
+When(/^I press the "(.*?)" button$/) do |name|
+  click_button(name)
+end
+
+
+# When /^I press "([^"]*)" within "(.*)"/ do |button, form_id|
+#   within "form##{form_id}" do
+#     click_button(button)
+#   end
+# end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)

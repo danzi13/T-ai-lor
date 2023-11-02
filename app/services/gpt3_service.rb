@@ -62,7 +62,7 @@ class Gpt3Service
       model: @model,
       messages: [{ role: 'user', content: message }]
     }
-    response = HTTParty.post(api_url, body: body.to_json, headers: options[:headers], timeout: 10)
+    response = HTTParty.post(api_url, body: body.to_json, headers: options[:headers], timeout: 90)
     raise response['error']['message'] unless response.code == 200
 
     response['choices'][0]['message']['content']

@@ -23,6 +23,8 @@ module NavigationHelpers
     
     when /Choose File$/ then '/resume'
 
+    when /on the editor page$/ then '/editor'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
