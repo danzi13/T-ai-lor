@@ -1081,3 +1081,49 @@ Processing by ResumeController#new as HTML
   Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 510)
   Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
 Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1638)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 5.0ms | Allocations: 889)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 159)
+Completed 200 OK in 224ms (Views: 223.2ms | ActiveRecord: 0.0ms | Allocations: 289524)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 277)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1335)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4875)
+  Rendered layouts/_flash.erb (Duration: 0.3ms | Allocations: 63)
+Completed 200 OK in 69ms (Views: 12.0ms | ActiveRecord: 6.3ms | Allocations: 12716)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1639)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1638)
+Started GET "/resume" for 127.0.0.1 at 2023-11-02 00:49:13 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1638)

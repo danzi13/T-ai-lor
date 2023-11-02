@@ -15996,3 +15996,42 @@ Processing by ResumeController#uploaded as HTML
 Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 8068)
 
 
+Started GET "/" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:48:45 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:48:45 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 892)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 25ms (Views: 10.8ms | ActiveRecord: 4.0ms | Allocations: 15239)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:48:54 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lrnEkfvMdk2Vc5CRL1/CX3IcUIxzM70+p+ADJGiUfKzDjdfg2t+JG5lZTA1NNcfxOfN5xkDKt6/By2bjzweXpA==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills python"}, "commit"=>"Submit Text"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.3ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-11-02 00:48:54.039658"], ["updated_at", "2023-11-02 00:48:54.039658"]]
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 25ms (ActiveRecord: 21.3ms | Allocations: 958)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:48:54 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 00:49:00 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgxztjUjZvZSTU9oJaefHdiAK4XC7J+N8frSrWV9WNcrOGDHFDCZoF5nk/RHzZqzk28Cz/EVlRyX0bdqwu6z3w==", "description"=>"skills needed is java\r\n", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Resume Load (0.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1672ms (ActiveRecord: 0.3ms | Allocations: 4128)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/resume_controller.rb:59:in `tailor'

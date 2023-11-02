@@ -50,10 +50,13 @@ class ResumeController < ApplicationController
       # Check the value of @resume.resume_text after assignment
       puts "Value of @resume.resume_text after assignment: #{@resume.resume_text}"
       @resume.save
+
+
+
       puts "this is the new resume!!"
       puts @resume.inspect
-      last_resume = Resume.last
-      puts last_resume.inspect
+      l_resume = Resume.last
+      puts l.inspect
 
     end
     redirect_to uploaded_path
