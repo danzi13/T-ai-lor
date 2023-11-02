@@ -40,7 +40,7 @@ class ResumeController < ApplicationController
 
       # @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content
       @resume = Resume.new
-      last_resume = Resume.last
+      last_resume = Resume.unscoped.last
 
       @resume.id = last_resume.id + 1
 
@@ -56,7 +56,7 @@ class ResumeController < ApplicationController
       puts "this is the new resume!!"
       puts @resume.inspect
       l_resume = Resume.last
-      puts l.inspect
+      puts l_resume.inspect
 
     end
     redirect_to uploaded_path

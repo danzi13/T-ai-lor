@@ -13,6 +13,6 @@ Scenario: add resume by upload a file
   When I go to the resume page
   And I go to Choose File
   And I attach the file "my_resume.pdf"
-  And I press "Upload Resume" within the page
+  When I press "Upload Resume" within the page
   Then I am on the uploaded page
   And I should see "Resume uploaded successfully."
