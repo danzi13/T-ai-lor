@@ -4,7 +4,7 @@ class Gpt3Service
   attr_reader :api_url, :options, :model, :message
 
   def initialize(message, model = 'gpt-3.5-turbo')
-    api_key = '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'
+    api_key = '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'
     @options = {
       headers: {
         'Content-Type' => 'application/json',

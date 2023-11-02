@@ -4,7 +4,7 @@
 <!%= text_area_tag :resume, @title_helper, class: 'form-control', style: 'height: 35px; width:25vw' %>
 <%= form_tag resume_save_path, class: 'form' do %>
   <%= label :resume, :resume, 'Resume', :class => 'col-form-label' %>
-  <%= text_area_tag :resume, @editor_helper, class: 'form-control', style: 'height: 400px; width: 75vw' %>
+  <%= text_area_tag :resume, @editor_helper, class: 'form-control my-own-class', style: 'height: 400px; width: 75vw' %>
   <br/>
   <%= link_to 'Cancel', cancel_path, class: 'btn btn-secondary' %>
   <%= submit_tag 'Save', class: 'btn btn-primary' %>

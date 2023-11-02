@@ -18,7 +18,12 @@ Scenario: return to home page
   Then I am on the resume page
 
 Scenario: see some text in the editor console
-  When I am on the editor page
+  When I go to Enter Resume Text
+  And I fill in "Resume Text" with "my resume text"
+  And I press "Upload Resume"
+  And I am on the uploaded page
+  And I follow "Resume Editor"
+  Then I am on the editor page
   And I should see "No resume was tailored"
-  Then I should see "my resume text"
+  And the resume textarea should contain "No Resume"
 

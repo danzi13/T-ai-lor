@@ -283,3 +283,10 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+Then("the resume textarea should contain {string}") do |expected_text|
+  textarea = find('.my-own-class')  # Assuming you can locate the textarea by its id
+
+  # Get the content of the textarea and assert that it contains the expected text.
+  expect(textarea.text).to include(expected_text)
+end

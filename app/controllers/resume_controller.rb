@@ -98,12 +98,12 @@ class ResumeController < ApplicationController
     else
       @editor_helper = "No Resume"
     end
-    if @tailored_resume == ""
-      @title_helper = 'tailored_resume.txt'
-      @editor_helper = @tailored_resume
-    else
-      flash[:notice] = "No resume was tailored"
-    end
+    # if @tailored_resume == ""
+    #   @title_helper = 'tailored_resume.txt'
+    #   @editor_helper = @tailored_resume
+    # else
+    #   flash[:notice] = "No resume was tailored"
+    # end
   end
 
   def save

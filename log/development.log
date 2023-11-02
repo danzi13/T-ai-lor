@@ -20641,3 +20641,151 @@ Processing by ResumeController#editor as HTML
 Completed 200 OK in 26ms (Views: 8.8ms | ActiveRecord: 5.0ms | Allocations: 15105)
 
 
+Started GET "/cancel" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 03:33:14 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 03:33:14 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 525)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8062)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:35:40 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 752)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 8467)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:35:44 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 479)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.4ms | Allocations: 8053)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:35:50 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/bSrniXZu8BMLzxUIvr9VLNyR+OL3GVyI0qqviOHr5GogLjvBMpElkAF4MhAkPj6+J1uqbglb+NFYc95hBREmQ==", "resume"=>{"resume_text"=>"my resume text"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.9ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "my resume text"], ["created_at", "2023-11-02 03:35:50.847473"], ["updated_at", "2023-11-02 03:35:50.847473"]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 38ms (ActiveRecord: 26.3ms | Allocations: 3403)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:35:51 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:35:55 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 265)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 1.5ms | Allocations: 8424)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:38:04 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 498)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:38:05 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 501)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 8074)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:38:18 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"blGkkoWCdCj9QzSArNG8uLVsRPMSwfAdrKoHsxksAaU7ZbfjpJGLfvFp6BzOu7kW/oNtuSE4+ozKgWJ0vr/qrQ==", "resume"=>{"resume_text"=>"my resume text"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "my resume text"], ["created_at", "2023-11-02 03:38:18.406949"], ["updated_at", "2023-11-02 03:38:18.406949"]]
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 22ms (ActiveRecord: 19.0ms | Allocations: 915)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:38:19 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:38:22 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 263)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 8321)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 03:42:42 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJxOXmRa3X4Fe4YoRW/62KaIPCNgSLHazen/NG7eUB+luiTE+UTFfSJwM+edcrm5aWz2k8sgdaEJIJ4MZRuZLg==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 454)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 03:42:42 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 531)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 8223)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:f5e2:aac8:9fbf:d016 at 2023-11-02 03:42:44 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 266)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 32ms (Views: 10.6ms | ActiveRecord: 7.6ms | Allocations: 15050)
+
+
+Started GET "/editor" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:55:49 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.5ms | Allocations: 763)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 164)
+Completed 200 OK in 33ms (Views: 11.1ms | ActiveRecord: 5.1ms | Allocations: 18701)
+
+
+Started POST "/resume/save" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:55:51 +0000
+Processing by ResumeController#save as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0RpIgZeK6nZxW6Zt7bc5UGtx8sRp39nPooetgjAEYjacHpTJ03U/9XvsgXV3NlLCkLugSJedfZYoXtxr1P6gA==", "resume"=>"my resume text", "commit"=>"Save"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 949)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:a5dd:60c:3aa3:7c04 at 2023-11-02 03:55:52 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 830)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8479)
+
+
