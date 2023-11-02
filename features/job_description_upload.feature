@@ -4,13 +4,13 @@ Background: user on website
   Given I am on the uploaded page
 
 Scenario: add job description
-  When I fill in "Job Description"
-  And I press "Upload Job Description"
+  When I fill in "description" with "This is the job description"
+  And I press "T(ai)lor!"
   Then I should see "Success! You can preview or download"
 
 Scenario: job description not added
   When "Job Description" is empty
-  And I press "Upload Job Description"
+  And I press "T(ai)lor!"
   Then I should see "No description, try again"
 
 Scenario: return to home page

@@ -53,6 +53,15 @@ When(/^I press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
+When(/^I click "Save"$/) do
+  click_button("Save")
+end
+
+When("I click a submit tag") do
+  click_button("Save") # Replace "Save" with the text on the submit tag you want to click
+end
+
+
 When /^I press "([^"]*)" within "(.*)"/ do |button, form_id|
   within('div.row1') do
     within('div.col-md-62') do
@@ -125,6 +134,10 @@ end
 
 When /^I attach the file "([^"]*)"$/ do |path|
   
+end
+
+When("I submit the form") do
+  find('form.form').find('input[type="submit"]').click # Adjust the selector based on your form's structure
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|

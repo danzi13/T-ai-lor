@@ -10,6 +10,7 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
+
   def path_to(page_name)
     case page_name
 
@@ -24,6 +25,7 @@ module NavigationHelpers
     when /Choose File$/ then '/resume'
 
     when /on the editor page$/ then '/editor'
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
