@@ -52,4 +52,46 @@ RSpec.describe ResumeController, type: :controller do
       expect(response).to render_template('editor')
     end
   end
+
+
+  
+  describe 'POST #save' do
+    context 'when valid parameters are provided' do
+      it 'creates a new resume with the provided title' do
+        post :save, params: { resume: 'Your new resume title here' }
+        expect(Resume.last.title).to eq('Your new resume title here')
+      end
+
+      it 'redirects to the uploaded_path' do
+        post :save, params: { resume: 'Your new resume title here' }
+        expect(response).to redirect_to(uploaded_path)
+      end
+
+      it 'sets a success notice' do
+        post :save, params: { resume: 'Your new resume title here' }
+        expect(flash[:notice]).to eq('Success! Resume Updated')
+      end
+    end
+
+    context 'when invalid parameters are provided' do
+      it 'does not create a new resume' do
+        post :save, params: { resume: '' } 
+        expect(Resume.count).to eq(0)
+      end
+
+      it 'does not set a success notice' do
+        post :save, params: { resume: '' }
+        expect(flash[:notice]).to be_nil
+      end
+    end
+  end
+
+
+  it 'sets flash messages when description is empty' do
+    post :tailor, params: { description: '' }
+    expect(flash[:alert]).to eq('Warning: you have not tailored your resume for editing or downloading')
+    expect(flash[:notice]).to eq('No description, try again')
+    expect(response).to redirect_to(uploaded_path)
+  end
+
 end

@@ -111,6 +111,10 @@ class ResumeController < ApplicationController
     @resume = Resume.new
     @resume.title = params[:resume]
     @resume.save
+    
+    @last_resume = @resume
+    @tailored_resume = @resume
+
     flash[:notice] = "Success! Resume Updated"
     redirect_to uploaded_path
   end

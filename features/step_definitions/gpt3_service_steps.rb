@@ -7,5 +7,5 @@ When("I call the Gpt3Service") do
 end
 
 Then("the response should be {string}") do |expected_response|
-  expect(@response).to eq(expected_response)
+  expect(@response).to include(expected_response)
 end

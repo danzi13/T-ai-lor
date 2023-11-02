@@ -2,7 +2,7 @@
 <p>Upload your Resume</p>
 
 <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
-
+    
   <div class="row">
     <div class="col-md-6">
       <div class="field">
@@ -12,13 +12,14 @@
     </div>
   </div>
 
-
+	
   <div class="col-md-6">
       <div class="field">
         <%= f.label :resume_text, 'Resume Text' %>
         <%= f.text_area :resume_text %>
       </div>
     </div>
+  </div>
 
   <div class="row">
     <div class="col-md-12 text-center">
@@ -27,5 +28,4 @@
       </div>
     </div>
   </div>
-  
 <% end %>

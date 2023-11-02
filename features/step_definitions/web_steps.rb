@@ -58,7 +58,7 @@ When(/^I click "Save"$/) do
 end
 
 When("I click a submit tag") do
-  click_button("Save") # Replace "Save" with the text on the submit tag you want to click
+  click_button("Save") 
 end
 
 
@@ -75,13 +75,6 @@ end
 When(/^I press the "(.*?)" button$/) do |name|
   click_button(name)
 end
-
-
-# When /^I press "([^"]*)" within "(.*)"/ do |button, form_id|
-#   within "form##{form_id}" do
-#     click_button(button)
-#   end
-# end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
