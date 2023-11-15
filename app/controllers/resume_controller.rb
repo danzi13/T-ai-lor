@@ -1,3 +1,5 @@
+require 'pdf-reader'
+
 class ResumeController < ApplicationController
   require_relative '../services/gpt3_service'
   @tailored_resume_for_download = ""
@@ -6,32 +8,49 @@ class ResumeController < ApplicationController
     @resume = Resume.new
   end
 
-  def create
-    # if params[:resume][:resume_text].present?
-    #   puts "Resume Text: #{params[:resume][:resume_text]}"
-    # end
+
+ def create
+    # puts "Made it to create"
     @resume = Resume.new(resume_params)
     if params[:resume][:resume_text].present?
       @resume.title = params[:resume][:resume_text]
     else
-      puts "HERE!"
-      @resume.title = 'Stand In Title'
+      @resume.title = ''
+    end
+
+    # puts params[:resume]
+    # if params[:file].present?
+    #   @pdf_reader = PDF::Reader.new(params[:attachment].tempfile.path)
+    #   puts @pdf_reader
+    # else
+    #   puts "No file attached."
+    # end
+
+    @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
+    puts @pdf_reader
+
+    @pdf_reader.pages.each do |page|
+      puts 'inside for loop for pdf-reader'
+      puts page.text
+      @resume.title += page.text
     end
     
+    puts @resume.title
+
     if @resume.save
+      # puts "Saves correctly"
       # puts "Uploaded resume title: #{@resume.title}"
       flash[:notice] = "Resume uploaded successfully."
       flash[:alert] = "Warning: you have not yet tailored your resume for editing or downloading"
       redirect_to uploaded_path
     else
+      # puts "In the else statement"
+      flash[:error] = "Failed to upload resume. Please try again."
       render 'new'
     end
-
-    # @last_resume = Resume.last
-    # puts @last_resume.inspect
   end
 
-  def tailor
+ def tailor
     description = params[:description]
     # puts description
 
@@ -125,20 +144,28 @@ class ResumeController < ApplicationController
     end
   end
 
-  def save
-    puts 'we are here'
-    puts params[:resume]
-    @resume = Resume.new
-    @resume.title = params[:resume]
-    @resume.save
-    
-    @last_resume = @resume
-    @tailored_resume = @resume
 
-    flash[:notice] = "Success! Resume Updated"
-    redirect_to uploaded_path
+  def save
+  @resume = Resume.new(resume_params)
+
+  if @file.present?
+    if @file.content_type == 'application/pdf'
+       reader = PDF::Reader.new(@file.path)
+       @resume.resume_text = reader.pages.map(&:text).join("\n")
+    else
+       @resume.resume_text = "Unsupported file format: #{@file.content_type}"
+    end
   end
-  
+
+  if @resume.save
+    flash[:notice] = "Success! Resume Uploaded"
+    redirect_to uploaded_path
+  else
+    flash[:error] = "Failed to upload resume. Please try again."
+    render :new
+  end
+end
+
   def cancel
     flash[:notice] = "Your resume was not changed"
     redirect_to uploaded_path

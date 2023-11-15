@@ -5,6 +5,7 @@ gem 'rails', '6.0.0'
 gem 'openai'
 gem 'httparty'
 gem 'pg'
+gem 'pdf-reader'
 
 gem 'sqlite3', '1.4.2',  group: [:development, :test]
 
@@ -17,6 +18,7 @@ group :development, :test do
   gem 'ZenTest', '4.11.2'
   gem 'paperclip'
   gem 'byebug'
+  gem 'pdf-reader'
 end
 
 group :test do
@@ -24,11 +26,13 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'simplecov', :require => false
   gem 'rails-controller-testing'
+  gem 'pdf-reader'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'pdf-reader'
 end
 
 # Gems used only for assets and not required

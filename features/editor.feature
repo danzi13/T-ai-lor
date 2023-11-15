@@ -4,7 +4,7 @@ Background: user on website
   Given I am on the editor page
 
 Scenario: save changes for resume editor
-  When I follow "Save"
+  When I press "Save"
   Then I should see "Success! Resume Updated"
   And I am on the uploaded page
 

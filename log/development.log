@@ -22425,3 +22425,936 @@ Sent data tailored_resume.txt (0.6ms)
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 504)
 
 
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:19:50 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:19:50 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 5056)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 378ms (Views: 289.3ms | ActiveRecord: 3.8ms | Allocations: 329044)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 128.59.177.50 at 2023-11-15 18:19:51 +0000
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 128.59.177.50 at 2023-11-15 18:19:51 +0000
+Started GET "/assets/resume.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 128.59.177.50 at 2023-11-15 18:19:51 +0000
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 128.59.177.50 at 2023-11-15 18:19:51 +0000
+Started GET "/assets/resume.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 128.59.177.50 at 2023-11-15 18:19:51 +0000
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 128.59.177.50 at 2023-11-15 18:19:51 +0000
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:21:25 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2jIN9SJ6GbFrz7oDTZKlWlXVf99o5h2eP+I95jlklKAOiSLlsBnIqs6UOGYJm98uj+znifacekr2t2uJeYLdNw==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.0ms | Allocations: 9335)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:21:47 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XTsjdLSBijXE0IfqpqjSFksIZ/QbKn/6NfIBmE4815CJgAxkJuJbLmGLBY/ioahikTH/ooVQGC78p1f3DtqeBw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000055c2c875d498 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-166-ihhe7d.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 426)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 9324)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:21:55 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CpG2HFB/ikP8QIsQ+XaInUY6Mqv/pqaXQ09vb8k5QITeKpkMwhxbWFkbCXW9f/LpnAOq/WHcwUOKGjkAid8JEw==", "resume"=>{"resume_text"=>"Hi"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.8ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hi"], ["resume_text", "Hi"], ["created_at", "2023-11-15 18:21:55.355917"], ["updated_at", "2023-11-15 18:21:55.355917"]]
+  [1m[35m (88.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 110ms (ActiveRecord: 89.5ms | Allocations: 3111)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 18:21:55 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.1ms | Allocations: 873)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 8522)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:25:35 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:25:35 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 5042)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 506ms (Views: 366.8ms | ActiveRecord: 4.9ms | Allocations: 329029)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:25:46 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b0KVDza8fXYnw7Vnu2YKj/EUiUBtbRYe88ZpVR6IpJy7+bofpN+sbYKYNwL/b3D7Ky0RFvMXcco6kz86Xm7tCw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fb6121a3dd8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-206-1e9zpcj.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 60.4ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 78ms (Views: 71.9ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:29:21 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 682)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 8255)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:29:26 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+egrkITvKmFblNz8SzW4Bteh86YS/2EQgbH1mqw1UnEtUwSAFoz7ev7PXpkPPMJyDZhr8IyFBsRI5KP17NMb5g==", "resume"=>{"resume_text"=>"hi"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (6.3ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hi"], ["resume_text", "hi"], ["created_at", "2023-11-15 18:29:26.937701"], ["updated_at", "2023-11-15 18:29:26.937701"]]
+  [1m[35m (78.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 103ms (ActiveRecord: 84.8ms | Allocations: 3123)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 18:29:27 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.1ms | Allocations: 863)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 8512)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:35:26 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:35:26 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 34.7ms | Allocations: 5057)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 344ms (Views: 280.6ms | ActiveRecord: 3.2ms | Allocations: 329044)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:35:38 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9f1whiIIT6e/I9ggCkAcHbH1ovewBy7ojNAaj5AIc2QhRl+WsGuevBp4WkVOSWZpa8w6oS59STxFhUzg0O468w==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f24d617f028 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-263-1iv94xy.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 18:35:49 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 869)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 8516)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:42:29 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:42:29 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:141: target of repeat operator is not specified: /*def save
+    puts 'we are here'
+    puts params[:resume]
+    @resume = Resume.new
+    @resume.title = params[:resume]
+    @resume.save
+    
+    @last_resume = @resume
+    @tailored_resume = @resume
+
+    flash[:notice] = "Success! Resume Updated"
+    redirect_to uploaded_path
+  end*/):
+  
+app/controllers/resume_controller.rb:141: target of repeat operator is not specified: /*def save
+app/controllers/resume_controller.rb:141: target of repeat operator is not specified: /*def save
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:42:52 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:42:53 +0000
+  
+SyntaxError (/home/codio/workspace/Iteration/app/controllers/resume_controller.rb:141: target of repeat operator is not specified: /*def save
+    puts 'we are here'
+    puts params[:resume]
+    @resume = Resume.new
+    @resume.title = params[:resume]
+    @resume.save
+    
+    @last_resume = @resume
+    @tailored_resume = @resume
+
+    flash[:notice] = "Success! Resume Updated"
+    redirect_to uploaded_path
+  end*/):
+  
+app/controllers/resume_controller.rb:141: target of repeat operator is not specified: /*def save
+app/controllers/resume_controller.rb:141: target of repeat operator is not specified: /*def save
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:44:07 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:44:08 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 22.8ms | Allocations: 5060)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 486ms (Views: 363.0ms | ActiveRecord: 4.0ms | Allocations: 329048)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:44:19 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gqRv5nsibVfmHEK7Nibd0xyMxMiDxPzKslsecfNjjq5WH0D26UG8TENHwN5yL6enxrVcnh2+mx57Dkges4XHOQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fb8c2228dc8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-320-11rwvr.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 9582)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:44:38 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ghuFEXxxxWtn0iLH+PWQm+aCAnfaAOw206J35hP3ScFWoKoB7hIUcMKJoKK8/OrvPLuaIUR6i+Ia9yGJUxEAVg==", "resume"=>{"resume_text"=>"Here"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.8ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Here"], ["resume_text", "Here"], ["created_at", "2023-11-15 18:44:38.580995"], ["updated_at", "2023-11-15 18:44:38.580995"]]
+  [1m[35m (77.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 93ms (ActiveRecord: 78.6ms | Allocations: 3118)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 18:44:38 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.6ms | Allocations: 881)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8530)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:52:12 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:52:12 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 5064)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 392ms (Views: 310.0ms | ActiveRecord: 2.8ms | Allocations: 329052)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 18:52:23 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JeJWDWk1b+A4XOeN4MgR5XCTdxrVz/m7K6VXnfSsAvHxWXkd+1a++50HZeikwWuRqqrvTEu1nm/i8AHytEpLZg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f26a61a0a30 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-367-1b195q0.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 61ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 9558)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 18:55:00 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 18:55:00 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 46.1ms | Allocations: 5068)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 491ms (Views: 410.4ms | ActiveRecord: 3.6ms | Allocations: 329055)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 19:14:08 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 19:14:08 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 21.8ms | Allocations: 5068)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 492ms (Views: 356.7ms | ActiveRecord: 7.9ms | Allocations: 329056)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:14:20 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3GYK9Ciu4/ncdy19izcXTS7F2Z60BdHfe8FpbX7N45Xyrc7QsFqlEIqXtCyJaYp7oKPMOSqcJO0ulPK9R1+GQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f15621946b8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-571-1owmncy.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 71ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 19:18:01 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 19:18:01 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 5075)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 548ms (Views: 420.9ms | ActiveRecord: 7.0ms | Allocations: 329063)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:18:12 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UEP/gyiNMLNG2SYxAtR1IvPH8vJFcMioprMzTfuJ87mE+NCTuu7hqOOCpFRG3Q9WKf5qpNsKr3xv5mUiu2+6Lg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f495232b160 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-606-o8oz3v.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:18:55 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RopX604Ik21A47gwWgVUUC3cUnOxkRbrg9oUvGNGBDWSMXj73GtCduW4OlUeDC4k9+XKJS/rcT9Kj0LTI6BNog==", "resume"=>{"resume_text"=>"here"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (4.6ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "here"], ["resume_text", "here"], ["created_at", "2023-11-15 19:18:55.621063"], ["updated_at", "2023-11-15 19:18:55.621063"]]
+  [1m[35m (77.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 174ms (ActiveRecord: 82.4ms | Allocations: 3127)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 19:18:55 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 12.4ms | Allocations: 884)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 14)
+Completed 200 OK in 122ms (Views: 120.2ms | ActiveRecord: 0.0ms | Allocations: 8535)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 19:24:41 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 19:24:41 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 83.2ms | Allocations: 5057)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 596ms (Views: 496.9ms | ActiveRecord: 4.0ms | Allocations: 329044)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:24:52 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+72VCSpR81tbTckWijJPZdt3IXwIumozAkxMHiuSgcXVdlEtsqW1sg2tUEeIbNJTVRE025YjnwFXGdfOEgDkA==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f4b92174208 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-645-b89k8g.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 19:28:55 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 19:28:55 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 5053)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 363ms (Views: 263.2ms | ActiveRecord: 4.0ms | Allocations: 329040)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:29:06 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fKja0nqfmQNHn6aup2oCrHNJ1V2nlvDOQO89ugnFXUOoE/XC6PxIGOLEJMvjY3jYqXBNCznslxqJumvVSSMU1A==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fbf9a19aa80 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-672-1r8szm9.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.0ms | Allocations: 9581)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 19:31:12 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 19:31:12 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5067)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 362ms (Views: 258.7ms | ActiveRecord: 4.1ms | Allocations: 329055)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:31:21 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dqNlPWIiZ1AJ14Naw8qsYpxdH6edH5VRrtd9lbXeS0uiGEot8EG2S6yMAT+Hw9YWRmSH8QNl8oVngiv69TgC3A==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f28f6228550 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-692-14xtp9o.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 9582)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 19:35:20 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 19:35:21 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 21.7ms | Allocations: 5063)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 457ms (Views: 334.7ms | ActiveRecord: 5.3ms | Allocations: 329051)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 19:35:32 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mhzRnlUp6tTwAbsCwFrUZ2bxQQMOWqIS6g5fpXW+yOZOp/6Ox0o7z1VaOWeEU64TvMjZVZAgxcYjWwnKNViBcQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000055810330b9a0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-720-1p13yab.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 20:03:47 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 20:03:47 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 73.6ms | Allocations: 5067)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 882ms (Views: 676.6ms | ActiveRecord: 14.3ms | Allocations: 329054)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:03:59 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xHqvqdknPUjM74dxQcRmxG3K7FzJtrZ6ndAP017XVyUQwYC5S0TsU2m0BRQFzRywt/N0ClfM0a5UhVm8HjEesg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fadde186c10 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-203-1wvcrdn.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 28ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started GET "/" for 209.2.227.118 at 2023-11-15 20:14:27 +0000
+Started GET "/resume" for 209.2.227.118 at 2023-11-15 20:14:27 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 46.5ms | Allocations: 5067)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 533ms (Views: 437.0ms | ActiveRecord: 20.9ms | Allocations: 329054)
+
+
+Started POST "/resume" for 209.2.227.118 at 2023-11-15 20:14:40 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zfh0L+IZZSPGpOyGZrj6cxmjohDMswf9QP7JS8P0o9AZQ1s/cHq0OGP/buMisYAHw5o6RlLJYCmJq58kgxLqRw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f0b1617a570 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-334-q9bhaa.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 209.2.227.118 at 2023-11-15 20:16:37 +0000
+Started GET "/resume" for 209.2.227.118 at 2023-11-15 20:16:37 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 5063)
+  Rendered layouts/_flash.erb (Duration: 1.9ms | Allocations: 172)
+Completed 200 OK in 805ms (Views: 596.6ms | ActiveRecord: 9.5ms | Allocations: 329051)
+
+
+Started POST "/resume" for 209.2.227.118 at 2023-11-15 20:16:47 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xDBZ+1ufBpvmW8Y1qqcfihBNzWvfIk/rTGeMP8/2a3wQi3bryfzXgEMARFDurmX+ynRVPUFYKD+FMtpQjxAi6w==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fcd0e326738 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-354-1lx55b2.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 20:31:27 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 20:31:27 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 5063)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 487ms (Views: 371.3ms | ActiveRecord: 6.5ms | Allocations: 329051)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:31:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yMBLGbUS5XLj8FUyhQMU6Vu7m+TR4L/J9kf/OGOvPRYce2QJJ3E0aUar11fBCm6dgYIDsk+a2B0/EqlXI0l0gQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f42ee198790 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-242-1ihgqbf.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 54ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 20:35:06 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 20:35:07 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 5067)
+  Rendered layouts/_flash.erb (Duration: 0.7ms | Allocations: 172)
+Completed 200 OK in 503ms (Views: 356.5ms | ActiveRecord: 5.4ms | Allocations: 329055)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:35:18 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EA1ZCgy+UJmxs52qiOcLqoUSOd2r8ENKuKpp9TsdT+rEtnYant2BghToH8/M7nHeXyuhizWKJJ5x/z+ae/sGfQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f2fd619c550 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-269-1kf8dli.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 77ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 20:36:54 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 20:36:54 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 5053)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 415ms (Views: 306.4ms | ActiveRecord: 5.4ms | Allocations: 329041)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:37:06 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TM5084TcmVCYcwvbt8ejCtCqkopbefKycee1AVnQQVaYdVvjFr9ISz0oib7zztl+CpMK3MUDlWa4suNuGTYIwQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007ff85632e438 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-288-x9hoql.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 20:39:37 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 20:39:38 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 52.3ms | Allocations: 5068)
+  Rendered layouts/_flash.erb (Duration: 3.4ms | Allocations: 172)
+Completed 200 OK in 593ms (Views: 483.2ms | ActiveRecord: 4.1ms | Allocations: 329055)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:39:49 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3DL9AbMYRSlYaDgPRxH/XrHy5P8P6GFCfoKHqMlrqywIidIRIXuUMv0zumoDGIUqa8t8qZGSBpa319HHiY3iuw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f9fae17fa48 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-308-htzo0c.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9590)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:40:09 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pFjpV8hrSrOcplIPMlIH7cVMP1YQwMQMnct2f6upYjhw48ZHWgibqDn90Gp2W32ZH3WnAI66o9hUniAQ608rrw==", "resume"=>{"resume_text"=>"sample"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (6.0ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sample"], ["resume_text", "sample"], ["created_at", "2023-11-15 20:40:09.882657"], ["updated_at", "2023-11-15 20:40:09.882657"]]
+  [1m[35m (68.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 104ms (ActiveRecord: 74.7ms | Allocations: 3126)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 20:40:10 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.9ms | Allocations: 872)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.0ms | Allocations: 8523)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 20:56:18 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 20:56:19 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 5042)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 645ms (Views: 467.0ms | ActiveRecord: 5.6ms | Allocations: 329030)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 20:56:38 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+8da5wRVr/uJgeiBayNNXIH8Dv3sLZvQAQiwcsiSt4XVDJ7DnKHpEt9hcdBpfdBqD5obWnK0buJUXSui8QDSQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007ff92e1988c0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-398-1mev96k.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 116ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 9565)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 21:22:00 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:22:01 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 26.3ms | Allocations: 5071)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 847ms (Views: 679.9ms | ActiveRecord: 9.9ms | Allocations: 329058)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 21:22:14 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cw1R9U/W55kE+f6RVYhgZlLHIGAoVZ+xisZJ499iCmKntn7l3bU2gqGifPQRgRoSiP64NrYv+GVDkx+Mn4RD9Q==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fc1ce063988 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-527-1d98gkw.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 70ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 9581)
+
+
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:23:03 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 693)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 8266)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 21:30:31 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:30:31 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 52.8ms | Allocations: 5057)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 486ms (Views: 393.0ms | ActiveRecord: 4.9ms | Allocations: 329044)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 21:30:42 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5JfcMa4cCUov+3T1ddd/PMZPR/b6fXnD2+Ez9EVFhaEwLPMhPH/YUYqg9pAx3gVIHHbfoGQHHhcStGWbBaPMNg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f3db21743b8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-576-1w0ele4.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 21:34:20 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:34:20 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 29.2ms | Allocations: 5063)
+  Rendered layouts/_flash.erb (Duration: 0.9ms | Allocations: 172)
+Completed 200 OK in 619ms (Views: 456.7ms | ActiveRecord: 10.4ms | Allocations: 329051)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 21:34:31 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Uzdz7KYUFPxxJZyOllr4/pC07nvt6t54HlBERaMa+gh9/LfIPuBSFSfFBd+UBGXIHtL73HNzK0pLBd+Vmoifw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x000055fd53344210 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-602-jpnlv6.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 1766)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 21:34:31 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 3.6ms | Allocations: 874)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 8524)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 21:39:12 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:39:12 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 5056)
+  Rendered layouts/_flash.erb (Duration: 0.8ms | Allocations: 172)
+Completed 200 OK in 596ms (Views: 407.6ms | ActiveRecord: 12.3ms | Allocations: 329042)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 21:39:22 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/u1Wag6A3u/xFDuUhBusQL4T/KS57qyeDBd8HM/3W+PQJpJOlnSYBqf0osWGRTF2MHXpAyd3WaxZQufM9mU+A==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f723a058008 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-633-1sxy6cm.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 1768)
+
+
+Started GET "/uploaded" for 128.59.177.50 at 2023-11-15 21:39:22 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.3ms | Allocations: 866)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 8518)
+
+
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:39:27 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 691)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8265)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 128.59.177.50 at 2023-11-15 21:44:31 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 21:44:31 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 54.6ms | Allocations: 5065)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 172)
+Completed 200 OK in 584ms (Views: 464.9ms | ActiveRecord: 4.2ms | Allocations: 329052)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 21:44:44 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fiJJ9pJSqQpgFKZ/o+iafx0USxCFVZ9AgvqD95/5Nb+qmWbmADF4EcVPJBrn4eALxy3TRhsv+JRLr9WY3x98KA==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f04c61780c8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-667-jys666.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 38ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started GET "/" for 209.2.229.16 at 2023-11-15 22:50:44 +0000
+Started GET "/resume" for 209.2.229.16 at 2023-11-15 22:50:45 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 5056)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 443ms (Views: 334.9ms | ActiveRecord: 4.7ms | Allocations: 329044)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 209.2.229.16 at 2023-11-15 22:50:45 +0000
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 22:51:10 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nZvWnl1AXB0h6mrORbx8bePRntp7+J/QQnm2gIju9obIr8XvfFOjSy3AtlIn1nnDqD63kEgBlUEkUtNHL30djg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00005561bfa77918 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1171-1enlmj7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 9589)
+
+
+Started GET "/" for 209.2.229.16 at 2023-11-15 22:52:48 +0000
+Started GET "/resume" for 209.2.229.16 at 2023-11-15 22:52:48 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 701)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8274)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 22:53:35 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wcNRQrwU4DznV3HUP/VckIPEKzDvlCbF6E9+/8s9n1yU90IznQcfaut9rUhdn1k+yCsCetxtLFSOZBs4bK50VA==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fce097780b0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1171-1vo6wud.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 28ms (Views: 10.2ms | ActiveRecord: 1.3ms | Allocations: 17149)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 22:58:30 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJ1+1bOfnZWrX1ZeImAefM05eMO4MMOdCy1l8w5c4lzBqW2kkoxiw6d1isJAChvShtZRiYvJyQxtBgA0qc8JVA==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (5.2ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python"], ["resume_text", "jasmine lou\r\nskills: python"], ["created_at", "2023-11-15 22:58:30.271134"], ["updated_at", "2023-11-15 22:58:30.271134"]]
+  [1m[35m (75.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 109ms (ActiveRecord: 80.6ms | Allocations: 3133)
+
+
+Started GET "/uploaded" for 209.2.229.16 at 2023-11-15 22:58:30 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.4ms | Allocations: 873)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 8522)
+
+
+Started POST "/tailor" for 209.2.229.16 at 2023-11-15 23:19:19 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JCKKBsuIiAZZ23elvnm2WtpZkfqTo3evStErm9ACFclxFpl36pt3UFXxqzncE7P0kba4sKBafT4s+k5cd5H+wQ==", "description"=>"skills needed:java", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mResume Load (5.8ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Jasmine Lou \nSkills: Java, Python \n\nObjective:\nI am a highly skilled software developer with a passion for coding and an in-depth understanding of Java and Python. I have extensive experience creating and implementing software solutions aimed at addressing complex business challenges.\n\nEducation:\nBachelor of Computer Science, XYZ University, [Graduation Date]\n\nSkills:\n• Proficient in Java and Python\n• Experience with various software development methodologies\n• Familiarity with agile development methodologies and best practices\n• Excellent problem-solving and analytical skills \n\nExperience:\nSoftware Developer, ABC Company\n[Date Range]\n• Developed high-quality software solutions using Java and Python \n• Designed and implemented innovative solutions that addressed client needs \n• Collaborated with cross-functional teams to ensure project success \n• Utilized agile methodologies to improve software development processes \n\nSoftware Engineer, DEF Corporation\n[Date Range]\n• Contributed to the creation of complex software solutions using Java and Python \n• Conducted code reviews and provided feedback to team members \n• Developed test cases and automated test scripts to ensure software quality \n• Collaborated with clients to understand their needs, and deliver timely solutions that met their expectations \n\nCertifications:\n• Java Certification, Oracle Corporation\n• Python Certification, Python Software Foundation \n\nReferences:\nAvailable Upon Request."], ["resume_text", "Jasmine Lou \nSkills: Java, Python \n\nObjective:\nI am a highly skilled software developer with a passion for coding and an in-depth understanding of Java and Python. I have extensive experience creating and implementing software solutions aimed at addressing complex business challenges.\n\nEducation:\nBachelor of Computer Science, XYZ University, [Graduation Date]\n\nSkills:\n• Proficient in Java and Python\n• Experience with various software development methodologies\n• Familiarity with agile development methodologies and best practices\n• Excellent problem-solving and analytical skills \n\nExperience:\nSoftware Developer, ABC Company\n[Date Range]\n• Developed high-quality software solutions using Java and Python \n• Designed and implemented innovative solutions that addressed client needs \n• Collaborated with cross-functional teams to ensure project success \n• Utilized agile methodologies to improve software development processes \n\nSoftware Engineer, DEF Corporation\n[Date Range]\n• Contributed to the creation of complex software solutions using Java and Python \n• Conducted code reviews and provided feedback to team members \n• Developed test cases and automated test scripts to ensure software quality \n• Collaborated with clients to understand their needs, and deliver timely solutions that met their expectations \n\nCertifications:\n• Java Certification, Oracle Corporation\n• Python Certification, Python Software Foundation \n\nReferences:\nAvailable Upon Request."], ["updated_at", "2023-11-15 23:19:41.416160"], ["id", 23]]
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 21747ms (ActiveRecord: 81.8ms | Allocations: 3904)
+
+
+Started GET "/uploaded" for 209.2.229.16 at 2023-11-15 23:19:42 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.7ms | Allocations: 847)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 153)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 9624)
+
+
+Started GET "/editor" for 209.2.229.16 at 2023-11-15 23:20:29 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.5ms | Allocations: 511)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 8682)
+
+
+Started GET "/cancel" for 209.2.229.16 at 2023-11-15 23:36:49 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 2ms (Allocations: 438)
+
+
+Started GET "/uploaded" for 209.2.229.16 at 2023-11-15 23:36:49 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.7ms | Allocations: 522)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 29ms (Views: 28.3ms | Allocations: 8210)
+
+
+Started GET "/resume" for 209.2.229.16 at 2023-11-15 23:36:56 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 975)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 39ms (Views: 14.3ms | ActiveRecord: 1.7ms | Allocations: 15963)
+
+
+Started GET "/resume" for 209.2.229.16 at 2023-11-15 23:36:57 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 678)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 8252)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:37:04 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E479hmHraz73OwXr5cwQIGEDFK8DHuGUGsBvMyzb8iVGuu73QPiUaPsR2XeHphWOKuw95TDn6wV86wr0i0gZLQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fcdf87f3690 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1171-1y281f4.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 427)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 9132)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:37:30 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvPvH/FKmOYyikZ7umvGFpkbaBpqAq3V+Y0hgkOaLsvPx/xu0FlnsD6gmufYAcO40vRBUFn7p0SfpkRF5AnFww==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fcdf88d84c0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1171-6btfq4.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 426)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 9096)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:38:39 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIs/sh0yL4mZgEPJ5zAfjcPOcQmHJOaSPtk5SXwiwgYtvyzDPCHQ35Wqn1WFWhojiCFYQ7Td7ANY8lyO27EpDg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fcdfc134f30 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1171-8z7hz0.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 35ms (Views: 11.4ms | ActiveRecord: 1.7ms | Allocations: 17099)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 23:42:57 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 23:42:57 +0000
+  
+LoadError (cannot load such file -- pdf-reader):
+  
+app/controllers/resume_controller.rb:1:in `<top (required)>'
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:43:44 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIs/sh0yL4mZgEPJ5zAfjcPOcQmHJOaSPtk5SXwiwgYtvyzDPCHQ35Wqn1WFWhojiCFYQ7Td7ANY8lyO27EpDg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x0000559f2effde58 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-drul8i.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 4.4ms | Allocations: 28542)
+
+
+  
+NoMethodError (undefined method `tempfile' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:22:in `create'
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:45:09 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIs/sh0yL4mZgEPJ5zAfjcPOcQmHJOaSPtk5SXwiwgYtvyzDPCHQ35Wqn1WFWhojiCFYQ7Td7ANY8lyO27EpDg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39c24b1d0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-1639aer.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1568)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 160)
+Completed 200 OK in 394ms (Views: 367.7ms | ActiveRecord: 1.4ms | Allocations: 309013)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:45:17 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJBsMOENta4UaAgC5x9aLNMlZxxGUOW1aK0mQRq7mWNppH9BwB5K+BhC1J6FdV+CmMpOVnWp7yQOhkOGvShyaw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39e33af30 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-3sl6kv.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 433)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 9099)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 23:45:54 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 23:45:55 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 750)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 38ms (Views: 14.1ms | ActiveRecord: 2.0ms | Allocations: 16302)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:45:57 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJBsMOENta4UaAgC5x9aLNMlZxxGUOW1aK0mQRq7mWNppH9BwB5K+BhC1J6FdV+CmMpOVnWp7yQOhkOGvShyaw==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39e6db7c0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-flhcun.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 427)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 9126)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:46:03 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jj8f3Vp+O/GfOhySi0JDYNlf5Xj2Brs3E9QS/XLMCcLbCwyse23Ep5MQwA7pKEbOkrDMMsX/saZ1/3c61V/iyg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39e7c07f8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-7bqa56.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 426)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 123ms (Views: 114.3ms | ActiveRecord: 0.0ms | Allocations: 9098)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-15 23:46:07 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ywdcPevJ+MADtpA8S9Ks75HdOvheZPYFcOCQU67nwFQfvHMteaop26btElkP29abS+SirsAekdG5tcY87gGJww==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x0000559f2ee260a8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-6boovg.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 426)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.0ms | Allocations: 9080)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:47:04 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0uULhLRwRuv+KlKqe1GugdznY+NKp9eFNrI5lny26fqH0Rj1lWO5vfIAjjYZO6svlwhKqXle3RRQmVxR2yUC8g==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39da48a30 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-f8pxpk.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.3ms | Allocations: 8348)
+
+
+  
+NoMethodError (undefined method `tempfile' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:29:in `create'
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:47:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0uULhLRwRuv+KlKqe1GugdznY+NKp9eFNrI5lny26fqH0Rj1lWO5vfIAjjYZO6svlwhKqXle3RRQmVxR2yUC8g==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39dc632c0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-1091eqo.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 38ms (Views: 13.1ms | ActiveRecord: 1.5ms | Allocations: 17864)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:47:54 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fv9Ew3qgYCR7fODZKzXf66TjDTRmnhEzQ0hUKK0N9Wwz+5iLPl+1p3HLx8GxtLR5XylfuJjctWrJkSXBSfc3Q==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39dfe5ec0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-1ysyfsw.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 426)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 9805)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:49:00 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BAm3T2c1nTezIIkNzb9krAlT8wQaQ0R8qCKBsjX34fZRPaQ+RiZiYb8KVZGv1WECQrzaTim6Tu3OCeR1kmQK/g==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39e436b28 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-1m7av8y.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 49ms (Views: 13.8ms | ActiveRecord: 2.0ms | Allocations: 24252)
+
+
+Started GET "/" for 128.59.177.50 at 2023-11-15 23:49:51 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-15 23:49:52 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 758)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 52ms (Views: 12.6ms | ActiveRecord: 1.3ms | Allocations: 16291)
+
+
+Started POST "/resume" for 209.2.229.16 at 2023-11-15 23:50:59 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdv5cFMoVT5jkyEH3v5F0UTM+KwO1SRkXq9HIlggJ7Uk7+oBcjuqaG+5/Zu8lEB/DyPR5j0sLvU4hCLl/7PMvQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007fd39dae8328 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-1665-1g827p0.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 436)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 51ms (Views: 11.9ms | ActiveRecord: 1.4ms | Allocations: 28172)
+
+

@@ -5,11 +5,12 @@ Background: user on website
 
 Scenario: add job description
   When I fill in "description" with "This is the job description"
-  And I press "T(ai)lor!"
+  And I follow "T(ai)lor!"
   Then I should see "Success! You can preview or download"
 
 Scenario: job description not added
-  When "Job Description" is empty
+
+  When I fill in "description" with ""
   And I press "T(ai)lor!"
   Then I should see "No description, try again"
 
@@ -23,6 +24,7 @@ Scenario: editor without tailoring
   Then I should see "No resume was tailored"
 
 Scenario: editor with tailoring
-  When I press "T(ai)lor!"
+  Given I am on the uploaded page
+  And I press "T(ai)lor!"
   And I press "Resume Editor"
   Then I am on the editor page
