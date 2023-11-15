@@ -20962,3 +20962,341 @@ FOREIGN KEY ("blob_id")
   [1m[35m (73.9ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 209.2.231.43 at 2023-11-15 03:23:45 +0000
+Started GET "/resume" for 209.2.231.43 at 2023-11-15 03:23:45 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1426)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 173)
+Completed 200 OK in 352ms (Views: 269.8ms | ActiveRecord: 5.0ms | Allocations: 324274)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 209.2.231.43 at 2023-11-15 03:23:46 +0000
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 209.2.231.43 at 2023-11-15 03:23:46 +0000
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 209.2.231.43 at 2023-11-15 03:23:46 +0000
+Started GET "/assets/resume.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 209.2.231.43 at 2023-11-15 03:23:46 +0000
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 209.2.231.43 at 2023-11-15 03:23:46 +0000
+Started GET "/assets/resume.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 209.2.231.43 at 2023-11-15 03:23:46 +0000
+Started POST "/resume" for 209.2.231.43 at 2023-11-15 03:23:51 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3TGpegjyrcecNwsV+qDIsLFQNDk22cO5u0pMWpYIWHcOX/idW/yvkC+xb7iKdalspZ98GSMA2PK5as2cNNE53Q==", "resume"=>{"resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 253)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 11693)
+
+
+Started POST "/resume" for 209.2.231.43 at 2023-11-15 03:23:55 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cwRl8lBEMHRzBVIXgshKvkXCxmTnwOJbyJHb5rySf5mgajQVA0oyI8CDNrryHStiUQ2ORPIZ+RDKsVogHkseMw==", "resume"=>{"resume_text"=>"hi"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "hi"], ["created_at", "2023-11-15 03:23:55.067060"], ["updated_at", "2023-11-15 03:23:55.067060"]]
+  [1m[35m (71.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 86ms (ActiveRecord: 72.2ms | Allocations: 2935)
+
+
+Started GET "/uploaded" for 209.2.231.43 at 2023-11-15 03:23:55 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 873)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 8522)
+
+
+Started POST "/tailor" for 209.2.231.43 at 2023-11-15 03:23:57 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xlTKiaotxqbdBHaRNo5KyC1edndXyNg1rn7y5zFOhBMVOptu+SPE8W6CEjxGWysUOZE+V0IRw36sXnMhk5fluQ==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/uploaded" for 209.2.231.43 at 2023-11-15 03:23:57 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 539)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 8077)
+
+
+Started POST "/tailor" for 209.2.231.43 at 2023-11-15 03:24:01 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rMeFOFx1HD95kiA9SGBlzpcRWVkqOglsteRyT8C8SiZ/qdTfD3seaMoURJA4tQQSg94ReT/jEie3xPOJYmUrjA==", "description"=>"Hello", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Greetings!\n\nI am excited to apply for the Hello position and utilize my skills and experience to excel in this role. My background in customer service, strong communication abilities, and multitasking capabilities make me an excellent fit for this position.\n\n- Proven experience delivering exceptional customer service and support in a fast-paced environment\n- Skilled in handling customer inquiries and resolving issues efficiently and professionally\n- Proficient in using various software programs and tools to maintain accurate records and manage workflow\n- Excellent verbal and written communication skills, capable of building rapport with customers and colleagues at all levels\n- Comfortable working independently and as part of a team, with a strong track record of meeting and exceeding goals\n- Detail-oriented and organized, capable of managing multiple tasks and priorities simultaneously\n\nI look forward to the opportunity of contributing to the success of your team at Hello. Thank you for considering my application."], ["updated_at", "2023-11-15 03:24:25.278431"], ["id", 1]]
+  [1m[35m (60.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 23890ms (ActiveRecord: 61.2ms | Allocations: 3292)
+
+
+Started GET "/uploaded" for 209.2.231.43 at 2023-11-15 03:24:25 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:25:39 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:25:40 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1413)
+  Rendered layouts/_flash.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 335ms (Views: 276.8ms | ActiveRecord: 2.7ms | Allocations: 324255)
+
+
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:25:40 +0000
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:25:40 +0000
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:26:33 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"097N4pHvYWBa40nrp7qxCfnu3hrbVsd0vBfoDDBFB2WG6t6TsPyeNlbJlXfF0LSnsgH3UOivzeXaPI3Ll9bsbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd081ae790 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1seviat.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+[31mUnpermitted parameter: :file[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 253)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 11729)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:27:58 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf0TS0xqLu3CH2gRiNpxHyKpujjuCoUohbTMIIvTYbnwyQA6bXnRu841tI3qsHSxaUaTct3zj7njn6nnLECKsQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x0000558257683d08 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1bz6rnj.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 250)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 30ms (Views: 12.5ms | ActiveRecord: 1.6ms | Allocations: 15931)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:35:08 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nfQFrAJpa5harbhBeq60lWnFFORj67NWTUJXMiii2GfIwBbdI3qUzlaHZN0YxLE7Iio9rlASuccraTL1jzEzbw==", "resume"=>{"resume_text"=>"hello world"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "hello world"], ["created_at", "2023-11-15 03:35:08.472336"], ["updated_at", "2023-11-15 03:35:08.472336"]]
+  [1m[35m (82.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 97ms (ActiveRecord: 83.1ms | Allocations: 3093)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:35:08 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 877)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 8526)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:38:21 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf0TS0xqLu3CH2gRiNpxHyKpujjuCoUohbTMIIvTYbnwyQA6bXnRu841tI3qsHSxaUaTct3zj7njn6nnLECKsQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd199f0438 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-13to4xp.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 440)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 163)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 10052)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:38:57 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf0TS0xqLu3CH2gRiNpxHyKpujjuCoUohbTMIIvTYbnwyQA6bXnRu841tI3qsHSxaUaTct3zj7njn6nnLECKsQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd19c51880 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-14hfcq0.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 89.0ms | Allocations: 1150)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 0.0ms | Allocations: 10752)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:39:30 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kDiulwxD442EgwnTAEToE5Z+ujlbD5CtBXVHef+fnlnFDL3mLVAc24ip1U9iLu293ZGTc2j2mjxjXiK+WAx1UQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd1a00e158 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1746ydg.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 435)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 8772)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:46:36 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd1a074138 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-bottbx.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1403)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:6:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:47:33 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd086977e8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-edzn5u.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 8ms (Allocations: 2526)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:6:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:48:01 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd08fb2b70 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-il6388.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 3ms (Allocations: 1552)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/resume.rb:5:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:48:45 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd08b792c0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-w9t3yk.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 4ms (Allocations: 2024)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:5:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:49:15 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x0000558257780df0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1us07vw.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 4ms (Allocations: 2020)
+
+
+  
+ArgumentError (Unknown validator: 'ContentTypeValidator'):
+  
+app/models/resume.rb:5:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:49:56 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd0890bc40 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-dxj93.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 3ms (Allocations: 2016)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/resume.rb:5:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:51:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd0932e600 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1kiqocv.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 4ms (Allocations: 1651)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:6:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:54:01 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd091865a0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1wcepa7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[paperclip] Trying to link /tmp/RackMultipart20231115-252-1wcepa7.pdf to /tmp/474de6dd66ed6c7cc20f57b1308a628820231115-252-1ra6072.pdf
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 8178)
+
+
+  
+Paperclip::Error (Resume model missing required attr_accessor for 'file_file_name'):
+  
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:55:22 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd08d5e950 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-1awhn3r.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[paperclip] Trying to link /tmp/RackMultipart20231115-252-1awhn3r.pdf to /tmp/474de6dd66ed6c7cc20f57b1308a628820231115-252-14s4h64.pdf
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms | Allocations: 8509)
+
+
+  
+Paperclip::Error (Resume model missing required attr_accessor for 'file_file_name'):
+  
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:56:16 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd08996458 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-16kfecz.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>"hello"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[paperclip] Trying to link /tmp/RackMultipart20231115-252-16kfecz.pdf to /tmp/474de6dd66ed6c7cc20f57b1308a628820231115-252-7mz6is.pdf
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.7ms | Allocations: 8521)
+
+
+  
+Paperclip::Error (Resume model missing required attr_accessor for 'file_file_name'):
+  
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:57:36 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd080fa3d0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-15fhw7t.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>"hello"}, "commit"=>"Upload Resume"}
+[paperclip] Trying to link /tmp/RackMultipart20231115-252-15fhw7t.pdf to /tmp/474de6dd66ed6c7cc20f57b1308a628820231115-252-5fmi5n.pdf
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 684)
+
+
+  
+Paperclip::Error (Resume model missing required attr_accessor for 'file_file_name'):
+  
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 03:59:07 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgJOcI50cQzFHUcf6yaZHEHdN+hoZeDXkXPdyg0w/2X7Nl0Br2eOWsk3m4OJTJyyCjIeoluc6kb3WLgNqqMUbQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd198113b0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-emsp.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>"hello"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[paperclip] Trying to link /tmp/RackMultipart20231115-252-emsp.pdf to /tmp/474de6dd66ed6c7cc20f57b1308a628820231115-252-1gbip47.pdf
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms | Allocations: 8536)
+
+
+  
+Paperclip::Error (Resume model missing required attr_accessor for 'file_file_name'):
+  
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:00:06 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kDiulwxD442EgwnTAEToE5Z+ujlbD5CtBXVHef+fnlnFDL3mLVAc24ip1U9iLu293ZGTc2j2mjxjXiK+WAx1UQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbd091c1628 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-252-pj7sgz.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+[paperclip] Trying to link /tmp/RackMultipart20231115-252-pj7sgz.pdf to /tmp/474de6dd66ed6c7cc20f57b1308a628820231115-252-v04k68.pdf
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 698)
+
+
+  
+Paperclip::Error (Resume model missing required attr_accessor for 'file_file_name'):
+  
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:00:15 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kDiulwxD442EgwnTAEToE5Z+ujlbD5CtBXVHef+fnlnFDL3mLVAc24ip1U9iLu293ZGTc2j2mjxjXiK+WAx1UQ==", "resume"=>{"resume_text"=>"hello world"}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1690)
+
+
+  
+NoMethodError (undefined method `file_file_name' for #<Resume:0x00007fbd08c881e8>):
+  
+app/controllers/resume_controller.rb:15:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:00:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kDiulwxD442EgwnTAEToE5Z+ujlbD5CtBXVHef+fnlnFDL3mLVAc24ip1U9iLu293ZGTc2j2mjxjXiK+WAx1UQ==", "resume"=>{"resume_text"=>"hello world"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "hello world"], ["created_at", "2023-11-15 04:00:43.569187"], ["updated_at", "2023-11-15 04:00:43.569187"]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 94ms (ActiveRecord: 74.1ms | Allocations: 8861)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:00:43 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.7ms | Allocations: 856)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8675)
+
+

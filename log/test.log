@@ -29454,3 +29454,385 @@ Processing by ResumeController#uploaded as HTML
   Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
   Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
 Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1325)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#tailor as HTML
+  Parameters: {"description"=>""}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1087)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1101)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 168)
+Completed 200 OK in 333ms (Views: 318.6ms | ActiveRecord: 0.9ms | Allocations: 296947)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#create as HTML
+  Parameters: {"resume"=>{"resume_text"=>"Your resume text"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Your resume text"], ["created_at", "2023-11-15 03:24:42.373968"], ["updated_at", "2023-11-15 03:24:42.373968"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/uploaded
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 794)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#create as HTML
+  Parameters: {"resume"=>{"resume_text"=>""}}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 217)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 4780)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#tailor as HTML
+  Parameters: {"description"=>"Job description"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 461)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 266)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#download as HTML
+Redirected to http://test.host/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 168)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.5ms | Allocations: 487)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1909)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>"Your new resume title here"}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 586)
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>"Your new resume title here"}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 560)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>"Your new resume title here"}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 560)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>""}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 560)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "resumes"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>""}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 560)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:07 +0000
+Processing by ResumeController#editor as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1033)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 161)
+Completed 200 OK in 270ms (Views: 256.0ms | ActiveRecord: 1.2ms | Allocations: 292070)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#editor as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.8ms | Allocations: 234)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1574)
+Started GET "/cancel" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#cancel as HTML
+Redirected to http://www.example.com/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 356)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.7ms | Allocations: 772)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1943)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 44.0ms | Allocations: 431)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 46ms (Views: 45.9ms | ActiveRecord: 0.0ms | Allocations: 1492)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#editor as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.7ms | Allocations: 228)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1569)
+Started GET "/" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 649)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 238)
+Completed 200 OK in 15ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 7931)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 226)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1496)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#editor as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.6ms | Allocations: 229)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1563)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 238)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1507)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 434)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1491)
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 3.7ms | Allocations: 226)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 1680)
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:08 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.9ms | Allocations: 226)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1691)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1325)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1325)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1325)
+Started GET "/" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1325)
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#editor as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.9ms | Allocations: 226)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1560)
+Started GET "/editor" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 0.9ms | Allocations: 226)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1691)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.8ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1325)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1325)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/resume" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 63)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1332)
+Started GET "/uploaded" for 127.0.0.1 at 2023-11-15 03:29:09 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.7ms | Allocations: 268)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1325)
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#tailor as HTML
+  Parameters: {"description"=>""}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 1087)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1101)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 168)
+Completed 200 OK in 380ms (Views: 360.0ms | ActiveRecord: 1.0ms | Allocations: 296947)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#create as HTML
+  Parameters: {"resume"=>{"resume_text"=>"Your resume text"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Your resume text"], ["created_at", "2023-11-15 03:29:24.753426"], ["updated_at", "2023-11-15 03:29:24.753426"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/uploaded
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 798)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#create as HTML
+  Parameters: {"resume"=>{"resume_text"=>""}}
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 217)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 11ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4786)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#tailor as HTML
+  Parameters: {"description"=>"Job description"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 463)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 266)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#download as HTML
+Redirected to http://test.host/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 170)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 1.2ms | Allocations: 488)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 20)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 1916)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>"Your new resume title here"}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>"Your new resume title here"}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 562)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>"Your new resume title here"}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 562)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>""}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 562)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "resumes"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ResumeController#save as HTML
+  Parameters: {"resume"=>""}
+Redirected to http://test.host/uploaded
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 562)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

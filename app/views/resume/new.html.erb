@@ -5,10 +5,17 @@
     
   <div class="row">
     <div class="col-md-6">
+    <!---
       <div class="field">
         <label for="resume_file">File</label>
         <input type="file" name="resume[file]" id="resume_file">
       </div>
+    --->
+
+    <div class="field">
+      <%= f.label :file %>
+      <%= f.file_field :file %>
+    </div>
     </div>
   </div>
 

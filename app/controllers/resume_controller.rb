@@ -125,6 +125,6 @@ class ResumeController < ApplicationController
   end
 
   def resume_params
-    params.require(:resume).permit(:attachment, :resume_text) # Include :resume_text in permitted params
+    params.require(:resume).permit(:attachment, :resume_text, :file, :filename) # Include :resume_text in permitted params
   end
 end
