@@ -6,6 +6,8 @@ gem 'openai'
 gem 'httparty'
 gem 'pg'
 
+gem 'sqlite3', '1.4.2',  group: [:development, :test]
+
 # for Heroku deployment 
 group :development, :test do
   gem 'database_cleaner', '1.4.1'
