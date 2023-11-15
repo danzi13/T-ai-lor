@@ -11,7 +11,13 @@ class ResumeController < ApplicationController
     #   puts "Resume Text: #{params[:resume][:resume_text]}"
     # end
     @resume = Resume.new(resume_params)
-    @resume.title = params[:resume][:resume_text]
+    if params[:resume][:resume_text].present?
+      @resume.title = params[:resume][:resume_text]
+    else
+      puts "HERE!"
+      @resume.title = 'Stand In Title'
+    end
+    
     if @resume.save
       # puts "Uploaded resume title: #{@resume.title}"
       flash[:notice] = "Resume uploaded successfully."
@@ -39,10 +45,23 @@ class ResumeController < ApplicationController
       @last_resume = Resume.last
 
       # Change resume with AI
-      @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same:\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
+      @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. AGAIN, DO NOT JUST MAKE UP EXPERIENCES. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
+      # @prompt = "Here is a resume. Return to me the same resume but parsed into different sections. Between each section put 3 & symbols. DO NOT CHANGE ANYTHING ABOUT THE RESUME, EXCEPT ADDING THE & SYMBOLS AND DO NOT RETURN ANY NEW LINE CHARACTERS. Resume: #{@last_resume.title}. \n\n Resume Parsed: "
       @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
-      # puts "THIS IS WHAT GPT IS RETURNING:"
-      # puts @tailored_resume
+      # @sections = @tailored_resume.split('&&&&&')
+      # # puts "THIS IS WHAT GPT IS RETURNING:"
+
+      # @tailored_resume = ''
+      
+      # for s in @sections
+      #   puts 'in the loop'
+      #   @s = s
+      #   @prompt = "Here is a resume section. Tailor the following section to match the job description. Don't lie in the tailored resume, but rather enhance the original resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same as the original resume section in the new resume section. :\n\nJob Description: #{description}\n\nResume section: #{@s} \n\nTailored Resume: "
+      #   @tailored_section = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
+      #   @tailored_resume += @tailored_section
+      # end
+
+
 
       # @resume = Resume.new(resume_text: @tailored_resume) # Create a new resume with the tailored content
       # @resume = Resume.new
@@ -107,7 +126,8 @@ class ResumeController < ApplicationController
   end
 
   def save
-    #puts params[:resume]
+    puts 'we are here'
+    puts params[:resume]
     @resume = Resume.new
     @resume.title = params[:resume]
     @resume.save

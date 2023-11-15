@@ -21300,3 +21300,1128 @@ Processing by ResumeController#uploaded as HTML
 Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8675)
 
 
+Started GET "/" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:16:52 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:16:52 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 35.3ms | Allocations: 5058)
+  Rendered layouts/_flash.erb (Duration: 0.7ms | Allocations: 172)
+Completed 200 OK in 514ms (Views: 360.0ms | ActiveRecord: 12.1ms | Allocations: 328993)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:22:47 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3242)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.5ms | Allocations: 12058)
+
+
+  
+ActionView::Template::Error (undefined method `file' for #<ActionView::Helpers::FormBuilder:0x00005640488735c8>):
+    14: 
+    15:     <div class="field">
+    16:       <%= f.label :file %>
+    17:       <%= f.file :file %>
+    18:     </div>
+    19:     </div>
+    20:   </div>
+  
+app/views/resume/new.html.erb:17
+app/views/resume/new.html.erb:4
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:22:59 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 920)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 9812)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:23:33 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 912)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 9751)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:23:52 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 904)
+  Rendered layouts/_flash.erb (Duration: 1.6ms | Allocations: 163)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 9743)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:25:32 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 754)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 39ms (Views: 16.5ms | ActiveRecord: 1.5ms | Allocations: 15730)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:25:37 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46a4a970 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-y5uf3e.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms | Allocations: 3155)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:15:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:28:30 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe4721af60 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-32o4tr.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.6ms | Allocations: 8230)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:20:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:29:11 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46583400 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-z0qrx7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms | Allocations: 8242)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:29:32 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46e30300 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-hd1es4.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 1006)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:30:06 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe458c1758 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-17ux5u9.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.6ms | Allocations: 8266)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:22:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:30:35 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46d8cf98 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-auywt7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.9ms | Allocations: 8235)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:22:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:32:26 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe45c47760 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-1o0es4b.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms | Allocations: 8252)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:34:53 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46ec4ca8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-k5g7m2.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.7ms | Allocations: 8254)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:36:34 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe4538d228 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-4qwoya.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.9ms | Allocations: 8220)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:37:02 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46939a40 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-2q4ot7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.4ms | Allocations: 8230)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:37:40 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe472921a0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-hof0cu.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.6ms | Allocations: 8238)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:39:21 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46697328 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-2si66q.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.5ms | Allocations: 8234)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:40:44 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe471b36d0 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-vr2na7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+Completed 500 Internal Server Error in 2ms (Allocations: 893)
+
+
+  
+ArgumentError (unknown keyword: if):
+  
+app/models/resume.rb:6:in `<class:Resume>'
+app/models/resume.rb:1:in `<top (required)>'
+app/controllers/resume_controller.rb:13:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:40:56 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe46f04880 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-toht9w.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.4ms | Allocations: 8957)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:41:20 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe45d033e8 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-1l0dcq7.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1003)
+
+
+  
+TypeError (can't cast ActionDispatch::Http::UploadedFile):
+  
+app/controllers/resume_controller.rb:21:in `create'
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:42:34 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3tx4V6pbEemMoo/EJjBJ3wtxW5fwIZPGan6pdy9UXlyT2KQf7qTEaoYVqNy8sSJN8LsJGw5jN5/gp9iey66cQ==", "resume"=>{"resume_text"=>"hello"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (27.3ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello"], ["resume_text", "hello"], ["created_at", "2023-11-15 04:42:34.253266"], ["updated_at", "2023-11-15 04:42:34.253266"]]
+  [1m[35m (87.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 125ms (ActiveRecord: 115.2ms | Allocations: 1060)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:42:34 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 19.3ms | Allocations: 874)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 155)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms | Allocations: 9654)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:47:03 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 1413)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:25:in `<class:Resume>'
+app/models/resume.rb:18:in `<top (required)>'
+app/controllers/resume_controller.rb:144:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:47:16 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 7ms (Allocations: 1320)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:25:in `<class:Resume>'
+app/models/resume.rb:18:in `<top (required)>'
+app/controllers/resume_controller.rb:144:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:48:27 +0000
+Processing by ResumeController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 1352)
+
+
+  
+NoMethodError (undefined method `before_file_post_process' for Resume (call 'Resume.connection' to establish a connection):Class):
+  
+app/models/resume.rb:25:in `<class:Resume>'
+app/models/resume.rb:18:in `<top (required)>'
+app/controllers/resume_controller.rb:144:in `new'
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:49:01 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1715)
+  Rendered layouts/_flash.erb (Duration: 0.6ms | Allocations: 163)
+Completed 200 OK in 47ms (Views: 22.1ms | ActiveRecord: 2.1ms | Allocations: 18266)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:49:13 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rt3ep8ADZGUjsA/ItloDvBtRuey9UMtcfyetrbPBsGET6c3W4RCbMy+a01TUMAYSUL6Qpo6pwc0ZDMhqFFJbaQ==", "resume"=>{"title"=>"My Resume", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007efe45ce5410 @tempfile=#<Tempfile:/tmp/RackMultipart20231115-710-13vw4fd.pdf>, @original_filename="my_resume_test.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[file]\"; filename=\"my_resume_test.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.7ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "My Resume"], ["created_at", "2023-11-15 04:49:13.561137"], ["updated_at", "2023-11-15 04:49:13.561137"]]
+  [1m[36mActiveStorage::Blob Load (6.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Resume"], ["name", "file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Resume"], ["name", "file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (2.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "yme4nrv43xyceln951q16hi1rv7v"], ["filename", "my_resume_test.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["byte_size", 13385], ["checksum", "Wdl1I1TW55Ss3dcN54E/1w=="], ["created_at", "2023-11-15 04:49:13.707665"]]
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "file"], ["record_type", "Resume"], ["record_id", 5], ["blob_id", 1], ["created_at", "2023-11-15 04:49:13.712205"]]
+  [1m[36mResume Update (3.1ms)[0m  [1m[33mUPDATE "resumes" SET "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["updated_at", "2023-11-15 04:49:13.714404"], ["id", 5]]
+  [1m[35m (106.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 121.4ms | Allocations: 26195)
+
+
+  
+NoMethodError (undefined method `upload' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:150:in `create'
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:49:19 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.9ms | Allocations: 825)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 8476)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:49:49 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 968)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 163)
+Completed 200 OK in 35ms (Views: 15.5ms | ActiveRecord: 1.4ms | Allocations: 17608)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:49:50 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 685)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 8259)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:52:22 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uirs6CCLtS13k0X4OS+fZSRouJ/FJCGSnFONzitcm5nvHv+ZAZhKe3u5mWRbRZrLb4eR1fbdKwP6eOgJjM9wkQ==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"], ["created_at", "2023-11-15 04:52:22.302387"], ["updated_at", "2023-11-15 04:52:22.302387"]]
+  [1m[35m (74.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 79ms (ActiveRecord: 75.3ms | Allocations: 1118)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:52:22 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.8ms | Allocations: 839)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 8487)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:52:38 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 669)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8243)
+
+
+Started GET "/" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:53:57 +0000
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:53:58 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 57.9ms | Allocations: 5069)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 613ms (Views: 497.2ms | ActiveRecord: 7.7ms | Allocations: 329056)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:54:42 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QoXr2nHNDy/SI07VvCFCL1ko0VPJ74SZyaGPgsJ3ep8XsfirUN7wed4JkkneS0eBEsf4GfoWjgiviupFZeSRlw==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"], ["created_at", "2023-11-15 04:54:42.226777"], ["updated_at", "2023-11-15 04:54:42.226777"]]
+  [1m[35m (118.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 184ms (ActiveRecord: 119.4ms | Allocations: 3245)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:54:43 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.4ms | Allocations: 872)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 8522)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:56:48 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+JsVA8sOa6odsq/aYMPoeWN1iTDh5TnWvk+wEwuQFcOtrwZy6h2U/BGYc0YCqe3XKJqgetIcM0fYZNXUrAP+yw==", "description"=>"needs sql", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 2.1ms | Allocations: 10205)
+
+
+  
+RuntimeError (Incorrect API key provided: sk-Jx8wc***************************************T9f1. You can find your API key at https://platform.openai.com/account/api-keys.):
+  
+app/services/gpt3_service.rb:25:in `call'
+app/services/gpt3_service.rb:32:in `call'
+app/controllers/resume_controller.rb:50:in `tailor'
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:58:01 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+JsVA8sOa6odsq/aYMPoeWN1iTDh5TnWvk+wEwuQFcOtrwZy6h2U/BGYc0YCqe3XKJqgetIcM0fYZNXUrAP+yw==", "description"=>"needs sql", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Full Name: Jasmine Lou\nSkills: \n- Python\n- SQL\n%%%%%\nExperience: \n- Data Science Intern\n%%%%%"], ["resume_text", "Full Name: Jasmine Lou\nSkills: \n- Python\n- SQL\n%%%%%\nExperience: \n- Data Science Intern\n%%%%%"], ["updated_at", "2023-11-15 04:58:06.524897"], ["id", 7]]
+  [1m[35m (66.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 4575ms (ActiveRecord: 69.2ms | Allocations: 11671)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:58:06 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.4ms | Allocations: 531)
+  Rendered layouts/_flash.erb (Duration: 0.2ms | Allocations: 12)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 8234)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:58:58 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANKWYo7kGF5OJYaLl/mhGcOttNn13YDA2X8hlQG9bbBV5oUTr/fnCEIPWhf1k6S3iEKdk8YkilG/VERSpi6GuA==", "description"=>"needs sql", "commit"=>"T(ai)lor!"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.4ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Full Name: Jasmine Lou\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nSkills: \n- Python\n- SQL\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nExperience: \n- Data Science Intern\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"], ["resume_text", "Full Name: Jasmine Lou\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nSkills: \n- Python\n- SQL\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\nExperience: \n- Data Science Intern\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"], ["updated_at", "2023-11-15 04:59:03.612851"], ["id", 7]]
+  [1m[35m (126.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 5206ms (ActiveRecord: 128.9ms | Allocations: 10960)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:59:03 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.5ms | Allocations: 544)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8230)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:59:29 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 755)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 8332)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:59:30 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 678)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 8251)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:59:47 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9kDDs/Gq6u+B97ylhyD090AbKyy8hE0934IW+i8dwYijdNDC0LkVuY3dYDnlSvFZC/QCZo99R6y5qXM9iI4qgA==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nexperience: data science intern"], ["created_at", "2023-11-15 04:59:47.373041"], ["updated_at", "2023-11-15 04:59:47.373041"]]
+  [1m[35m (88.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 97ms (ActiveRecord: 89.3ms | Allocations: 1032)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 04:59:47 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 531)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 8068)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:00:04 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bsutLw1q1ruN0L0Wi6tDgGVlzuxtBq6+62lKt45MgjY7/75eLHkp7YH6YYrpwUYuLornpl7/pC+NQi9wKd9pPg==", "description"=>"djaoifjdosi", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (5.3ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Jasmine Lou \n&&&&&\nSkills: Python, SQL \n&&&&&\nExperience: Data Science Intern"], ["resume_text", "Jasmine Lou \n&&&&&\nSkills: Python, SQL \n&&&&&\nExperience: Data Science Intern"], ["updated_at", "2023-11-15 05:00:07.831194"], ["id", 8]]
+  [1m[35m (116.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 3490ms (ActiveRecord: 122.3ms | Allocations: 2589)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:00:08 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.3ms | Allocations: 543)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 8078)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:03:10 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iM/0fk6wqy+ndB3CVHFg2xpUEO0gZb/iCVAQSRM08t/d++cPb6NUeatewV42G2V1Ubs5pxOctXNve3WOtKcZ1w==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 4ms (Allocations: 454)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:03:10 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 541)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 21ms (Views: 20.2ms | Allocations: 8229)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:03:36 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 732)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 31ms (Views: 12.0ms | ActiveRecord: 1.4ms | Allocations: 16038)
+
+
+Started GET "/r4esume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:03:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/r4esume"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+railties (6.0.0) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.0) lib/rails/railtie.rb:190:in `method_missing'
+rack (2.2.8) lib/rack/handler/webrick.rb:95:in `service'
+/usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:03:39 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 678)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms | Allocations: 8256)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:03:41 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 682)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 8255)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:04:14 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fij84kMJeCn9lPJHwmIHiWHeZGXYuNNYTu6MJ52X1bYrHO+TYhqHf/G+LtugCAInKjFNL+tB2ckoxengOgQ+vg==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, java\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, java\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, java\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:04:14.590428"], ["updated_at", "2023-11-15 05:04:14.590428"]]
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 74ms (ActiveRecord: 69.5ms | Allocations: 1130)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:04:14 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:04:18 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CJO4o9uHTb3+6xCncgvJiBBOt5syBJpQuQMJdz6XroVdp6vS+pSy6/LBzDsQYcwmW6Ge0QH9kMHfKGywmQRFjQ==", "description"=>"", "commit"=>"T(ai)lor!"}
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 420)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:04:18 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 535)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 8072)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:04:23 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1m0zFvAxycQYMgy0UI3CkCEYydp0meF11afzzSlWVCaDWSBn0SI2khQY0Cgy58c+avfgkEdg6+SzjJYKjsW/Lg==", "description"=>"afa", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.6ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Jasmine Lou \n&&&&&\nSkills: Python, Java \n&&&&&\nExperiences: Data Science Intern, SWE Intern"], ["resume_text", "Jasmine Lou \n&&&&&\nSkills: Python, Java \n&&&&&\nExperiences: Data Science Intern, SWE Intern"], ["updated_at", "2023-11-15 05:04:27.720943"], ["id", 9]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 4010ms (ActiveRecord: 85.2ms | Allocations: 3133)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:04:28 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 520)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 8055)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:06:27 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 743)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 32ms (Views: 12.5ms | ActiveRecord: 1.4ms | Allocations: 16263)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:06:28 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 678)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8251)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:06:47 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8UHuOkQoAEZ9hY8ToCH8GCXoUVBtugaHsUph3AVaAbO8RTJyANfVxXcyqAs6oJeK3iID3JP4ot47kxA14aDDg==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, ruby\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.5ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, ruby\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, ruby\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:06:47.680032"], ["updated_at", "2023-11-15 05:06:47.680032"]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 79ms (ActiveRecord: 75.3ms | Allocations: 1135)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:06:47 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 525)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 8062)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:06:51 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0O7F2dRPY6JutukZVVWqSHpDHGuI1GMyqcbeds/w5HKF2tao9Vyc9GKcNYU3P6/mMaw1IbstaaPP7buxaGMPeg==", "description"=>"dfasdfa", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.7ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Jasmine Lou\n&&&&&\nSkills: Python, Ruby\n&&&&&\nExperiences: Data Science Intern, SWE Intern."], ["resume_text", "Jasmine Lou\n&&&&&\nSkills: Python, Ruby\n&&&&&\nExperiences: Data Science Intern, SWE Intern."], ["updated_at", "2023-11-15 05:06:55.428006"], ["id", 10]]
+  [1m[35m (64.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 4093ms (ActiveRecord: 65.3ms | Allocations: 3118)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:06:56 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 520)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 8055)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:08:32 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 747)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 21ms (Views: 8.8ms | ActiveRecord: 1.0ms | Allocations: 16228)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:08:35 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+CieaVkUvXwfUTypQj69+51mPuDy7Sy9fPugp4jxjC+1LEIhHeto/xXmG7HYv9ZpZqxsbAyviOT2ItFObAtOA==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, ruby\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.6ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, ruby\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, ruby\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:08:35.084919"], ["updated_at", "2023-11-15 05:08:35.084919"]]
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 67ms (ActiveRecord: 63.5ms | Allocations: 1127)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:08:35 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 543)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 8080)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:08:38 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pl8pN+bygGeFCN4ncIR8zKFSYVwaRPlC28OBNjHYizLzazpGx+F/MYkiArsS7nli6r1IFim989O96OTxlktgOg==", "description"=>"DADFADSAF", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.3ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "jasmine lou\n&&&&&\nskills: python, ruby\n&&&&&\nexperiences: data science intern, swe intern. \n&&&&&"], ["resume_text", "jasmine lou\n&&&&&\nskills: python, ruby\n&&&&&\nexperiences: data science intern, swe intern. \n&&&&&"], ["updated_at", "2023-11-15 05:08:42.789651"], ["id", 11]]
+  [1m[35m (68.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 4653ms (ActiveRecord: 68.9ms | Allocations: 3120)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:08:42 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 8069)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:11:29 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 751)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 21ms (Views: 8.8ms | ActiveRecord: 1.1ms | Allocations: 16232)
+
+
+Started GET "/r3esume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:11:30 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/r3esume"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+railties (6.0.0) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.0) lib/rails/railtie.rb:190:in `method_missing'
+rack (2.2.8) lib/rack/handler/webrick.rb:95:in `service'
+/usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:11:32 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 678)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 8254)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:11:32 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 682)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8255)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:12:02 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hX115R5lT76NXsiDalS/wnRDwlQ1PfjU4UgMWFYDljbQSWaUP3aw6IF0FB8IPrpsP6zrHgbE8kWHY2mf8ZB9Pg==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:12:02.279210"], ["updated_at", "2023-11-15 05:12:02.279210"]]
+  [1m[35m (70.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 75ms (ActiveRecord: 71.4ms | Allocations: 1135)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:12:02 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 539)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8076)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:12:28 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHCo1qhdh5GxRrAcFbI6WzVwBRDdDni317U4CQ/Z21HpRLuniU54x71sbIB32D/1fp8sWu73ciaxnl3OqEowWQ==", "description"=>"hi we are looking for a full time applications developer who is skilled in C and Python", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.4ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "jasmine lou &&& skills: python, sql &&& classes: esaas, databases &&& experiences: data science intern, swe intern."], ["resume_text", "jasmine lou &&& skills: python, sql &&& classes: esaas, databases &&& experiences: data science intern, swe intern."], ["updated_at", "2023-11-15 05:12:37.240551"], ["id", 12]]
+  [1m[35m (67.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 9033ms (ActiveRecord: 68.1ms | Allocations: 4575)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:12:37 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:13:22 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 743)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 22ms (Views: 9.2ms | ActiveRecord: 1.1ms | Allocations: 16263)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:13:29 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 682)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8255)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:13:31 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"44Q2fQdom/38J/wOvDTBBRJzf45igTbMQcYp2EE4Oym2sCUMJntkq/ANIJLeXsSrWZxWxFF4PF0n7Uwf5qvQIQ==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.8ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:13:31.022095"], ["updated_at", "2023-11-15 05:13:31.022095"]]
+  [1m[35m (75.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 80ms (ActiveRecord: 76.3ms | Allocations: 1127)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:13:31 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 539)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8076)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:14:02 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fG6Q//aEyMImgvod3o4mexdOinK6U0MXlPWL4Q+g/KIpWoOO15c3lCqoJoG85CPVXKGjOImqSYby3u4mqDMXqg==", "description"=>"Kforce has a client that is seeking a Business Analyst in Queens, NY. Responsibilities:\r\nBusiness Analyst will define configuration specifications and business analysis requirements\r\nPerform quality assurance\r\nDefine reporting and alerting requirements\r\nOwn and develop relationships with partners, collaborating to optimize and enhance our integration\r\nAs a Business Analyst, you will help design, document, and maintain system processes\r\nReport on common sources of technical issues or questions and make recommendations to the product team\r\nCommunicate key insights and findings to the product team\r\nStay vigilant for ways to improve monitoring, discover issues, and deliver better value to the customer\r\n\r\nRequirements\r\nA degree or certificate in IT/Computer Science\r\nPrevious experience in Business/Systems Analysis or Quality Assurance\r\nProven experience in eliciting requirements and testing\r\nExperience in analyzing data to draw business-relevant conclusions and in data visualization techniques and tools\r\nBasic knowledge in generating process documentation\r\nStrong written and verbal communication skills, including technical writing skills", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "jasmine lou &&& skills: python, sql &&& classes: esaas, databases &&& experiences: data science intern, swe intern."], ["resume_text", "jasmine lou &&& skills: python, sql &&& classes: esaas, databases &&& experiences: data science intern, swe intern."], ["updated_at", "2023-11-15 05:14:37.227268"], ["id", 13]]
+  [1m[35m (65.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 34818ms (ActiveRecord: 66.4ms | Allocations: 4575)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:14:37 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 530)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:16:09 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 729)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 1.0ms | Allocations: 16210)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:16:15 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 682)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 8255)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:16:17 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"89v6vuelAQKxBd1hFKORwhrjlcuuyySQWZoFCbSTP96m7+nPxrb+VL0vAf12yZRsUQy8gZ0yLgE/sWDOEwDU1g==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:16:17.553310"], ["updated_at", "2023-11-15 05:16:17.553310"]]
+  [1m[35m (82.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 86ms (ActiveRecord: 83.2ms | Allocations: 1117)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:16:17 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 543)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 8080)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:16:23 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKqfvXiEiA9s1y68qqIiJkq+sk2XaAV4eyJ/kxH03CZRnozMWZd3WWD98iDIyCeIAVGbB6SRD+kdCRpUtmc3Lg==", "description"=>"Kforce has a client that is seeking a Business Analyst in Queens, NY. Responsibilities:\r\nBusiness Analyst will define configuration specifications and business analysis requirements\r\nPerform quality assurance\r\nDefine reporting and alerting requirements\r\nOwn and develop relationships with partners, collaborating to optimize and enhance our integration\r\nAs a Business Analyst, you will help design, document, and maintain system processes\r\nReport on common sources of technical issues or questions and make recommendations to the product team\r\nCommunicate key insights and findings to the product team\r\nStay vigilant for ways to improve monitoring, discover issues, and deliver better value to the customer\r\n\r\nRequirements\r\nA degree or certificate in IT/Computer Science\r\nPrevious experience in Business/Systems Analysis or Quality Assurance\r\nProven experience in eliciting requirements and testing\r\nExperience in analyzing data to draw business-relevant conclusions and in data visualization techniques and tools\r\nBasic knowledge in generating process documentation\r\nStrong written and verbal communication skills, including technical writing skills", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "jasmine lou &&& skills: python, sql &&& classes: esaas, databases &&& experiences: data science intern, swe intern."], ["resume_text", "jasmine lou &&& skills: python, sql &&& classes: esaas, databases &&& experiences: data science intern, swe intern."], ["updated_at", "2023-11-15 05:17:04.233172"], ["id", 14]]
+  [1m[35m (166.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 40418ms (ActiveRecord: 167.2ms | Allocations: 4587)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:17:04 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 8069)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:18:40 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 747)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 23ms (Views: 10.1ms | ActiveRecord: 1.2ms | Allocations: 16228)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:18:45 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 698)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 8276)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:18:47 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tBnRFCjdYMg8VcIyk9Tc188gbMxW/vGIC9j7BWQpviLhLcJlCc6fnjB/Hq7xvtl5hM9FhmUH+xlt857Cw7pVKg==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (1.0ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:18:47.529293"], ["updated_at", "2023-11-15 05:18:47.529293"]]
+  [1m[35m (70.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 76ms (ActiveRecord: 71.1ms | Allocations: 1135)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:18:47 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.2ms | Allocations: 525)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 8062)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:18:53 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UnXkEkJ+wOqs1RsYX79yFssiwIHIxrvDGFg6R5J6PPYHQfdjY20/vKD/x4Q91Xe4gM3py/s/sVJ+c1+ANenX/g==", "description"=>"Kforce has a client that is seeking a Business Analyst in Queens, NY. Responsibilities:\r\nBusiness Analyst will define configuration specifications and business analysis requirements\r\nPerform quality assurance\r\nDefine reporting and alerting requirements\r\nOwn and develop relationships with partners, collaborating to optimize and enhance our integration\r\nAs a Business Analyst, you will help design, document, and maintain system processes\r\nReport on common sources of technical issues or questions and make recommendations to the product team\r\nCommunicate key insights and findings to the product team\r\nStay vigilant for ways to improve monitoring, discover issues, and deliver better value to the customer\r\n\r\nRequirements\r\nA degree or certificate in IT/Computer Science\r\nPrevious experience in Business/Systems Analysis or Quality Assurance\r\nProven experience in eliciting requirements and testing\r\nExperience in analyzing data to draw business-relevant conclusions and in data visualization techniques and tools\r\nBasic knowledge in generating process documentation\r\nStrong written and verbal communication skills, including technical writing skills", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "As a knowledgeable and experienced Business Analyst, I am confident that I am the right person for the job at Kforce's client in Queens, NY. My expertise includes defining configuration specifications and business analysis requirements, as well as performing quality assurance. Additionally, I possess a proven track record in defining reporting and alerting requirements, while continually owning and developing relationships with partners to optimize and enhance integration. \n\nI have helped design, document, and maintain system processes as a Business Analyst, and am highly skilled at reporting on common sources of technical issues or questions and making recommendations to the product team. My communication skills are outstanding, and I have experience in sharing key insights and findings with the entire product team. Additionally, I am always on the lookout for ways to improve monitoring, discover issues, and deliver better value to the customer. \n\nAlong with a degree in IT/Computer Science, I have taken relevant classes such as ESAAS and Databases. My experience in data science and software engineering internships, combined with skills in Python and SQL, have given me the ability to confidently elicit requirements and testing. My expertise in analyzing data to draw business-relevant conclusions, as well as extensive knowledge in data visualization techniques and tools, makes me best suited to the role. Finally, I have solid experience in generating process documentation and possess strong written and verbal communication skills, including technical writing skills."], ["resume_text", "As a knowledgeable and experienced Business Analyst, I am confident that I am the right person for the job at Kforce's client in Queens, NY. My expertise includes defining configuration specifications and business analysis requirements, as well as performing quality assurance. Additionally, I possess a proven track record in defining reporting and alerting requirements, while continually owning and developing relationships with partners to optimize and enhance integration. \n\nI have helped design, document, and maintain system processes as a Business Analyst, and am highly skilled at reporting on common sources of technical issues or questions and making recommendations to the product team. My communication skills are outstanding, and I have experience in sharing key insights and findings with the entire product team. Additionally, I am always on the lookout for ways to improve monitoring, discover issues, and deliver better value to the customer. \n\nAlong with a degree in IT/Computer Science, I have taken relevant classes such as ESAAS and Databases. My experience in data science and software engineering internships, combined with skills in Python and SQL, have given me the ability to confidently elicit requirements and testing. My expertise in analyzing data to draw business-relevant conclusions, as well as extensive knowledge in data visualization techniques and tools, makes me best suited to the role. Finally, I have solid experience in generating process documentation and possess strong written and verbal communication skills, including technical writing skills."], ["updated_at", "2023-11-15 05:19:34.404659"], ["id", 15]]
+  [1m[35m (69.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 41347ms (ActiveRecord: 70.7ms | Allocations: 4585)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:19:34 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 546)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8081)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:19:47 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (4.9ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 700)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:21:51 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 739)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 1.1ms | Allocations: 16259)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:21:57 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 678)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8251)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:22:00 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O+6OZ094KZQLhW95HLGm0ksEtMYMrEGq0NbsqIdesVZu2p0WbmvWwgevs+V+26N8AOudjD9VSzu2/YlvIM1aXg==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:22:00.531846"], ["updated_at", "2023-11-15 05:22:00.531846"]]
+  [1m[35m (69.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 74ms (ActiveRecord: 70.3ms | Allocations: 1131)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:22:01 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 543)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 8080)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:22:08 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xi1hn1lVo81lzrzCjgr4D+uAlXS5YPxTxWpKPdl5zIsLGXLueEZcm2nkYF7sYP2hoG+8PoqZ9sKjQS/6fuongw==", "description"=>"Kforce has a client that is seeking a Business Analyst in Queens, NY. Responsibilities:\r\nBusiness Analyst will define configuration specifications and business analysis requirements\r\nPerform quality assurance\r\nDefine reporting and alerting requirements\r\nOwn and develop relationships with partners, collaborating to optimize and enhance our integration\r\nAs a Business Analyst, you will help design, document, and maintain system processes\r\nReport on common sources of technical issues or questions and make recommendations to the product team\r\nCommunicate key insights and findings to the product team\r\nStay vigilant for ways to improve monitoring, discover issues, and deliver better value to the customer\r\n\r\nRequirements\r\nA degree or certificate in IT/Computer Science\r\nPrevious experience in Business/Systems Analysis or Quality Assurance\r\nProven experience in eliciting requirements and testing\r\nExperience in analyzing data to draw business-relevant conclusions and in data visualization techniques and tools\r\nBasic knowledge in generating process documentation\r\nStrong written and verbal communication skills, including technical writing skills", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.3ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.6ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Business Analyst with expertise in Python and SQL, seeking a position in Queens, NY. \r\n\r\n- Experienced in defining configuration specifications and eliciting business analysis requirements to optimize integration with partners\r\n- Conduct quality assurance testing and analyze data to draw business-relevant conclusions utilizing data visualization techniques and tools\r\n- Documented system processes and reported common sources of technical issues to the product team\r\n- Proven ability to communicate key insights and findings to stakeholders\r\n- Completed coursework in ESAAS and databases, with strong written and verbal communication skills, including technical writing\r\n\r\nEducation:\r\n- Bachelor's degree in IT/Computer Science\r\n\r\nExperience: \r\n- Data Science Intern, where I developed skills in Python and data analysis\r\n- Software Engineering Intern, where I gained valuable experience working collaboratively in a professional environment."], ["resume_text", "Business Analyst with expertise in Python and SQL, seeking a position in Queens, NY. \r\n\r\n- Experienced in defining configuration specifications and eliciting business analysis requirements to optimize integration with partners\r\n- Conduct quality assurance testing and analyze data to draw business-relevant conclusions utilizing data visualization techniques and tools\r\n- Documented system processes and reported common sources of technical issues to the product team\r\n- Proven ability to communicate key insights and findings to stakeholders\r\n- Completed coursework in ESAAS and databases, with strong written and verbal communication skills, including technical writing\r\n\r\nEducation:\r\n- Bachelor's degree in IT/Computer Science\r\n\r\nExperience: \r\n- Data Science Intern, where I developed skills in Python and data analysis\r\n- Software Engineering Intern, where I gained valuable experience working collaboratively in a professional environment."], ["updated_at", "2023-11-15 05:22:35.469417"], ["id", 16]]
+  [1m[35m (87.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 26677ms (ActiveRecord: 88.9ms | Allocations: 4577)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:22:35 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 534)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 8069)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:22:56 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.6ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 504)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:25:45 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 743)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 21ms (Views: 8.9ms | ActiveRecord: 1.0ms | Allocations: 16224)
+
+
+Started GET "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:25:51 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 682)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 8255)
+
+
+Started POST "/resume" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:25:53 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uo5pF98CIIoVoIEnaY3SHwNJfFg5Y0uXII7Tjt7HLx/vunpm/hHf3BmKXbsL59exSKZVEgqaQQZGpbZJeVTEFw==", "resume"=>{"resume_text"=>"jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["resume_text", "jasmine lou\r\nskills: python, sql\r\nclasses: esaas, databases\r\nexperiences: data science intern, swe intern"], ["created_at", "2023-11-15 05:25:53.041761"], ["updated_at", "2023-11-15 05:25:53.041761"]]
+  [1m[35m (68.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 72ms (ActiveRecord: 68.5ms | Allocations: 1135)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:25:53 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.1ms | Allocations: 539)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8076)
+
+
+Started POST "/tailor" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:25:58 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jnX5LHy+JiElHebw3lolvFDkPqBOMIq8F8jCFzVuYoDbQepdXa3Zdyk3Omy8MCASGwsX6n3JgC1x46fQkv2JiA==", "description"=>"Kforce has a client that is seeking a Business Analyst in Queens, NY. Responsibilities:\r\nBusiness Analyst will define configuration specifications and business analysis requirements\r\nPerform quality assurance\r\nDefine reporting and alerting requirements\r\nOwn and develop relationships with partners, collaborating to optimize and enhance our integration\r\nAs a Business Analyst, you will help design, document, and maintain system processes\r\nReport on common sources of technical issues or questions and make recommendations to the product team\r\nCommunicate key insights and findings to the product team\r\nStay vigilant for ways to improve monitoring, discover issues, and deliver better value to the customer\r\n\r\nRequirements\r\nA degree or certificate in IT/Computer Science\r\nPrevious experience in Business/Systems Analysis or Quality Assurance\r\nProven experience in eliciting requirements and testing\r\nExperience in analyzing data to draw business-relevant conclusions and in data visualization techniques and tools\r\nBasic knowledge in generating process documentation\r\nStrong written and verbal communication skills, including technical writing skills", "commit"=>"T(ai)lor!"}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Update (0.5ms)[0m  [1m[33mUPDATE "resumes" SET "title" = ?, "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["title", "Jasmine Lou\r\nSkills: Python, SQL, data visualization techniques and tools\r\n\r\nEducation:\r\n- Bachelor's degree in Computer Science, with emphasis on Enterprise Software as a Service (eSaaS) and databases\r\n\r\nExperience:\r\n- Data Science Intern at ABC Company, where I successfully elicited requirements and performed quality assurance for data-driven projects\r\n- As a Software Engineering Intern at DEF Company, I developed strong analytical skills and used Python and SQL in data analysis\r\n\r\nResponsibilities:\r\n- Define configuration specifications and business analysis requirements using my expertise in eSaaS and databases\r\n- Perform quality assurance and testing to ensure all requirements are met\r\n- Define and establish reporting and alerting requirements\r\n- Collaborate with partners to optimize and enhance our integration, while owning and developing relationships with them\r\n- Continuously design, document, and maintain system processes while monitoring for issues and delivering better value to the customer\r\n- Report on technical issues and make recommendations to the product team\r\n- Use my strong written and verbal communication skills, including technical writing, to communicate key insights and findings to the product team\r\n\r\nRequirements:\r\n- A Bachelor's degree in IT/Computer Science, which I have obtained\r\n- Previous experience in Business/Systems Analysis or Quality Assurance, which I have gained through my internships\r\n- Proven experience in eliciting requirements and testing, which I have demonstrated in my internships\r\n- Experience in analyzing data to draw business-relevant conclusions, which I have gained through my studies in data visualization techniques and tools\r\n- Basic knowledge in generating process documentation, which I am familiar with through my coursework\r\n- Strong written and verbal communication skills, including technical writing skills, which I possess"], ["resume_text", "Jasmine Lou\r\nSkills: Python, SQL, data visualization techniques and tools\r\n\r\nEducation:\r\n- Bachelor's degree in Computer Science, with emphasis on Enterprise Software as a Service (eSaaS) and databases\r\n\r\nExperience:\r\n- Data Science Intern at ABC Company, where I successfully elicited requirements and performed quality assurance for data-driven projects\r\n- As a Software Engineering Intern at DEF Company, I developed strong analytical skills and used Python and SQL in data analysis\r\n\r\nResponsibilities:\r\n- Define configuration specifications and business analysis requirements using my expertise in eSaaS and databases\r\n- Perform quality assurance and testing to ensure all requirements are met\r\n- Define and establish reporting and alerting requirements\r\n- Collaborate with partners to optimize and enhance our integration, while owning and developing relationships with them\r\n- Continuously design, document, and maintain system processes while monitoring for issues and delivering better value to the customer\r\n- Report on technical issues and make recommendations to the product team\r\n- Use my strong written and verbal communication skills, including technical writing, to communicate key insights and findings to the product team\r\n\r\nRequirements:\r\n- A Bachelor's degree in IT/Computer Science, which I have obtained\r\n- Previous experience in Business/Systems Analysis or Quality Assurance, which I have gained through my internships\r\n- Proven experience in eliciting requirements and testing, which I have demonstrated in my internships\r\n- Experience in analyzing data to draw business-relevant conclusions, which I have gained through my studies in data visualization techniques and tools\r\n- Basic knowledge in generating process documentation, which I am familiar with through my coursework\r\n- Strong written and verbal communication skills, including technical writing skills, which I possess"], ["updated_at", "2023-11-15 05:26:42.409756"], ["id", 17]]
+  [1m[35m (69.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 43655ms (ActiveRecord: 70.1ms | Allocations: 3086)
+
+
+Started GET "/uploaded" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:26:42 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 1.0ms | Allocations: 538)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 8073)
+
+
+Started GET "/download" for 2603:7000:9a00:cb5:1c1e:e47e:b88f:2957 at 2023-11-15 05:26:46 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.txt (0.6ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 504)
+
+
