@@ -1,10 +1,13 @@
+require 'dotenv/rails-now'
+
 class Gpt3Service
   include HTTParty
 
   attr_reader :api_url, :options, :model, :message
 
   def initialize(message, model = 'gpt-3.5-turbo')
-    api_key = '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'
+    # api_key = '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'
+    api_key = ENV['API_KEY']
     @options = {
       headers: {
         'Content-Type' => 'application/json',

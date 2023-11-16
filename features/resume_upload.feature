@@ -17,3 +17,17 @@ Scenario: add resume by upload a file
   And I press "Upload Resume"
   Then I am on the uploaded page
   And I should see "Paste your job description"
+
+Scenario: upload a resume without providing input
+  When I go to the resume page
+  And I press "Upload Resume"
+  Then I should be on the resume page
+  And I should see "Upload your Resume"
+
+Scenario: Unsuccessful resume upload
+  When I go to the resume page
+  And I go to Choose File
+  And I attach an invalid file
+  And I press "Upload Resume"
+  Then I should be on the resume page
+  And I should see "Upload your Resume"

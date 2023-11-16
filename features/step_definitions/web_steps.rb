@@ -126,6 +126,10 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
 end
 
+When("I attach an invalid file") do
+  attach_file('resume[attachment]', '/home/codio/workspace/Iteration/bad_file.JPG')
+end
+
 When /^I attach the file "([^"]*)"$/ do |path|
   
 end
@@ -136,7 +140,16 @@ end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
-    page.should have_content(text)
+    page.should have_content(text, wait: 3)
+  else
+    assert page.has_content?(text)
+  end
+end
+
+Then /^(?:|I )should see the error "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    puts page.html
+    page.should have_content(text, wait: 3)
   else
     assert page.has_content?(text)
   end

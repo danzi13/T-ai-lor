@@ -24,9 +24,10 @@ To run product:
    before.
    
 To test product:
-1. In the Iteration directory, run 'bundle exec cucumber'
-2. In the Iteration directory, run 'bundle exec rspec'
+Run rspec first, then cucumber:
+1. In the Iteration directory, run 'bundle exec rspec'
+2. In the Iteration directory, run 'bundle exec cucumber'
 
 Heroku Link: https://pure-river-69411-5cfef20475c9.herokuapp.com/uploaded
-only /uploaded works, /editor and /resume do not work. They do work on 
+only /uploaded works, /editor and /resume do not work, it is because of the db. They do work on 
 the local servers though.

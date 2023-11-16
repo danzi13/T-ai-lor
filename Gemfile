@@ -8,6 +8,7 @@ gem 'pg'
 gem 'pdf-reader'
 
 gem 'sqlite3', '1.4.2',  group: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test]
 
 # for Heroku deployment 
 group :development, :test do
@@ -19,6 +20,7 @@ group :development, :test do
   gem 'paperclip'
   gem 'byebug'
   gem 'pdf-reader'
+  gem 'prawn'
 end
 
 group :test do
@@ -27,12 +29,14 @@ group :test do
   gem 'simplecov', :require => false
   gem 'rails-controller-testing'
   gem 'pdf-reader'
+  gem 'prawn'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'pdf-reader'
+  gem 'prawn'
 end
 
 # Gems used only for assets and not required
