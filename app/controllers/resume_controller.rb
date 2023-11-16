@@ -63,27 +63,28 @@ class ResumeController < ApplicationController
       @last_resume = Resume.last
 
       # Change resume with AI
-      # @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. AGAIN, DO NOT JUST MAKE UP EXPERIENCES. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
-      @prompt = "Here is a resume. Return to me the same resume but parsed into different sections. Examples of sections include Skills and Work Experience. Between each section put 3 '&' symbols. For example, if you see a skills section do like &&& Skills: Ruby, Java, etc &&&. DO NOT CHANGE ANYTHING ABOUT THE RESUME, EXCEPT ADDING THE & SYMBOLS AND REMOVE ALL NEW LINE CHARACTERS AND ANYTHING NOT ALPHANUMERICAL. Resume: #{@last_resume.title}. \n\n Resume Parsed: "
-      # @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
-      @sections = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301').split('&&&')
+      @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. AGAIN, DO NOT JUST MAKE UP EXPERIENCES. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
+      # @prompt = "Here is a resume. Return to me the same resume but parsed into different sections. Examples of sections include Skills and Work Experience. Between each section put 3 '&' symbols. For example, if you see a skills section do like &&& Skills: Ruby, Java, etc &&&. DO NOT CHANGE ANYTHING ABOUT THE RESUME, EXCEPT ADDING THE & SYMBOLS AND REMOVE ALL NEW LINE CHARACTERS AND ANYTHING NOT ALPHANUMERICAL. Resume: #{@last_resume.title}. \n\n Resume Parsed: "
+      @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
+      # @sections = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301').split('&&&')
       #puts "THIS IS WHAT GPT IS RETURNING:"
       #puts @sections
 
-      @tailored_resume = ''
+
+      # @tailored_resume = ''
       
-      for s in @sections
-        @s = s
-        #puts 'here in the section loop'
-        #puts @s
-        if @s.include?('skills') || @s.include?('work') || @s.include?('experience')
-          @prompt = "Here is a resume section (Labeled as Resume Section: ___). Tailor the following section to match the job description. Don't lie in the new tailored section, but rather enhance the original section to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same as the original resume section in the new resume section. DO NOT CHANGE THE FORMATTING OF THE ORIGINAL SECTION:\n\nJob Description: #{description}\n\nResume section to be tailored: #{@s} \n\nNew Tailored Section: "
-          @tailored_section = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
-          @tailored_resume += @tailored_section + '\n'
-        else
-          @tailored_resume += @s + '\n'
-        end
-      end
+      # for s in @sections
+      #   @s = s
+      #   #puts 'here in the section loop'
+      #   #puts @s
+      #   if @s.include?('skills') || @s.include?('work') || @s.include?('experience')
+      #     @prompt = "Here is a resume section (Labeled as Resume Section: ___). Tailor the following section to match the job description. Don't lie in the new tailored section, but rather enhance the original section to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same as the original resume section in the new resume section. DO NOT CHANGE THE FORMATTING OF THE ORIGINAL SECTION:\n\nJob Description: #{description}\n\nResume section to be tailored: #{@s} \n\nNew Tailored Section: "
+      #     @tailored_section = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
+      #     @tailored_resume += @tailored_section + '\n'
+      #   else
+      #     @tailored_resume += @s + '\n'
+      #   end
+      # end
 
 
 

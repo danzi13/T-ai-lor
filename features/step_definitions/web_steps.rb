@@ -374,7 +374,6 @@ When("I tailor the resume section") do
   end
 end
 
-Then("the tailored resume should contain the tailored section") do
-  expect(@tailored_resume).not_to include("Original Resume Section")
-  expect(@tailored_resume).to include("New Tailored Section:")
+Then("the tailored resume should contain {string}") do |expected_text|
+  expect(@tailored_resume).to include(expected_text)
 end
