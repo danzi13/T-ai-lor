@@ -23358,3 +23358,98 @@ Processing by ResumeController#create as HTML
 Completed 200 OK in 51ms (Views: 11.9ms | ActiveRecord: 1.4ms | Allocations: 28172)
 
 
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 128.59.177.50 at 2023-11-16 00:20:33 +0000
+Started GET "/resume" for 128.59.177.50 at 2023-11-16 00:20:33 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 5038)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 380ms (Views: 304.2ms | ActiveRecord: 3.7ms | Allocations: 329021)
+
+
+Started POST "/resume" for 128.59.177.50 at 2023-11-16 00:20:44 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6zgul7D2gZEVuu5u6tlR9WvXCUh09sKIvI5ARpL9M0XF8+qzKALHeENadz/oh8zD5bEc7+pvN7rp29uWq29Wg==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f37f22e5de8 @tempfile=#<Tempfile:/tmp/RackMultipart20231116-2130-10wsk5j.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (2.1ms)[0m  [1m[32mINSERT INTO "resumes" ("title", "resume_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "                                              Benjamin R. Kuhn\n                                    70 Morningside Drive, F0607 Wien Hall, New York, NY 10027\n                                               484-926-1341 | benkuhn99@gmail.com\n\nEDUCATION\n\nColumbia University in the City of New York, Columbia College                                                      New York, NY\nB.A. in Financial Economics and Computer Science                                                    Expected Graduation May 2024\n•   Current GPA: 3.70\n\n•   Relevant Finance Coursework: Financial Accounting, Econometrics, Corporate Finance, Financial Economics\n•   Relevant Computer Science Coursework: Advanced Programming, Data Structures, Intro to Databases, User Interface Design\n\nWyomissing Area Jr./Sr. High School                                                                               Wyomissing, PA\nHigh School Diploma                                                                                       August 2016 – June 2020\n•   Graduated with a 5.03 (4.0 unweighted) GPA\n\n•   Relevant Coursework: AP Macroeconomics, AP Statistics, AP Computer Science A, AP Calculus AB, AP Calculus BC\n\n\nHONORS\n•   Columbia College Dean’s List (Fall 2020, Spring 2021, Spring 2022)\n\n•   National AP Scholar and AP Scholar with Distinction (2019, 2020)\n•   National Honor Society (2017 - present)\n\n•   Spanish National Honor Society (2018 - present)\n\n\nPROFESSIONAL EXPERIENCE\nKonrad Group                                                                                                       New York, NY\n\nDigital Strategy Consultant                                                                                    June 2023 – Present\n    •    Lead the design thinking process by facilitating workshops and employing user-centric methodologies to uncover client needs,\n         fostering the development of innovative and tailored digital solutions\n\n    •    Conduct scrum allocations to foster efficient client collaboration, translating business goals into impactful digital strategies in an\n         iterative fashion\n    •    Partner closely with internal designers and developers, leveraging financial analysis to develop effective design concepts aligned\n         with market dynamics\n\nSkylerAI                                                                                                 New York, NY (Remote)\n\nBusiness Developer                                                                                        August 2022 – May 2023\n    •    Structured sales operations and processes pertaining to the customer database, customer onboarding, and CRM reporting\n    •    Worked alongside founder and CEO Ron Sasson to develop sales strategies via market research and pre-qualification of leads\n\n    •    Engaged with healthcare, real estate, government, and nonprofit sectors to effectively administer tailored AI technology to firms\n\n\nLEADERSHIP EXPERIENCE\nColumbia University, NCAA Division I Varsity Cross Country/Track and Field                                         New York, NY\n\nDistance Runner                                                                                           September 2020 – Present\n    •    Dedicate 30 hours per week to practice, conditioning, competition, and team meetings while balancing a full academic course load\n\n    •    Scored points at 2021 NCAA Cross Country Northeast Regionals to secure Columbia’s first top-five finish in over ten years\nWyomissing Area Jr./Sr. High School Extracurriculars                                                             Wyomissing, PA\n\nStudent Representative                                                                                    August 2016 – June 2020\n    •    Elected as Class Vice President and Student Council representative to advocate for classmates and organize a plethora of events\n\n    •    Selected as Cross Country/Track and Field team captain to engage younger teammates and keep the team focused on set goals\n\n\nSKILLS AND INTERESTS\n•   Computer: Microsoft Office Suite, STATA, Python, C, Java, SQL, Figma, AEM, Marketo Engage, Portfolio Analysis\n\n•   Languages: Fluent in English, Limited Working Proficiency in Spanish\n•   Interests: Running, Music, Philadelphia Sports, Writing, WADA Laws and Regulations"], ["resume_text", ""], ["created_at", "2023-11-16 00:20:45.713561"], ["updated_at", "2023-11-16 00:20:45.713561"]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 24], ["record_type", "Resume"], ["name", "attachment"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "6m89c4wof8wd4vsqfnxmokuyk17w"], ["filename", "Ben.Kuhn_Resume.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["byte_size", 152643], ["checksum", "jULY41ic1P9zFSttB49J8Q=="], ["created_at", "2023-11-16 00:20:45.738647"]]
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "attachment"], ["record_type", "Resume"], ["record_id", 24], ["blob_id", 2], ["created_at", "2023-11-16 00:20:45.740640"]]
+  [1m[36mResume Update (0.2ms)[0m  [1m[33mUPDATE "resumes" SET "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["updated_at", "2023-11-16 00:20:45.742261"], ["id", 24]]
+  [1m[35m (82.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 1179ms (ActiveRecord: 87.9ms | Allocations: 649507)
+
+
+  
+NoMethodError (undefined method `upload' for nil:NilClass):
+  
+app/controllers/resume_controller.rb:40:in `create'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResumes (20231116002439)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "resume_text" text)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20231101174332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231101174332"]]
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20231101174332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "resume_text" varchar)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "resume_text" varchar, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231101174332"]]
+  [1m[35m (78.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateResumes (20231116002439)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "resume_text" text)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResumes (20231116002439)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "resume_text" text)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231116002439"]]
+  [1m[35m (75.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
