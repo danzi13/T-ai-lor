@@ -28,4 +28,3 @@ Scenario: editor with tailoring
   And I press "T(ai)lor!"
   And I press "Resume Editor"
   Then I am on the editor page
-

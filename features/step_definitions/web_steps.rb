@@ -304,3 +304,77 @@ Then("the resume textarea should contain {string}") do |expected_text|
   # Get the content of the textarea and assert that it contains the expected text.
   expect(textarea.text).to include(expected_text)
 end
+
+
+
+
+Given("a resume with a non-empty tailored resume") do
+  @last_resume = Resume.new
+  @tailored_resume = "This is a non-empty tailored resume."
+end
+
+Given("a resume with an empty tailored resume") do
+  @last_resume = Resume.new
+  @tailored_resume = ""
+end
+
+Given("a resume with a tailored resume containing newline characters") do
+  @last_resume = Resume.new
+  @tailored_resume = "Line 1\nLine 2\nLine 3"
+end
+
+When("I save the resume") do
+  @last_resume.title = @tailored_resume.gsub('\n', "\n")
+  @last_resume.resume_text = @tailored_resume.gsub('\n', "\n")
+  @last_resume.save
+end
+
+Then("the resume should be saved successfully") do
+  expect(@last_resume.valid?).to be true
+end
+
+Then("the resume shouldn't be saved successfully") do
+  expect(@last_resume.valid?).to be false
+end
+
+
+
+
+
+
+Given("a resume section with the word 'skills'") do
+  @prompt = "Original Resume Section: This is a skills section."
+end
+
+Given("a resume section with the word 'work'") do
+  @prompt = "Original Resume Section: This is a work section."
+end
+
+Given("a resume section with the word 'experience'") do
+  @prompt = "Original Resume Section: This is an experience section."
+end
+
+Given("a resume section without 'skills', 'work', or 'experience'") do
+  @prompt = "Original Resume Section: This is a section without keywords."
+end
+
+When("I tailor the resume section") do
+  @sections = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301').split('&&&')
+  @tailored_resume = ''
+
+  for s in @sections
+    @s = s
+    if @s.include?('skills') || @s.include?('work') || @s.include?('experience')
+      @prompt = "Job Description: Some job description\n\nResume section to be tailored: #{@s} \n\nNew Tailored Section: "
+      @tailored_section = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
+      @tailored_resume += @tailored_section + '\n'
+    else
+      @tailored_resume += @s + '\n'
+    end
+  end
+end
+
+Then("the tailored resume should contain the tailored section") do
+  expect(@tailored_resume).not_to include("Original Resume Section")
+  expect(@tailored_resume).to include("New Tailored Section:")
+end

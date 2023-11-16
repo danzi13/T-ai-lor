@@ -26,5 +26,3 @@ Scenario: see some text in the editor console
   Then I am on the editor page
   And I should see "No resume was tailored"
   And the resume textarea should contain "No Resume"
-  
-
