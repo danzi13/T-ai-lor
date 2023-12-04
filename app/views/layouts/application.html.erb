@@ -1,4 +1,3 @@
-<%# Our "base" layout should be a valid HTML document. %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,11 +6,47 @@
     <%= stylesheet_link_tag 'application', 'media' => 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+    <style>
+      /* Add custom CSS for vertical centering */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Align items at both ends */
+        height: 80px; /* Adjust the height as needed */
+        background-color: rgba(30, 30, 30, 1);
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .title {
+        padding-left: 10px;
+        padding-top: 5px;
+        font-family: Didot, sans-serif;
+        font-weight: bold; /* Make the font bold */
+	margin-top: 3px; /* Remove default margin for h1 element */
+	letter-spacing: 0.8px;
+      }
+
+      .ai-text {
+        color: rgba(98, 158, 202, 1); /* Set the color for 'AI' text */
+      }
+
+      .secondary-title {
+        padding-right: 10px;
+        padding-top: 5px;
+        font-family: Verdana, sans-serif;
+        /*font-weight: bold;*/ /* Make the font bold */
+	margin-top: 3px; /* Remove default margin for h1 element */
+	font-size: 120%;
+	letter-spacing: 0.4px;
+      }
+    </style>
   </head>
   <body>
     <%# These classes come from the Bootstrap CSS framework. %>
-    <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
-      <h1 class="title" style="font-family: Arial, sans-serif;">T(Ai)lor</h1>
+    <nav class="navbar navbar-expand-lg">
+      <h1 class="title">t<span class="ai-text">AI</span>lor</h1>
+      <h1 class="secondary-title">Powered by ChatGPT 3.5</h1>
     </nav>
     <div class="container">
       <%# Render "flash" messages in our application. This loads _flash.erb %>
@@ -22,3 +57,4 @@
     </div>
   </body>
 </html>
+

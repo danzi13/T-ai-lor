@@ -1,16 +1,35 @@
-<h2>Resume Details/Editor</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: rgba(50, 50, 50, 1.0);
+      color: white;
+      font-family: Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
 
-<! Resume Title: </p>
-<!%= text_area_tag :resume, @title_helper, class: 'form-control', style: 'height: 35px; width:25vw' %>
-<%= form_tag resume_save_path, class: 'form' do %>
-  <%= label :resume, :resume, 'Resume', :class => 'col-form-label' %>
-  <%= text_area_tag :resume, @editor_helper, class: 'form-control my-own-class', style: 'height: 400px; width: 75vw' %>
-  <br/>
-  <%= link_to 'Cancel', cancel_path, class: 'btn btn-secondary' %>
-  <%= submit_tag 'Save', class: 'btn btn-primary' %>
-<% end %>
+  <h2>Resume Editor</h2>
 
-<br>
-<br>
+  <!-- Resume Title: -->
 
-<%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
+  <%= form_tag resume_save_path, class: 'form' do %>
+    <%= label :resume, :resume, 'Resume', :class => 'col-form-label' %>
+    <%= text_area_tag :resume, @editor_helper, class: 'form-control my-own-class', style: 'height: 400px; width: 75vw' %>
+    <br/>
+    <%= link_to 'Cancel', cancel_path, class: 'btn btn-secondary' %>
+    <%= submit_tag 'Save', class: 'btn btn-primary' %>
+  <% end %>
+
+  <br>
+  <br>
+
+  <%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
+
+</body>
+</html>
+

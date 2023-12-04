@@ -1,25 +1,43 @@
-<h5>Paste your job description:</h5>
-<%= form_tag tailor_path, method: :post, class: 'form' do %>
-  
-  <%= text_area_tag :description, nil, class: 'form-control', style: 'height: 400px; width:75vw' %>
-  <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: rgba(50, 50, 50, 1.0);
+      color: white;
+      font-family: Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
 
-  <div class="container">
-    <div class="field">
-      <%= submit_tag "T(ai)lor!", class: 'btn btn-success'%>
-      <%#= button_tag "T(ai)lor!", type: "submit", class: 'btn btn-success' %>
+  <h5>Paste your job description:</h5>
+  <%= form_tag tailor_path, method: :post, class: 'form' do %>
+    
+    <%= text_area_tag :description, nil, class: 'form-control', style: 'height: 400px; width:75vw' %>
+    <br>
+
+    <div class="container">
+      <div class="field">
+        <%= submit_tag "T(ai)lor!", class: 'btn btn-success'%>
+        <%#= button_tag "T(ai)lor!", type: "submit", class: 'btn btn-success' %>
+      </div>
+
+      <%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
+      <br><br>
+
+      <% if flash[:alert] %>
+          <div class="btn btn-outline-secondary"><%= flash[:alert] %></div>
+      <% end %>
+
+      <br><br>
+      <%= link_to 'Download Resume', download_path, class: 'btn btn-dark' %>
+      <%= link_to 'Resume Editor', editor_path, class: 'btn btn-info' %>
     </div>
+  <% end %>
 
-    <%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
-    <br><br>
+</body>
+</html>
 
-
-    <% if flash[:alert] %>
-        <div class="btn btn-outline-secondary"><%= flash[:alert] %></div>
-    <% end %>
-
-    <br><br>
-    <%= link_to 'Download Resume', download_path, class: 'btn btn-dark' %>
-    <%= link_to 'Resume Editor', editor_path, class: 'btn btn-info' %>
-  </div>
-<% end %>

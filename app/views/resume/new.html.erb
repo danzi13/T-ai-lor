@@ -1,42 +1,119 @@
-<h2>Powered by ChatGPT 3.5</h2>
-<p>Upload your Resume</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: rgba(50, 50, 50, 1.0);
+      color: white;
+      font-family: Verdana, sans-serif;
+    }
 
-<%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
-    
-  <div class="row">
-    <div class="col-md-6">
-    <!---
-      <div class="field">
-        <label for="resume_file">File</label>
-        <input type="file" name="resume[file]" id="resume_file">
-      </div>
-    --->
+    #typing-container {
+      margin: 0 auto;
+      word-wrap: break-word;
+      text-align: left;
+      height: 240px;
+    }
 
-    <div class="field">
-      <%= f.label :file %>
-      <%= f.file_field :attachment %>
-    </div>
-    </div>
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      overflow: hidden;
+      display: inline-block;
+      margin: 0;
+    }
 
+    .upload-paragraph {
+      margin-bottom: 40px; /* Adjust the margin-bottom as needed */
+    }
 
-	
-  <div class="col-md-6">
-      <div class="field">
-        <%= f.label :resume_text, 'Resume Text' %>
-        <%= f.text_area :resume_text %>
-      </div>
-    </div>
+    .rectangle {
+      border: 1px solid white;
+      border-radius: 10px; /* Adjust the border radius as needed */
+      padding: 10px; /* Adjust the padding as needed */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+    } 
+
+    .field {
+      margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+    }
+
+    .white-background {
+      background-color: white;
+      color: black;
+      width: calc(100% - 20px); /* Adjust the width as needed */
+      margin: 0 auto; /* Center the text area */
+    }
+
+    .label-wrapper {
+      text-align: center;
+      margin-bottom: 10px; /* Adjust as needed for vertical spacing */
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body style="background-color: rgba(50, 50, 50, 1.0);">
+  <div id="typing-container">
+    <p id="typing-text"></p>
   </div>
-  </div>
 
-  <br>
-  <br>
+  <p class="upload-paragraph">Upload or paste your resume below.</p>
 
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="field">
-        <%= submit_tag "Upload Resume" %>
+  <%= form_for @resume, url: resume_index_path, html: { multipart: true } do |f| %>
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <div class="field rectangle">
+          <%= f.label :file %>
+          <%= f.file_field :attachment %>
+        </div>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <div class="field rectangle">
+          <div class="label-wrapper">
+            <%= f.label :resume_text, 'Paste Your Resume Text' %>
+          </div>
+          <%= f.text_area :resume_text, class: 'white-background' %>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="field">
+          <%= submit_tag "Upload Resume", class: 'btn white-background', id: 'upload-button' %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+  <script>
+    // Typing effect
+    const text = "Meet Tailor AI, your go-to SaaS for personalized resumes that stand out effortlessly. Powered by ChatGPT 3.5, we refine your resume to match any job description. Just upload your resume, input the desired job details, and Tailor AI crafts a custom-fit resume. With an easy-to-use interface, you can fine-tune the results before downloading your perfectly tailored resume. Elevate your career prospects with Tailor AI – where precision meets opportunity. Your dream job deserves a standout application, and Tailor AI ensures you're ahead of the curve.";
+
+    let index = 0;
+    const typingText = document.getElementById('typing-text');
+
+    function type() {
+      typingText.textContent += text[index];
+      index++;
+
+      if (index < text.length) {
+        setTimeout(type, 30);
+      }
+    }
+
+    type();
+
+    // Button styling script
+    const uploadButton = document.getElementById('upload-button');
+    uploadButton.style.width = '200px'; // Adjust the width as needed
+  </script>
+</body>
+</html>
+
