@@ -8,7 +8,7 @@ gem 'pg'
 gem 'pdf-reader'
 
 gem 'sqlite3', '1.4.2',  group: [:development, :test]
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 
 # for Heroku deployment 
 group :development, :test do
