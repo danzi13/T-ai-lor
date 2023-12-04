@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
 
 ruby '2.6.6'
+
 gem 'rails', '6.0.0'
 gem 'openai'
 gem 'httparty'
 gem 'pg'
 gem 'pdf-reader'
-
-gem 'sqlite3', '1.4.2',  group: [:development, :test]
+gem 'sqlite3', '1.4.2', group: [:development, :test]
 gem 'dotenv-rails'
 
-# for Heroku deployment 
 group :development, :test do
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -19,28 +18,19 @@ group :development, :test do
   gem 'ZenTest', '4.11.2'
   gem 'paperclip'
   gem 'byebug'
-  gem 'pdf-reader'
-  gem 'prawn'
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'cucumber-rails-training-wheels'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
   gem 'rails-controller-testing'
-  gem 'pdf-reader'
-  gem 'prawn'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
-  gem 'pdf-reader'
-  gem 'prawn'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
