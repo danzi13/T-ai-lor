@@ -9,6 +9,7 @@ gem 'pg'
 gem 'pdf-reader'
 gem 'sqlite3', '1.4.2', group: [:development, :test]
 gem 'dotenv-rails'
+gem 'prawn' 
 
 group :development, :test do
   gem 'database_cleaner', '1.4.1'

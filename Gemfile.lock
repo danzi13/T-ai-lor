@@ -166,6 +166,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
+    pdf-core (0.9.0)
     pdf-reader (2.11.0)
       Ascii85 (~> 1.0)
       afm (~> 0.2.1)
@@ -173,6 +174,9 @@ GEM
       ruby-rc4
       ttfunk
     pg (1.5.4)
+    prawn (2.4.0)
+      pdf-core (~> 0.9.0)
+      ttfunk (~> 1.7)
     public_suffix (5.0.3)
     racc (1.7.2)
     rack (2.2.8)
@@ -297,6 +301,7 @@ DEPENDENCIES
   paperclip
   pdf-reader
   pg
+  prawn
   rails (= 6.0.0)
   rails-controller-testing
   rails_12factor
