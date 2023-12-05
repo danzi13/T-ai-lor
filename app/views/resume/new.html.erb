@@ -26,7 +26,8 @@
     }
 
     .upload-paragraph {
-      margin-bottom: 40px; /* Adjust the margin-bottom as needed */
+      margin-bottom: 20px; /* Adjust the margin-bottom as needed */
+      margin-top: -16px;
     }
 
     .rectangle {
@@ -34,6 +35,11 @@
       border-radius: 10px; /* Adjust the border radius as needed */
       padding: 10px; /* Adjust the padding as needed */
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+      height: 300px; /* Adjust the height as needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     } 
 
     .field {
@@ -45,12 +51,39 @@
       color: black;
       width: calc(100% - 20px); /* Adjust the width as needed */
       margin: 0 auto; /* Center the text area */
+      height: 226px;
     }
 
     .label-wrapper {
       text-align: center;
       margin-bottom: 10px; /* Adjust as needed for vertical spacing */
       font-weight: bold;
+    }
+
+    .upload-label {
+      margin-bottom: 86px; /* Add a bottom margin to this label */
+    }
+
+    #upload-button {
+      width: 200px; /* Adjust the width as needed */
+      background-color: white;
+      color: black;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      margin-top: 20px;
+    }
+
+    .typing-char {
+      color: rgba(98, 158, 202, 1);
+      animation: colorChange 0.5s ease-in-out forwards;
+    }
+
+    @keyframes colorChange {
+      to {
+        color: white;
+      }
     }
 
   </style>
@@ -67,7 +100,9 @@
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="field rectangle">
-          <%= f.label :attachment %>
+          <div class="label-wrapper upload-label">
+            <%= f.label :file, 'Upload Your Resume File' %>
+          </div>
           <%= f.file_field :attachment %>
         </div>
       </div>
@@ -85,7 +120,7 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <div class="field">
-          <%= submit_tag "Upload Resume", class: 'btn white-background', id: 'upload-button' %>
+          <%= submit_tag "Upload Resume", class: 'btn', id: 'upload-button' %>
         </div>
       </div>
     </div>
@@ -100,7 +135,12 @@
     const typingText = document.getElementById('typing-text');
 
     function type() {
-      typingText.textContent += text[index];
+      const char = text[index];
+      const charSpan = document.createElement('span');
+      charSpan.textContent = char;
+      charSpan.className = 'typing-char';
+      typingText.appendChild(charSpan);
+
       index++;
 
       if (index < text.length) {
@@ -109,10 +149,6 @@
     }
 
     type();
-
-    // Button styling script
-    const uploadButton = document.getElementById('upload-button');
-    uploadButton.style.width = '200px'; // Adjust the width as needed
   </script>
 </body>
 </html>
