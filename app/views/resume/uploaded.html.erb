@@ -8,36 +8,142 @@
       background-color: rgba(50, 50, 50, 1.0);
       color: white;
       font-family: Verdana, sans-serif;
+      justify-content: center;      
+      align-items: center; 
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Left-align */
+      padding-bottom: 10px; /* Added 10px padding below the text */
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .custom-button,
+    .tailor-button,
+    .new-resume-button,
+    .download-resume-button,
+    .resume-editor-button {
+      width: 225px; /* Adjust the width as needed */
+      border-radius: 10px;
+      padding: 8px;
+      box-shadow: 0 0 15px rgba(98, 158, 202, 0.5); /* Glow effect */
+      transition: background-color 0.3s, color 0.3s;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .custom-button {
+      color: black;
+      background-color: rgba(50, 50, 50, 1.0);
+      border: 1px solid white;
+    }
+
+    .tailor-button {
+      outline: none;
+      font-family: 'Didot', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left:-15px;
+      background-color: white;
+      color: black;
+      border: 1px solid white;
+    }
+    
+    .ai-text {
+      color: rgba(98, 158, 202, 1); /* Set the color for 'AI' text */
+    }
+
+    .tailor-button:hover,
+    .tailor-button:focus,
+    .tailor-button:active {
+      background-color: black;
+      color: white;
+      border: 1px solid black;
+      text-decoration: none;
+    }
+
+    .download-resume-button {
+      background-color: rgba(98, 158, 202, 1);
+      color: white;
+      border: 1px rgba(98, 158, 202, 1);
+    }
+
+    .download-resume-button:hover,
+    .download-resume-button:focus,
+    .download-resume-button:active {
+      background-color: rgba(39, 86, 120, 1);
+      color: white;
+      border: 1px rgba(39, 86, 120, 1);
+      text-decoration: none;
+    }
+
+    .resume-editor-button {
+      background-color: rgba(7, 61, 110, 1);
+      color: white;
+      border: 1px rgba(7, 61, 110, 1);
+    }
+
+    .resume-editor-button:hover,
+    .resume-editor-button:focus,
+    .resume-editor-button:active {
+      background-color: rgba(5, 31, 55, 1);
+      color: white;
+      border: 1px rgba(5, 31, 55, 1);
+      text-decoration: none;
+    }
+
+    .new-resume-button {
+      background-color: rgba(66, 19, 19, 1);
+      color: white;
+      border: 1px rgba(66, 19, 19, 1);
+    }
+
+    .new-resume-button:hover,
+    .new-resume-button:focus,
+    .new-resume-button:active {
+      background-color: rgba(40, 12, 12, 1);
+      color: white;
+      border: 1px rgba(40, 12, 12, 1);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <h5>Paste your job description:</h5>
+  <h5 style="padding-bottom: 10px;">Paste your job description:</h5>
   <%= form_tag tailor_path, method: :post, class: 'form' do %>
-    
-    <%= text_area_tag :description, nil, class: 'form-control', style: 'height: 400px; width:75vw' %>
+    <%= text_area_tag :description, nil, class: 'form-control', style: 'height: 400px; width:75vw; box-shadow: 0 0 15px rgba(98, 158, 202, 0.5)' %>
     <br>
 
-    <div class="container">
-      <div class="field">
-        <%= submit_tag "T(ai)lor!", class: 'btn btn-success'%>
-        <%#= button_tag "T(ai)lor!", type: "submit", class: 'btn btn-success' %>
+    <div class="container form-container">
+      <div class="field button-container">
+        <div class="button-group">
+          <%= button_tag type: "submit", class: 'tailor-button', onclick: "void(0)" do %>
+            t<span class="ai-text">AI</span>lor
+          <% end %>
+          <%= link_to 'Download Resume', download_path, class: 'download-resume-button' %>
+          <%= link_to 'Resume Editor', editor_path, class: 'resume-editor-button' %>
+          <%= link_to 'Upload New Resume', root_path, class: 'new-resume-button' %>
+        </div>
       </div>
-
-      <%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
-      <br><br>
-
-      <% if flash[:alert] %>
-          <div class="btn btn-outline-secondary"><%= flash[:alert] %></div>
-      <% end %>
-
-      <br><br>
-      <%= link_to 'Download Resume', download_path, class: 'btn btn-dark' %>
-      <%= link_to 'Resume Editor', editor_path, class: 'btn btn-info' %>
     </div>
-  <% end %>
 
+    <% if flash[:alert] %>
+      <div class="btn btn-outline-secondary"><%= flash[:alert] %></div>
+    <% end %>
+
+    <br><br>
+  <% end %>
 </body>
 </html>
 

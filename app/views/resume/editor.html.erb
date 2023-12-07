@@ -9,26 +9,100 @@
       color: white;
       font-family: Verdana, sans-serif;
     }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .form-control {
+      height: 400px;
+      width: 75vw;
+      margin-bottom: 40px;
+    }
+
+    .save-button,
+    .cancel-button,
+    .new-resume-button {
+      width: 225px; /* Adjust the width as needed */
+      border-radius: 10px;
+      padding: 8px;
+      box-shadow: 0 0 15px rgba(98, 158, 202, 0.5); /* Glow effect */
+      transition: background-color 0.3s, color 0.3s;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+
+
+    .save-button {
+      background-color: rgba(98, 158, 202, 1);
+      color: white;
+      border: 1px rgba(98, 158, 202, 1);
+     }
+
+    .save-button:hover,
+    .save-button:focus,
+    .save-button:active {
+      background-color: rgba(39, 86, 120, 1);
+      color: white;
+      border: 1px rgba(39, 86, 120, 1);
+      text-decoration: none;
+    }
+
+
+    .cancel-button {
+      background-color: rgba(7, 61, 110, 1);
+      color: white;
+      border: 1px rgba(7, 61, 110, 1);
+    }
+
+    .cancel-button:hover,
+    .cancel-button:focus,
+    .cancel-button:active {
+      background-color: rgba(5, 31, 55, 1);
+      color: white;
+      border: 1px rgba(5, 31, 55, 1);
+      text-decoration: none;
+    }
+
+
+    .new-resume-button {
+      background-color: rgba(66, 19, 19, 1);
+      color: white;
+      border: 1px rgba(66, 19, 19, 1);
+    }
+
+    .new-resume-button:hover,
+    .new-resume-button:focus,
+    .new-resume-button:active {
+      background-color: rgba(40, 12, 12, 1);
+      color: white;
+      border: 1px rgba(40, 12, 12, 1);
+      text-decoration: none;
+    }
+
   </style>
 </head>
 <body>
 
   <h2>Resume Editor</h2>
 
-  <!-- Resume Title: -->
-
-  <%= form_tag resume_save_path, class: 'form' do %>
-    <%= label :resume, :resume, 'Resume', :class => 'col-form-label' %>
-    <%= text_area_tag :resume, @editor_helper, class: 'form-control my-own-class', style: 'height: 400px; width: 75vw' %>
-    <br/>
-    <%= link_to 'Cancel', cancel_path, class: 'btn btn-secondary' %>
-    <%= submit_tag 'Save', class: 'btn btn-primary' %>
+  <%= form_for @resume, url: resume_save_path, method: :post, class: 'form' do |f| %>
+    <%= f.label :resume, 'Resume', class: 'col-form-label' %>
+    <%= f.text_area :resume_text, class: 'form-control my-own-class', style: 'height: 400px; width: 75vw', value: @editor_helper %>
+    <div class="button-container">
+      <%= f.submit 'Save', class: 'save-button' %>
+      <%= link_to 'Cancel', cancel_path, class: 'cancel-button' %>
+      <%= link_to 'Upload New Resume', root_path, class: 'new-resume-button' %>
+    </div>
   <% end %>
-
   <br>
   <br>
-
-  <%= link_to 'Upload a New Resume', root_path, class: 'btn btn-danger' %>
 
 </body>
 </html>
