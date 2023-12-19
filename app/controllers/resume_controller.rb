@@ -57,7 +57,10 @@ class ResumeController < ApplicationController
  def tailor
   
     @last_resume = Resume.last
-    # flash[:notice] = @last_resume.title + 'hello'
+    # puts "here"
+    # @last_resume.attributes.each do |attr, value|
+    #   puts "#{attr}: #{value}"
+    # end
     description = params[:description]
 
     if description == ""
@@ -68,7 +71,8 @@ class ResumeController < ApplicationController
       flash[:notice] = nil
 
       # Change resume with AI
-      @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. AGAIN, DO NOT JUST MAKE UP EXPERIENCES. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
+      @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
+      # @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. :\n\nJob Description: #{description}\n\nResume: #{@resume.title} \n\nTailored Resume:"
       @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
 
       @last_resume.title = @tailored_resume.gsub('\n', "\n")
