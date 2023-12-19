@@ -27,17 +27,12 @@ class ResumeController < ApplicationController
         @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
         @pdf_reader.pages.each
         @pdf_reader.pages.each do |page|
-          @resume.title += page.text
+          @resume.title += page.text #this works, i tested with puts
         end
       rescue PDF::Reader::MalformedPDFError => e
         flash[:error] = "Error parsing PDF: #{e.message}"
         redirect_to resume_path and return
       end
-
-      #TESTING THIS 38,39,40
-      flash[:notice] = "Resume uploaded successfully."
-      flash[:alert] = "Warning: you have not yet tailored your resume for editing or downloading"
-      redirect_to uploaded_path
 
     else
       @resume.title = 'None, Error'
@@ -50,6 +45,8 @@ class ResumeController < ApplicationController
     # else
     #   puts "No file attached."
     # end
+
+    # puts @resume
 
     if @resume.save
       # puts "Saves correctly"
