@@ -24,8 +24,10 @@ class ResumeController < ApplicationController
       # end
 
       begin
+        puts "hi1"
         @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
         @pdf_reader.pages.each do |page|
+          puts "hi2"
           @resume.title += page.text
         end
       rescue PDF::Reader::MalformedPDFError => e
