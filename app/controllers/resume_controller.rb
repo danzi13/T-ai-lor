@@ -24,22 +24,20 @@ class ResumeController < ApplicationController
       # end
 
       begin
-        puts "hi1"
         @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
         @pdf_reader.pages.each
         @pdf_reader.pages.each do |page|
-          puts "hi2"
-          puts page.text
-          puts "hi3"
-          puts page
           @resume.title += page.text
         end
-        puts "hi5"
-        puts @resume.title
       rescue PDF::Reader::MalformedPDFError => e
         flash[:error] = "Error parsing PDF: #{e.message}"
         redirect_to resume_path and return
       end
+
+      #TESTING THIS 38,39,40
+      flash[:notice] = "Resume uploaded successfully."
+      flash[:alert] = "Warning: you have not yet tailored your resume for editing or downloading"
+      redirect_to uploaded_path
 
     else
       @resume.title = 'None, Error'

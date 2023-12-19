@@ -35038,3 +35038,146 @@ FOREIGN KEY ("blob_id")
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "2fbbc69c36008e359d30d7bacaf5a82458efbd61"], ["created_at", "2023-12-18 19:34:34.911241"], ["updated_at", "2023-12-18 19:34:34.911241"]]
   [1m[35m (66.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 209.2.226.13 at 2023-12-19 01:34:32 +0000
+Started GET "/resume" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Processing by ResumeController#new as HTML
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1990)
+  Rendered layouts/_flash.erb (Duration: 0.5ms | Allocations: 172)
+Completed 200 OK in 447ms (Views: 332.7ms | ActiveRecord: 7.5ms | Allocations: 324238)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Started GET "/assets/resume.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Started GET "/assets/resume.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 209.2.226.13 at 2023-12-19 01:34:33 +0000
+Started POST "/resume" for 209.2.226.13 at 2023-12-19 01:35:13 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aICkkjrJ3TB3nJb/e7+BaegfdEeRrR8OKmGci28dwOK8O4uCqKoMK9LHFJo/tvsdMibsEQ/XeNrjNMrkL/uJdQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f2fc41ada88 @tempfile=#<Tempfile:/tmp/RackMultipart20231219-701-10pqbu1.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (3.2ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at", "resume_text") VALUES (?, ?, ?)[0m  [["created_at", "2023-12-19 01:35:14.323372"], ["updated_at", "2023-12-19 01:35:14.323372"], ["resume_text", ""]]
+  [1m[36mActiveStorage::Attachment Load (3.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 40], ["record_type", "Resume"], ["name", "attachment"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "vznb1s5owvn2nt0egayz9jme3l98"], ["filename", "Ben.Kuhn_Resume.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["byte_size", 131390], ["checksum", "tYmlAGZoZpSsv3KbqY+KUg=="], ["created_at", "2023-12-19 01:35:14.348144"]]
+  [1m[36mActiveStorage::Attachment Create (2.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "attachment"], ["record_type", "Resume"], ["record_id", 40], ["blob_id", 8], ["created_at", "2023-12-19 01:35:14.349701"]]
+  [1m[36mResume Update (0.2ms)[0m  [1m[33mUPDATE "resumes" SET "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["updated_at", "2023-12-19 01:35:14.353011"], ["id", 40]]
+  [1m[35m (111.9ms)[0m  [1m[36mcommit transaction[0m
+[36m  Disk Storage (1.4ms) [0m[32mUploaded file to key: vznb1s5owvn2nt0egayz9jme3l98 (checksum: tYmlAGZoZpSsv3KbqY+KUg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a) to Async(default) with arguments: #<GlobalID:0x00007f2fc4226370 @uri=#<URI::GID gid://rottenpotatoes/ActiveStorage::Blob/8>>
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 1407ms (ActiveRecord: 122.1ms | Allocations: 845199)
+
+
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a] Performing ActiveStorage::AnalyzeJob (Job ID: 9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a) from Async(default) enqueued at 2023-12-19T01:35:14Z with arguments: #<GlobalID:0x00007f2fc423caa8 @uri=#<URI::GID gid://rottenpotatoes/ActiveStorage::Blob/8>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 8]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a]   [1m[35m (83.5ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a] Performed ActiveStorage::AnalyzeJob (Job ID: 9d2bbff7-d46e-49d4-82c9-c9dd022d3b0a) from Async(default) in 92.52ms
+Started GET "/uploaded" for 209.2.226.13 at 2023-12-19 01:35:14 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1008)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 8654)
+
+
+Started GET "/resume" for 209.2.226.13 at 2023-12-19 01:35:17 +0000
+Processing by ResumeController#new as HTML
+  Rendering resume/new.html.erb within layouts/application
+  Rendered resume/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 584)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 8155)
+
+
+Started POST "/resume" for 209.2.226.13 at 2023-12-19 01:37:43 +0000
+Processing by ResumeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOJRwI3pHtjbwCAwk7U58ZEPHV3Li70kJ5/dTqcZyVJ4WX7QH4rPw36bolXXvEOFSzaFC1Xx2vDuyosh5/+AxQ==", "resume"=>{"attachment"=>#<ActionDispatch::Http::UploadedFile:0x00007f2fd1480320 @tempfile=#<Tempfile:/tmp/RackMultipart20231219-701-dvh0vr.pdf>, @original_filename="Ben.Kuhn_Resume.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"resume[attachment]\"; filename=\"Ben.Kuhn_Resume.pdf\"\r\nContent-Type: application/pdf\r\n">, "resume_text"=>""}, "commit"=>"Upload Resume"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mResume Create (0.3ms)[0m  [1m[32mINSERT INTO "resumes" ("created_at", "updated_at", "resume_text") VALUES (?, ?, ?)[0m  [["created_at", "2023-12-19 01:37:43.983445"], ["updated_at", "2023-12-19 01:37:43.983445"], ["resume_text", ""]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 41], ["record_type", "Resume"], ["name", "attachment"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "uzxkxoohmaxyb1064quya3ysnmfa"], ["filename", "Ben.Kuhn_Resume.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["byte_size", 131390], ["checksum", "tYmlAGZoZpSsv3KbqY+KUg=="], ["created_at", "2023-12-19 01:37:43.986366"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "attachment"], ["record_type", "Resume"], ["record_id", 41], ["blob_id", 9], ["created_at", "2023-12-19 01:37:43.987516"]]
+  [1m[36mResume Update (0.1ms)[0m  [1m[33mUPDATE "resumes" SET "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["updated_at", "2023-12-19 01:37:43.988411"], ["id", 41]]
+  [1m[35m (77.3ms)[0m  [1m[36mcommit transaction[0m
+[36m  Disk Storage (1.3ms) [0m[32mUploaded file to key: uzxkxoohmaxyb1064quya3ysnmfa (checksum: tYmlAGZoZpSsv3KbqY+KUg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9755a910-adf5-4d3e-854d-eb14ac5ab954) to Async(default) with arguments: #<GlobalID:0x00007f2fd1a4f3a0 @uri=#<URI::GID gid://rottenpotatoes/ActiveStorage::Blob/9>>
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 620ms (ActiveRecord: 80.5ms | Allocations: 305875)
+
+
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9755a910-adf5-4d3e-854d-eb14ac5ab954] Performing ActiveStorage::AnalyzeJob (Job ID: 9755a910-adf5-4d3e-854d-eb14ac5ab954) from Async(default) enqueued at 2023-12-19T01:37:44Z with arguments: #<GlobalID:0x00007f2fd1a9ffa8 @uri=#<URI::GID gid://rottenpotatoes/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9755a910-adf5-4d3e-854d-eb14ac5ab954]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9755a910-adf5-4d3e-854d-eb14ac5ab954]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9755a910-adf5-4d3e-854d-eb14ac5ab954]   [1m[35m (106.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9755a910-adf5-4d3e-854d-eb14ac5ab954] Performed ActiveStorage::AnalyzeJob (Job ID: 9755a910-adf5-4d3e-854d-eb14ac5ab954) from Async(default) in 108.48ms
+Started GET "/uploaded" for 209.2.226.13 at 2023-12-19 01:37:44 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 547)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8237)
+
+
+Started POST "/tailor" for 209.2.226.13 at 2023-12-19 01:37:53 +0000
+Processing by ResumeController#tailor as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDAirE6gw8EE1xDLjEtudKSZD31A+UgoOxdxZ+JT8yuciw283MMS2qGMkq7IQhQAfqCXK96DL/zyQicIorW6vA==", "description"=>"Python", "button"=>""}
+  [1m[36mResume Load (0.2ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 41], ["record_type", "Resume"], ["name", "attachment"], ["LIMIT", 1]]
+  [1m[36mResume Update (0.7ms)[0m  [1m[33mUPDATE "resumes" SET "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["resume_text", "Objective: Seeking a Python Developer role, where I can utilize my Python development skills to contribute to the growth of the organization.\n\nEducation:\n- Bachelor's Degree in Computer Science, XYZ University\n- Master's Degree in Computer Science, ABC College\n\nSkills:\n- Proficient in Python programming language, with experience in its frameworks such as Django and Flask\n- Strong knowledge of web development using HTML5, CSS3, and JavaScript\n- Experience in working with databases such as MySQL and MongoDB\n- Familiarity with cloud services like AWS and Azure\n- Familiarity with Agile methodologies\n- Good communication and collaboration skills\n\nExperience: \n- Worked as a Python Developer at PQR Company, developing web applications using Django framework, MySQL database, and AWS cloud services.\n- Developed RESTful APIs for managing user data at DEF Company, using Flask framework, and MongoDB database.\n- Automated web-based tasks using Python scripts for GHI Company, using Selenium and Beautiful Soup libraries.\n- Created data visualizations using Matplotlib and Seaborn libraries for JKL Organization.\n\nProjects:\n- Developed an e-commerce website using Django framework, MySQL database, and Bootstrap for UI.\n- Built a web scraper using Beautiful Soup library to scrape data from online sources to be used for data analysis.\n\nCertifications:\n- AWS Certified Developer - Associate\n- Microsoft Certified Azure Developer\n\nReferences:\n- Available upon request."], ["updated_at", "2023-12-19 01:37:58.186910"], ["id", 41]]
+  [1m[35m (131.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 5226ms (ActiveRecord: 132.2ms | Allocations: 3684)
+
+
+Started GET "/uploaded" for 209.2.226.13 at 2023-12-19 01:37:58 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 532)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 8067)
+
+
+Started GET "/editor" for 209.2.226.13 at 2023-12-19 01:38:03 +0000
+Processing by ResumeController#editor as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering resume/editor.html.erb within layouts/application
+  Rendered resume/editor.html.erb within layouts/application (Duration: 4.2ms | Allocations: 719)
+  Rendered layouts/_flash.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 8885)
+
+
+Started POST "/resume/save" for 209.2.226.13 at 2023-12-19 01:38:07 +0000
+Processing by ResumeController#save as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yzs/H/w/KF2YFYpgP2xBitmFROCy/oZoa+ZUvTGH8nMfgBAPblz5Rj1OCAV7ZTv+A7zctiyE4byiswLScWG75A==", "resume"=>{"resume_text"=>"Objective: Seeking a Python Developer role, where I can utilize my Python development skills to contribute to the growth of the organization.\r\n\r\nEducation:\r\n- Bachelor's Degree in Computer Science, XYZ University\r\n- Master's Degree in Computer Science, ABC College\r\n\r\nSkills:\r\n- Proficient in Python programming language, with experience in its frameworks such as Django and Flask\r\n- Strong knowledge of web development using HTML5, CSS3, and JavaScript\r\n- Experience in working with databases such as MySQL and MongoDB\r\n- Familiarity with cloud services like AWS and Azure\r\n- Familiarity with Agile methodologies\r\n- Good communication and collaboration skills\r\n\r\nExperience: \r\n- Worked as a Python Developer at PQR Company, developing web applications using Django framework, MySQL database, and AWS cloud services.\r\n- Developed RESTful APIs for managing user data at DEF Company, using Flask framework, and MongoDB database.\r\n- Automated web-based tasks using Python scripts for GHI Company, using Selenium and Beautiful Soup libraries.\r\n- Created data visualizations using Matplotlib and Seaborn libraries for JKL Organization.\r\n\r\nProjects:\r\n- Developed an e-commerce website using Django framework, MySQL database, and Bootstrap for UI.\r\n- Built a web scraper using Beautiful Soup library to scrape data from online sources to be used for data analysis.\r\n\r\nCertifications:\r\n- AWS Certified Developer - Associate\r\n- Microsoft Certified Azure Developer\r\n\r\nReferences:\r\n- Available upon request."}, "commit"=>"Save"}
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 41], ["record_type", "Resume"], ["name", "attachment"], ["LIMIT", 1]]
+  [1m[36mResume Update (0.3ms)[0m  [1m[33mUPDATE "resumes" SET "resume_text" = ?, "updated_at" = ? WHERE "resumes"."id" = ?[0m  [["resume_text", "Objective: Seeking a Python Developer role, where I can utilize my Python development skills to contribute to the growth of the organization.\r\n\r\nEducation:\r\n- Bachelor's Degree in Computer Science, XYZ University\r\n- Master's Degree in Computer Science, ABC College\r\n\r\nSkills:\r\n- Proficient in Python programming language, with experience in its frameworks such as Django and Flask\r\n- Strong knowledge of web development using HTML5, CSS3, and JavaScript\r\n- Experience in working with databases such as MySQL and MongoDB\r\n- Familiarity with cloud services like AWS and Azure\r\n- Familiarity with Agile methodologies\r\n- Good communication and collaboration skills\r\n\r\nExperience: \r\n- Worked as a Python Developer at PQR Company, developing web applications using Django framework, MySQL database, and AWS cloud services.\r\n- Developed RESTful APIs for managing user data at DEF Company, using Flask framework, and MongoDB database.\r\n- Automated web-based tasks using Python scripts for GHI Company, using Selenium and Beautiful Soup libraries.\r\n- Created data visualizations using Matplotlib and Seaborn libraries for JKL Organization.\r\n\r\nProjects:\r\n- Developed an e-commerce website using Django framework, MySQL database, and Bootstrap for UI.\r\n- Built a web scraper using Beautiful Soup library to scrape data from online sources to be used for data analysis.\r\n\r\nCertifications:\r\n- AWS Certified Developer - Associate\r\n- Microsoft Certified Azure Developer\r\n\r\nReferences:\r\n- Available upon request."], ["updated_at", "2023-12-19 01:38:07.069102"], ["id", 41]]
+  [1m[35m (78.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://felixmodest-floodfresh-3000.codio.io/uploaded
+Completed 302 Found in 84ms (ActiveRecord: 79.2ms | Allocations: 1585)
+
+
+Started GET "/uploaded" for 209.2.226.13 at 2023-12-19 01:38:07 +0000
+Processing by ResumeController#uploaded as HTML
+  Rendering resume/uploaded.html.erb within layouts/application
+  Rendered resume/uploaded.html.erb within layouts/application (Duration: 0.9ms | Allocations: 523)
+  Rendered layouts/_flash.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 8060)
+
+
+Started GET "/download" for 209.2.226.13 at 2023-12-19 01:38:09 +0000
+Processing by ResumeController#download as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" ORDER BY "resumes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 2)
+Sent data tailored_resume.pdf (2.4ms)
+Completed 200 OK in 95ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 59492)
+
+
