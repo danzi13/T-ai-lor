@@ -18,10 +18,21 @@ class ResumeController < ApplicationController
       @resume.title = params[:resume][:resume_text]
     elsif params[:resume][:attachment].present?
       @resume.title = ' '
-      @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
-      @pdf_reader.pages.each do |page|
-        @resume.title += page.text
+      # @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
+      # @pdf_reader.pages.each do |page|
+      #   @resume.title += page.text
+      # end
+
+      begin
+        @pdf_reader = PDF::Reader.new(params[:resume][:attachment].tempfile.path)
+        @pdf_reader.pages.each do |page|
+          @resume.title += page.text
+        end
+      rescue PDF::Reader::MalformedPDFError => e
+        flash[:error] = "Error parsing PDF: #{e.message}"
+        redirect_to resume_path and return
       end
+
     else
       @resume.title = 'None, Error'
     end
@@ -64,7 +75,7 @@ class ResumeController < ApplicationController
 
       # Change resume with AI
       @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. AGAIN, DO NOT JUST MAKE UP EXPERIENCES. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
-     @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
+      @tailored_resume = Gpt3Service.call(@prompt, 'gpt-3.5-turbo-0301')
 
       @last_resume.title = @tailored_resume.gsub('\n', "\n")
       @last_resume.resume_text = @tailored_resume.gsub('\n', "\n")
@@ -75,7 +86,7 @@ class ResumeController < ApplicationController
   end
 
 
-  def download
+def download
   tailored_resume = Resume.last
 
   if tailored_resume
@@ -90,23 +101,23 @@ class ResumeController < ApplicationController
     flash[:alert] = "No tailored resume is available for download."
     redirect_to uploaded_path
   end
-  end
+end
 
-  def generate_pdf(content)
+def generate_pdf(content)
   pdf = Prawn::Document.new
   pdf.text content
   pdf_content = pdf.render
   pdf_content
-  end 
+end 
  
 def editor
   @resume = Resume.last || Resume.new
   @editor_helper = @resume.resume_text || "No Resume"
   
-  if @tailored_resume == ""
-    @title_helper = 'tailored_resume.txt'
-    @editor_helper = @tailored_resume
-  else
+  if !@tailored_resume.present?
+  #   @title_helper = 'tailored_resume.txt'
+  #   @editor_helper = @tailored_resume
+  # else
     flash[:notice] = "No resume was tailored"
   end
 end
@@ -118,7 +129,7 @@ def save
     flash[:notice] = "Success! Resume Updated"
     redirect_to uploaded_path
   else
-    flash[:error] = "Failed to update resume. Please try again."
+    # flash[:error] = "Failed to update resume. Please try again."
     render :editor
   end
 end

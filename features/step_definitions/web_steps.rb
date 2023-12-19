@@ -54,6 +54,16 @@ When(/^I press "([^"]*)"$/) do |button|
   click_on(button)
 end
 
+
+When /^(?:|I )try to tailor by pressing "([^"]*)"$/ do |link|
+  if page.has_button?(link)
+    click_button(link)
+  else
+    find('.tailor-button').click
+  end
+end
+
+
 When(/^I click "Save"$/) do
   click_button("Save")
 end
@@ -79,6 +89,15 @@ end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
+end
+
+When /^(?:|I )try to tailor by following "([^"]*)"$/ do |link|
+  if page.has_button?(link)
+    click_link(link)
+  else
+    # Try to find a button with the specified class
+    find('.tailor-button').click
+  end
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
@@ -376,4 +395,100 @@ end
 
 Then("the tailored resume should contain {string}") do |expected_text|
   expect(@tailored_resume).to include(expected_text)
+end
+
+
+
+
+Given("there is a tailored resume") do
+  @tailored_resume = "This is a tailored resume."
+end
+
+Given("there is no tailored resume") do
+  @tailored_resume = nil
+end
+
+When("I visit the editor page") do
+  visit editor_path
+end
+
+Then("the title helper should be 'tailored_resume.txt'") do
+  expect(page).to have_content('tailored_resume.txt')
+end
+
+Then("the editor helper should be the tailored resume") do
+  expect(page).to have_content(@tailored_resume)
+end
+
+Then("I should see a notice that no resume was tailored") do
+  expect(page).to have_content("No resume was tailored")
+end
+
+
+
+# For the generate-pdf tests
+Given("I have some content") do
+  @content = 'This is the content for the PDF.'
+end
+
+Given("I have empty content") do
+  @content = ''
+end
+
+When("I generate a PDF with that content") do
+  @pdf_content = ResumeController.new.generate_pdf(@content)
+end
+
+Then("I should receive a non-empty PDF content") do
+  expect(@pdf_content).not_to be_nil
+end
+
+Then("I should receive an empty PDF content") do
+  expect(@pdf_content).to be_empty
+end
+
+
+# for the download tests
+Given("there is a tailored resume with content") do
+  @tailored_resume = Resume.create(resume_text: 'This is the tailored resume content.')
+end
+
+Given("PDF generation fails") do
+  pdf_content = nil
+end
+
+When("I visit the download page") do
+  visit download_path
+end
+
+Then("I should download the tailored resume as a PDF") do
+  expect(page.response_headers['Content-Disposition']).to include('tailored_resume.pdf')
+end
+
+Then("I should see an error message") do
+  expect(page).to have_content("Error generating PDF content.")
+end
+
+Then("I should see a message indicating no tailored resume is available") do
+  expect(page).to have_content("No tailored resume is available for download.")
+end
+
+
+
+#for gpt tailor calls
+Given("there is a resume in the database") do
+  # Create a resume in the database for testing
+  @resume = Resume.create(title: "Original Resume", resume_text: "Original content.")
+end
+
+When("I tailor the resume with a valid description") do
+  @tailored_content = "something that is valid"
+end
+
+Then("the resume should be successfully tailored") do
+  @last_resume = Resume.last
+  @tailored_resume = "Tailored content."
+  expect(@last_resume.title).to have_content("Tailored content.")
+  expect(@last_resume.resume_text).to have_content("Tailored content.")
+
 end

@@ -24,10 +24,9 @@ To run product:
    before.
    
 To test product:
-Run rspec first, then cucumber:
-1. In the Iteration directory, run 'bundle exec rspec'
-2. In the Iteration directory, run 'bundle exec cucumber'
+1. In the Iteration directory, run 'rake cucumber'
+Then, run rspec first, then cucumber:
+2. In the Iteration directory, run 'bundle exec rspec'
+3. In the Iteration directory, run 'bundle exec cucumber'
 
-Heroku Link: https://pure-river-69411-5cfef20475c9.herokuapp.com/uploaded
-only /uploaded works, /editor and /resume do not work, it is because of the db. They do work on 
-the local servers though.
+Heroku Link: https://pure-river-69411-5cfef20475c9.herokuapp.com/

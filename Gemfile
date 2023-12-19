@@ -13,7 +13,7 @@ gem 'prawn'
 
 group :development, :test do
   gem 'database_cleaner', '1.4.1'
-  gem 'capybara', '2.4.4'
+  gem 'capybara', '~> 2.7', '>= 2.7.1'
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest', '4.11.2'
