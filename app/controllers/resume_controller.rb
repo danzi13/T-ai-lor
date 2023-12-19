@@ -9,7 +9,6 @@ class ResumeController < ApplicationController
     @resume = Resume.new
   end
 
-
  def create
     # puts "Made it to create"
     
@@ -38,21 +37,12 @@ class ResumeController < ApplicationController
       @resume.title = 'None, Error'
     end
 
-    # puts params[:resume]
-    # if params[:file].present?
-    #   @pdf_reader = PDF::Reader.new(params[:attachment].tempfile.path)
-    #   puts @pdf_reader
-    # else
-    #   puts "No file attached."
-    # end
-
-    # puts @resume
-
     if @resume.save
       # puts "Saves correctly"
       # puts "Uploaded resume title: #{@resume.title}"
       flash[:notice] = "Resume uploaded successfully."
       flash[:alert] = "Warning: you have not yet tailored your resume for editing or downloading"
+      # flash[:alert] = @resume.title
       redirect_to uploaded_path
     else
       # puts "In the else statement"
@@ -65,16 +55,17 @@ class ResumeController < ApplicationController
   end
 
  def tailor
+  
+    @last_resume = Resume.last
+    # flash[:notice] = @last_resume.title + 'hello'
     description = params[:description]
 
     if description == ""
       flash[:alert] = "Warning: you have not tailored your resume for editing or downloading"
       flash[:notice] = "No description, try again"
     else
-      flash[:alert] = "Success! You can preview or download"
+      # flash[:alert] = "Success! You can preview or download"
       flash[:notice] = nil
-
-      @last_resume = Resume.last
 
       # Change resume with AI
       @prompt = "Tailor the following resume to match the job description. Don't lie, but rather enhance the resume to just fit the description better. Also, try to keep each line length roughly the same and the number of lines roughly the same from the original resume to the tailored resume. AGAIN, DO NOT JUST MAKE UP EXPERIENCES. :\n\nJob Description: #{description}\n\nResume: #{@last_resume.title} \n\nTailored Resume:"
@@ -144,6 +135,6 @@ end
   end
 
   def resume_params
-    params.require(:resume).permit(:attachment, :resume_text, :file, :filename) # Include :resume_text in permitted params
+    params.require(:resume).permit(:attachment, :resume_text, :file, :filename, :title) # Include :resume_text in permitted params
   end
 end
