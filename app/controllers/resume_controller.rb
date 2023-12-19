@@ -34,6 +34,8 @@ class ResumeController < ApplicationController
           puts page
           @resume.title += page.text
         end
+        puts "hi5"
+        puts @resume.title
       rescue PDF::Reader::MalformedPDFError => e
         flash[:error] = "Error parsing PDF: #{e.message}"
         redirect_to resume_path and return
