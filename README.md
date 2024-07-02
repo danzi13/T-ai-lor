@@ -31,3 +31,5 @@ Then, run rspec first, then cucumber:
 Heroku Link: https://pure-river-69411-5cfef20475c9.herokuapp.com/
 
 Github Link: https://github.com/danzi13/Iteration1
+
+This app will take your long resume and tailor itself to the job description using AI!
