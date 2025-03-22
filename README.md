@@ -1,4 +1,4 @@
-Team Members:
+Team Members: 
 Ben Kuhn (bk2782)
 Jasmine Lou (yl4386)
 Michael Danzi (mjd2266)
